@@ -9,12 +9,7 @@ export type ThemeColors =
   | "dark"
   | "white";
 
-export type ThemeGradientColors =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "info"
-  | "warning"
-  | "danger"
-  | "light"
-  | "dark";
+export enum Orientation {
+  Left,
+  Right,
+}

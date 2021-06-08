@@ -1,8 +1,8 @@
-import { Children, ReactNode } from "react";
-import { ThemeGradientColors } from "../../../types";
+import { ReactNode } from "react";
+import { ThemeColors } from "../../../types";
 
 type Props = {
-  color: ThemeGradientColors;
+  color: ThemeColors;
   children?: ReactNode;
 };
 

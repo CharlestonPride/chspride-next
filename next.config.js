@@ -1,3 +1,2 @@
-module.exports = {
-  /* config options here */
-};
+const withMDX = require("@next/mdx")();
+module.exports = withMDX();

@@ -4,8 +4,8 @@
   background-position: $icon-shape-bg-position;
   border-radius: $border-radius-lg;
 
-  i {
-    color: $white;
+  i,
+  svg {
     opacity: $icon-shape-icon-opacity;
     top: $info-icon-top;
     position: $info-icon-position;
@@ -174,5 +174,11 @@ svg.text-dark {
   }
   .color-background {
     fill: $dark-gradient-state;
+  }
+}
+
+svg.text-white {
+  .color-foreground {
+    fill: $white;
   }
 }

@@ -1,25 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Navbar({}) {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
         <div className="container">
-          <a
-            className="navbar-brand"
-            href="https://demos.creative-tim.com/soft-ui-design-system-pro/presentation.html"
-            rel="tooltip"
-            title="Charleston Pride"
-            data-placement="bottom"
-            target="_blank"
-          >
-            Charleston Pride
-          </a>
-          <a
-            href="https://www.creative-tim.com/product/soft-ui-design-system-pro#pricingCard"
-            className="btn btn-sm  bg-gradient-primary  btn-round mb-0 ms-auto d-lg-none d-block"
-          >
-            Buy Now
-          </a>
+          <Link href="/">
+            <a className="navbar-brand" href="#">
+              <Image
+                src="/images/logo.jpg"
+                alt="Charleston Pride"
+                width="300"
+                height="82"
+              ></Image>
+            </a>
+          </Link>
           <button
             className="navbar-toggler shadow-none ms-2"
             type="button"
@@ -73,10 +69,10 @@ export default function Navbar({}) {
             <ul className="navbar-nav d-lg-block d-none">
               <li className="nav-item">
                 <a
-                  href="https://www.creative-tim.com/product/soft-ui-design-system-pro#pricingCard"
+                  href="#"
                   className="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1"
                 >
-                  Buy Now
+                  Get Involved
                 </a>
               </li>
             </ul>
