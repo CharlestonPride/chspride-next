@@ -1,84 +1,83 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+import { Navbar, NavDropdown, Nav, Container, Button } from "react-bootstrap";
 
-export default function Navbar({}) {
+const Hamburger = () => {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
-        <div className="container">
-          <Link href="/">
-            <a className="navbar-brand" href="#">
-              <Image
-                src="/images/logo.jpg"
-                alt="Charleston Pride"
-                width="300"
-                height="82"
-              ></Image>
-            </a>
-          </Link>
-          <button
-            className="navbar-toggler shadow-none ms-2"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navigation"
-            aria-controls="navigation"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon mt-2">
-              <span className="navbar-toggler-bar bar1" />
-              <span className="navbar-toggler-bar bar2" />
-              <span className="navbar-toggler-bar bar3" />
-            </span>
-          </button>
-          <div
-            className="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0"
-            id="navigation"
-          >
-            <ul className="navbar-nav navbar-nav-hover mx-auto">
-              <li className="nav-item mx-2">
-                <a className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                  About Us
-                  <img
-                    src="/images/down-arrow-dark.svg"
-                    className="arrow ms-1"
-                  />
-                </a>
-              </li>
-              <li className="nav-item mx-2">
-                <a className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                  Sponsors
-                  <img
-                    src="/images/down-arrow-dark.svg"
-                    className="arrow ms-1"
-                  />
-                </a>
-              </li>
+    <span className="navbar-toggler-icon mt-2">
+      <span className="navbar-toggler-bar bar1" />
+      <span className="navbar-toggler-bar bar2" />
+      <span className="navbar-toggler-bar bar3" />
+    </span>
+  );
+};
 
-              <li className="nav-item mx-2">
-                <a className="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                  Get Involved
-                  <img
-                    src="/images/down-arrow-dark.svg"
-                    className="arrow ms-1"
-                  />
-                </a>
-              </li>
-            </ul>
+const NavLink = ({ href, children }) => {
+  return (
+    <Link href={href} passHref>
+      <Nav.Link>{children}</Nav.Link>
+    </Link>
+  );
+};
 
-            <ul className="navbar-nav d-lg-block d-none">
-              <li className="nav-item">
-                <a
-                  href="#"
-                  className="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1"
-                >
-                  Get Involved
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </>
+const NavDropdownItem = ({ href, children }) => {
+  return (
+    <Link href={href} passHref>
+      <NavDropdown.Item>{children}</NavDropdown.Item>
+    </Link>
+  );
+};
+
+const Brand = () => {
+  return (
+    <Link href="/">
+      <>
+        <Image
+          src="/images/logo.jpg"
+          alt="Charleston Pride"
+          width="239"
+          height="82"
+        ></Image>
+      </>
+    </Link>
+  );
+};
+
+const AboutUs = () => {
+  return (
+    <NavDropdown title="About Us" id="basic-nav-dropdown">
+      <NavDropdownItem href="/our-team">Our Team</NavDropdownItem>
+      <NavDropdown.Divider />
+      <NavDropdownItem href="#action/3.4">Serve on the Board</NavDropdownItem>
+    </NavDropdown>
+  );
+};
+
+export default function MainNavBar({}) {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container className="py-3">
+        <Navbar.Brand>
+          <Brand />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Hamburger />
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mx-auto">
+            <AboutUs />
+            <NavLink href="#link">Sponsors</NavLink>
+          </Nav>
+          <Nav>
+            <Link passHref href="/">
+              <Button className="bg-gradient-primary btn-round" size="sm">
+                Get Involved
+              </Button>
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

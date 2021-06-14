@@ -7,23 +7,23 @@
       cursor: pointer;
     }
 
-    .dropdown-toggle {
-      &:after {
-        content: "\f107";
-        font: normal normal normal 14px/1 FontAwesome;
-        border: none;
-        vertical-align: middle;
-        font-weight: $font-weight-bold;
-      }
-      &.show {
-        &:after {
-          transform: $dropdown-toggle-arrow-transform;
-        }
-      }
-      &:after {
-        transition: $dropdown-toggle-arrow-transition;
-      }
-    }
+    // .dropdown-toggle {
+    //   &:after {
+    //     content: "\f107";
+    //     font: normal normal normal 14px/1 FontAwesome;
+    //     border: none;
+    //     vertical-align: middle;
+    //     font-weight: $font-weight-bold;
+    //   }
+    //   &.show {
+    //     &:after {
+    //       transform: $dropdown-toggle-arrow-transform;
+    //     }
+    //   }
+    //   &:after {
+    //     transition: $dropdown-toggle-arrow-transition;
+    //   }
+    // }
   }
 
   .dropdown {

@@ -13,7 +13,15 @@ import SocialBar from "../components/modules/Social/SocialBar";
 import Smile from "../components/modules/Smile/Smile";
 import ConstantContactInline from "../components/modules/Contact/ConstantContact";
 import ContentSectionImageGallery from "../components/modules/ContentSection/ContentSectionImageGallery";
+import { Container } from "react-bootstrap";
+import styles from "./index.module.css";
+import AdCarousel from "../components/modules/Ad/AdCarousel";
 
+const style = `.background {
+  background-image: url(/images/header.jpg);
+  background-size: cover;
+  background-position: center 20%;
+}`;
 const DonateSection = () => {
   return (
     <ContentSectionStackedImage
@@ -85,49 +93,53 @@ const Store = () => {
 
 const Mission = () => {
   return (
-    <section className=" ">
-      <div className="container py-5">
-        <div className="row">
-          <div className="col-12 col-lg-6">
-            <div className="card bg-gradient-danger my-2">
-              <div className="card-body py-6">
-                <h2 className="text-white">Our Mission</h2>
-                <div className="col lead text-white">
-                  Our mission is to promote the visibility of the LGBTQ
-                  community by educating society, honoring our heritage,
-                  advocating for our culture, and celebrating our diverse
-                  society.
-                </div>
+    <Container className="my-5">
+      <div className="row">
+        <div className="col-12 col-lg-6">
+          <div className="card bg-gradient-danger my-2">
+            <div className="card-body py-6">
+              <h2 className="text-white">Our Mission</h2>
+              <div className="col lead text-white">
+                Our mission is to promote the visibility of the LGBTQ community
+                by educating society, honoring our heritage, advocating for our
+                culture, and celebrating our diverse society.
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-6">
-            <div className="card bg-gradient-warning my-2">
-              <div className="card-body py-6">
-                <h2 className="text-white">Our Purpose</h2>
-                <div className="col lead text-white">
-                  Our purpose is to highlight the uniqueness and diversity of
-                  our community through distinct events throughout the year
-                  promoting our history and culture, including the annual
-                  Charleston Pride Parade and Festival
-                </div>
+        </div>
+        <div className="col-12 col-lg-6">
+          <div className="card bg-gradient-warning my-2">
+            <div className="card-body py-6">
+              <h2 className="text-white">Our Purpose</h2>
+              <div className="col lead text-white">
+                Our purpose is to highlight the uniqueness and diversity of our
+                community through distinct events throughout the year promoting
+                our history and culture, including the annual Charleston Pride
+                Parade and Festival
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
+};
+
+const headerStyle = {
+  backgroundImage: `url(/images/header.jpg)`,
+  backgroundSize: `cover`,
+  backgroundPosition: `center 20%`,
 };
 
 const Home = () => {
   return (
     <Layout>
-      <Header />
+      <Header style={headerStyle} />
       <DonateSection />
       <FopSection />
+      <AdCarousel />
       <SocialBar />
-      <ConstantContactInline />
+      {/* <ConstantContactInline /> */}
       <Store />
       <Mission />
       <Smile />

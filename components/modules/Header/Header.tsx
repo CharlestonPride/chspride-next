@@ -1,16 +1,15 @@
 import React from "react";
-import styles from "./Header.module.css";
 
-export default function Header({}) {
+export default function Header({ style }) {
   return (
     <>
       <header>
         <div className="page-header section-height-100">
           <div
             className={
-              styles.background +
               " position-absolute fixed-top ms-auto w-75 h-100 z-index-0 d-block"
             }
+            style={style}
           ></div>
           <div className="container">
             <div className="row">

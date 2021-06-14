@@ -71,7 +71,7 @@ const Footer = ({}) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-3 mx-auto">
-            <FooterLink href="bylaws">Bylaws</FooterLink>
+            <FooterLink href="/bylaws">Bylaws</FooterLink>
           </div>
           <div className="col-lg-6 my-2 text-center">
             <SocialLink url={fbUrl} icon={faFacebook} />
