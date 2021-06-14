@@ -33,12 +33,12 @@ const Brand = () => {
   return (
     <Link href="/">
       <>
-        <Image
+        <img
           src="/images/logo.jpg"
           alt="Charleston Pride"
           width="239"
           height="82"
-        ></Image>
+        ></img>
       </>
     </Link>
   );

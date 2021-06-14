@@ -11,7 +11,7 @@ const Smile = ({}) => {
               Support <strong>Charleston Pride</strong> with every Amazon
               purchase.
             </h5>
-            <Image src="/images/smile.png" width={330} height={78}></Image>
+            <img src="/images/smile.png" width={330} height={78}></img>
           </div>
           <div className="col-lg-6 m-auto">
             <div className="row">

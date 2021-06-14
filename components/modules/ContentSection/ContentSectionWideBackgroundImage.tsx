@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { ThemeColors } from "../../../types";
-import Image from "next/image";
 
 type Props = {
   children?: ReactNode;
@@ -37,12 +36,7 @@ const ContentSectionWideBackgroundImage = ({
         </div>
       </div>
       <div className="position-absolute fixed-top ms-auto w-75 h-75 z-index-1 d-none d-sm-block me-n2">
-        <Image
-          className="border-radius-xl"
-          src={imageSrc}
-          alt={imageAlt}
-          layout="fill"
-        ></Image>
+        <img className="border-radius-xl" src={imageSrc} alt={imageAlt}></img>
       </div>
       <div className="container">
         <div className="row mt-7">

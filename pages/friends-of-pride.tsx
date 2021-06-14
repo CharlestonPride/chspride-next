@@ -116,7 +116,7 @@ const Gift = () => {
       </h3>
       <div className="row">
         <div className="col">
-          <Image
+          <img
             src="/images/friends/hat.png"
             alt="Friend of Pride Hat"
             width={300}
@@ -125,7 +125,7 @@ const Gift = () => {
           />
         </div>
         <div className="col">
-          <Image
+          <img
             src="/images/friends/shirt.png"
             alt="Friend of Pride Shirt"
             width={300}
@@ -134,7 +134,7 @@ const Gift = () => {
           />
         </div>
         <div className="col">
-          <Image
+          <img
             src="/images/friends/visor.png"
             alt="Friend of Pride Visor"
             width={300}
