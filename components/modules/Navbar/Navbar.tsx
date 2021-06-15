@@ -32,14 +32,12 @@ const NavDropdownItem = ({ href, children }) => {
 const Brand = () => {
   return (
     <Link href="/">
-      <>
-        <img
-          src="/images/logo.jpg"
-          alt="Charleston Pride"
-          width="239"
-          height="82"
-        ></img>
-      </>
+      <img
+        src="/images/logo.jpg"
+        alt="Charleston Pride"
+        width="239"
+        height="82"
+      ></img>
     </Link>
   );
 };
@@ -49,7 +47,9 @@ const AboutUs = () => {
     <NavDropdown title="About Us" id="basic-nav-dropdown">
       <NavDropdownItem href="/our-team">Our Team</NavDropdownItem>
       <NavDropdown.Divider />
-      <NavDropdownItem href="#action/3.4">Serve on the Board</NavDropdownItem>
+      <NavDropdownItem href="/serve-on-the-board">
+        Serve on the Board
+      </NavDropdownItem>
     </NavDropdown>
   );
 };

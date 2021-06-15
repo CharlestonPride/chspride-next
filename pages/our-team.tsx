@@ -68,10 +68,10 @@ const BoardMember = (memberData: Member) => {
       <Col lg="6" className="my-5">
         <Card className="card-profile card-plain">
           <Row>
-            <Col lg="5">
+            <Col xs="5">
               <Headshot {...memberData} />
             </Col>
-            <Col lg="7">
+            <Col xs="7">
               <Card.Body className="h-100 pt-5 pb-0">
                 <div className="d-flex flex-column align-items-start h-100">
                   <div className="mb-auto">
