@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 export default function Header({ style }) {
   return (
     <>
-      <header>
+      <header className="mb-7">
         <div className="page-header section-height-100">
           <div
             className={
@@ -11,18 +12,18 @@ export default function Header({ style }) {
             }
             style={style}
           ></div>
-          <div className="container">
+          <Container>
             <div className="row">
               <div className="col-lg-7 d-flex justify-content-center flex-column">
                 <div className="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
                   <h1 className="text-gradient text-primary">
                     Charleston Pride
                   </h1>
-                  <h1 className="mb-4">Bridge the Gap</h1>
+                  {/* <h1 className="mb-4">Bridge the Gap</h1> */}
                   <p className="lead pe-5 me-5">
-                    <strong>Pride Week 2021 </strong> START - END
+                    <strong>Pride Week 2021 </strong> Details Coming Soon
                   </p>
-                  <div className="buttons">
+                  {/* <div className="buttons">
                     <button
                       type="button"
                       className="btn bg-gradient-primary mt-4"
@@ -30,11 +31,11 @@ export default function Header({ style }) {
                       <i className="fas fa-arrow-up"></i>
                       More Info
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
-          </div>
+          </Container>
         </div>
       </header>
     </>

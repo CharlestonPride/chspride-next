@@ -29,7 +29,7 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
               </div>
               <div className="card-body p-sm-5">
                 {children}
-                <div className="card card-frame mt-4">
+                <div className="card card-frame mt-2">
                   <div className="card-body">
                     <iframe
                       title={title}

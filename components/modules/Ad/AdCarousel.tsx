@@ -6,7 +6,7 @@ type AdProps = {
 };
 
 const Ad = ({ label }: AdProps) => {
-  const smSrc = "https://via.placeholder.com/400x400?text=400x400+Ad+" + label;
+  const smSrc = "https://via.placeholder.com/400x300?text=400x300+Ad+" + label;
   const mdSrc = "https://via.placeholder.com/800x300?text=800x300+Ad+" + label;
   const lgSrc =
     "https://via.placeholder.com/1200x300?text=1200x300+Ad+" + label;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Smile = ({}) => {
   return (
-    <section className="my-5 py-5 bg-gradient-dark position-relative">
+    <section className="my-5 mt-lg-10 py-5 bg-gradient-dark position-relative">
       <span className="mask bg-gradient-dark opacity-8"></span>
       <div className="container position-relative z-index-2">
         <div className="row">

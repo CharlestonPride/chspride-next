@@ -11,7 +11,7 @@ type Props = ContentProps & {
 const ContentSectionStackedImage = (props: Props) => {
   if (props.orientation == Orientation.Left) {
     return (
-      <div className="container py-5">
+      <div className="container my-5 mb-lg-10">
         <div className="row">
           <div className="col-lg-6 col-md-8 order-2 order-md-2 order-lg-1">
             <div className="position-relative ms-md-5 mb-0 mb-md-7 mb-lg-0 d-none d-lg-block h-75">
@@ -38,7 +38,7 @@ const ContentSectionStackedImage = (props: Props) => {
     );
   } else {
     return (
-      <div className="container py-5">
+      <div className="container my-5 mb-lg-7">
         <div className="row ">
           <div className="col-lg-5 col-md-12 me-auto">
             <div className="p-3 pt-0">

@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
+import { Container } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
 
 type Props = {
@@ -38,16 +39,18 @@ const ContentSectionWideBackgroundImage = ({
       <div className="position-absolute fixed-top ms-auto w-75 h-75 z-index-1 d-none d-sm-block me-n2">
         <img className="border-radius-xl" src={imageSrc} alt={imageAlt}></img>
       </div>
-      <div className="container">
-        <div className="row mt-7">
-          <div className="col-lg-6 d-flex justify-content-center flex-column">
-            <div className="card card-body d-flex justify-content-center shadow-lg border-radius-lg p-5 blur align-items-center z-index-2 shadow-blur">
-              <h2 className={"text-gradient mb-4 text-" + color}>{title}</h2>
-              <div>{children}</div>
+      {children && (
+        <Container>
+          <div className="row mt-7">
+            <div className="col-lg-6 d-flex justify-content-center flex-column">
+              <div className="card card-body d-flex justify-content-center shadow-lg border-radius-lg p-5 blur align-items-center z-index-2 shadow-blur">
+                <h2 className={"text-gradient mb-4 text-" + color}>{title}</h2>
+                <div>{children}</div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </Container>
+      )}
     </div>
   );
 };

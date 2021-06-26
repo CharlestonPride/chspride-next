@@ -7,21 +7,24 @@ import {
   faHandHoldingUsd,
   faUserFriends,
   faShoppingCart,
+  faHandsHelping,
+  faHeart,
+  faStar,
+  faSmile,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/ContentSection/ContentSectionTwoColumn";
 import SocialBar from "../components/modules/Social/SocialBar";
 import Smile from "../components/modules/Smile/Smile";
 import ConstantContactInline from "../components/modules/Contact/ConstantContact";
 import ContentSectionImageGallery from "../components/modules/ContentSection/ContentSectionImageGallery";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import styles from "./index.module.css";
 import AdCarousel from "../components/modules/Ad/AdCarousel";
+import ContentSectionWideBackgroundImage from "../components/modules/ContentSection/ContentSectionWideBackgroundImage";
+import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
+import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
+import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
 
-const style = `.background {
-  background-image: url(/images/header.jpg);
-  background-size: cover;
-  background-position: center 20%;
-}`;
 const DonateSection = () => {
   return (
     <ContentSectionStackedImage
@@ -29,7 +32,7 @@ const DonateSection = () => {
       color="warning"
       description="Help Make Charleston Pride a Reality!"
       action={{ href: "/donate", text: "Donate" }}
-      imageSrc="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-city.jpg"
+      imageSrc="images/parade1.jpg"
       imageAlt="Donate"
       icon={faHandHoldingUsd}
       orientation={Orientation.Left}
@@ -56,7 +59,7 @@ const FopSection = () => {
       color="danger"
       description="Let's be Friends (with benefits)"
       action={{ href: "/friends-of-pride", text: "More Info" }}
-      imageSrc="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-city.jpg"
+      imageSrc="images/prism1.jpg"
       imageAlt="Donate"
       icon={faUserFriends}
       orientation={Orientation.Left}
@@ -67,6 +70,25 @@ const FopSection = () => {
         some extra perks along the way.
       </p>
     </ContentSectionTwoColumn>
+  );
+};
+
+const Volunteer = () => {
+  return (
+    <ContentSectionStackedImage
+      title="Volunteer with Pride"
+      color="info"
+      imageSrc="images/volunteer.jpg"
+      imageAlt="Volunteer with Pride"
+      icon={faHandsHelping}
+      orientation={Orientation.Left}
+      action={{ href: "/volunteer", text: "Volunteer" }}
+    >
+      <p className="lead">
+        As a volunteer, you will help ensure the success of events throughout
+        the year including fundraising events that will fund Pride Week.
+      </p>
+    </ContentSectionStackedImage>
   );
 };
 
@@ -91,42 +113,118 @@ const Store = () => {
   );
 };
 
-const Mission = () => {
+const Breaker1 = () => {
+  const itemA = { src: "images/venus.jpg", alt: "parade " };
+  const itemB = { src: "images/prism2.jpg", alt: "parade " };
   return (
-    <Container className="my-5">
-      <div className="row">
-        <div className="col-12 col-lg-6">
-          <div className="card bg-gradient-danger my-2">
-            <div className="card-body py-6">
-              <h2 className="text-white">Our Mission</h2>
-              <div className="col lead text-white">
-                Our mission is to promote the visibility of the LGBTQ community
-                by educating society, honoring our heritage, advocating for our
-                culture, and celebrating our diverse society.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-12 col-lg-6">
-          <div className="card bg-gradient-warning my-2">
-            <div className="card-body py-6">
-              <h2 className="text-white">Our Purpose</h2>
-              <div className="col lead text-white">
-                Our purpose is to highlight the uniqueness and diversity of our
-                community through distinct events throughout the year promoting
-                our history and culture, including the annual Charleston Pride
-                Parade and Festival
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Container>
+    <GallerySectionDualImage
+      itemA={itemA}
+      itemB={itemB}
+      variant={1}
+    ></GallerySectionDualImage>
+  );
+};
+
+const Breaker2 = () => {
+  const itemA = { src: "images/parade4.jpg", alt: "parade " };
+  const itemB = { src: "images/parade5.jpg", alt: "parade " };
+  return (
+    <GallerySectionDualImage
+      itemA={itemA}
+      itemB={itemB}
+      variant={2}
+    ></GallerySectionDualImage>
+  );
+};
+const Breaker3 = () => {
+  const itemA = { src: "images/vertical3.jpg", alt: "parade " };
+  const itemB = { src: "images/vertical1.jpg", alt: "parade " };
+  const itemC = { src: "images/vertical2.jpg", alt: "parade " };
+  return (
+    <GallerySectionTripleImages
+      itemA={itemA}
+      itemB={itemB}
+      itemC={itemC}
+      color="primary"
+    ></GallerySectionTripleImages>
+  );
+};
+
+const Breaker4 = () => {
+  return (
+    <GallerySectionSingleImage
+      src="images/prism3.jpg"
+      alt=""
+    ></GallerySectionSingleImage>
+  );
+};
+
+const Breaker5 = () => {
+  return (
+    <div className="mt-n6">
+      <GallerySectionSingleImage
+        src="images/mlk.jpg"
+        alt=""
+      ></GallerySectionSingleImage>
+    </div>
+  );
+};
+
+const Breaker6 = () => {
+  const itemA = { src: "images/parade6.jpg", alt: "parade " };
+  const itemB = { src: "images/parade7.jpg", alt: "parade " };
+  return (
+    <div className="mt-n6">
+      <GallerySectionDualImage
+        itemA={itemA}
+        itemB={itemB}
+        variant={1}
+      ></GallerySectionDualImage>
+    </div>
+  );
+};
+
+const OurMission = () => {
+  return (
+    <ContentSectionTwoColumn
+      title="Our Mission"
+      color="primary"
+      imageSrc="images/tte1.jpg"
+      imageAlt="Donate"
+      icon={faHeart}
+      orientation={Orientation.Right}
+    >
+      <p className="lead">
+        Our mission is to promote the visibility of the LGBTQ community by
+        educating society, honoring our heritage, advocating for our culture,
+        and celebrating our diverse society.
+      </p>
+    </ContentSectionTwoColumn>
+  );
+};
+
+const OurPurpose = () => {
+  return (
+    <ContentSectionStackedImage
+      title="Our Purpose"
+      color="success"
+      imageSrc="images/festival1.jpg"
+      imageAlt="Donate"
+      icon={faSmile}
+      orientation={Orientation.Right}
+    >
+      <p className="lead">
+        Our purpose is to highlight the uniqueness and diversity of our
+        community through distinct events throughout the year promoting our
+        history and culture, including the annual Charleston Pride Parade and
+        Festival
+      </p>
+    </ContentSectionStackedImage>
   );
 };
 
 const headerStyle = {
-  backgroundImage: `url(/images/header.jpg)`,
+  backgroundImage: `url(/images/manson2.jpg)`,
   backgroundSize: `cover`,
   backgroundPosition: `center 20%`,
 };
@@ -136,13 +234,22 @@ const Home = () => {
     <Layout>
       <Header style={headerStyle} />
       <DonateSection />
+      <Breaker3 />
       <FopSection />
-      <AdCarousel />
+      {/* <AdCarousel /> */}
       <SocialBar />
-      {/* <ConstantContactInline /> */}
+      <Volunteer />
+      <Breaker4 />
+      <ConstantContactInline />
       <Store />
-      <Mission />
+      <Breaker1 />
+      <OurMission />
+      <OurPurpose />
       <Smile />
+      <Breaker2 />
+
+      <Breaker5 />
+      <Breaker6 />
     </Layout>
   );
 };

@@ -4,12 +4,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
-const query =
-  "?utm_source=charleston_pride&utm_medium=website&utm_campaign=homepage";
-const fbUrl = "https://www.facebook.com/charlestonpride/" + query;
-const instagramUrl = "https://www.instagram.com/charlestonpride/" + query;
-const twitterUrl = "https://www.twitter.com/charlestonpride/" + query;
+import { fbUrl, instagramUrl, twitterUrl } from "../../../utils/socialMedia";
 
 const SocialBar = ({}) => {
   return (
@@ -17,11 +12,11 @@ const SocialBar = ({}) => {
       <div className="row mx-auto">
         <div className="col-md-6 ">
           <h4 className="mb-1">Thank you for your support!</h4>
-          <p className="lead mb-0">
+          <p className="lead ">
             Stay tuned to our socials for the latest updates.
           </p>
         </div>
-        <div className="col-md-6 d-flex align-items-center ">
+        <div className="col-md-6 d-flex align-items-center justify-content-around">
           <a
             href={fbUrl}
             className="btn btn-facebook me-2"

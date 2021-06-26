@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Navbar, NavDropdown, Nav, Container, Button } from "react-bootstrap";
+import { fbUrl, instagramUrl, twitterUrl } from "../../../utils/socialMedia";
 
 const Hamburger = () => {
   return (
@@ -33,10 +33,10 @@ const Brand = () => {
   return (
     <Link href="/">
       <img
-        src="/images/logo.jpg"
+        height="60px"
+        width="221px"
+        src="/images/logo_221x60.jpg"
         alt="Charleston Pride"
-        width="239"
-        height="82"
       ></img>
     </Link>
   );
@@ -44,12 +44,46 @@ const Brand = () => {
 
 const AboutUs = () => {
   return (
-    <NavDropdown title="About Us" id="basic-nav-dropdown">
+    <NavDropdown title="About Us" id="about-us">
       <NavDropdownItem href="/our-team">Our Team</NavDropdownItem>
+      <NavDropdownItem href="/bylaws">Our Bylaws</NavDropdownItem>
       <NavDropdown.Divider />
       <NavDropdownItem href="/serve-on-the-board">
         Serve on the Board
       </NavDropdownItem>
+    </NavDropdown>
+  );
+};
+
+const GetInvolved = () => {
+  return (
+    <NavDropdown title="Get Involved" id="get-involved">
+      <NavDropdownItem href="/friends-of-pride">
+        Become a Friend of Pride
+      </NavDropdownItem>
+      <NavDropdownItem href="/donate">Make a donation</NavDropdownItem>
+      <NavDropdownItem href="/store">Shop with Pride</NavDropdownItem>
+      <NavDropdownItem href="/volunteer">Volunteer with Pride</NavDropdownItem>
+    </NavDropdown>
+  );
+};
+
+const StayInTouch = () => {
+  return (
+    <NavDropdown title="Stay in Touch" id="stay-in-touch">
+      <NavDropdownItem href="/mailing-list">
+        Join our Mailing List
+      </NavDropdownItem>
+      <NavDropdown.Divider />
+      <NavDropdown.Item href={fbUrl} target="_blank">
+        Like us on Facebook
+      </NavDropdown.Item>
+      <NavDropdown.Item href={instagramUrl} target="_blank">
+        Follow us on Instagram
+      </NavDropdown.Item>
+      <NavDropdown.Item href={twitterUrl} target="_blank">
+        Follow us on Twitter
+      </NavDropdown.Item>
     </NavDropdown>
   );
 };
@@ -67,14 +101,15 @@ export default function MainNavBar({}) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <AboutUs />
-            <NavLink href="#link">Sponsors</NavLink>
+            <GetInvolved />
+            <StayInTouch />
           </Nav>
           <Nav>
-            <Link passHref href="/">
+            {/* <Link passHref href="/">
               <Button className="bg-gradient-primary btn-round" size="sm">
                 Get Involved
               </Button>
-            </Link>
+            </Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

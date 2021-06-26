@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {
@@ -8,12 +8,8 @@ import {
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMap } from "@fortawesome/free-solid-svg-icons";
-
-const query =
-  "?utm_source=charleston_pride&utm_medium=website&utm_campaign=homepage";
-const fbUrl = "https://www.facebook.com/charlestonpride/" + query;
-const instagramUrl = "https://www.instagram.com/charlestonpride/" + query;
-const twitterUrl = "https://www.twitter.com/charlestonpride/" + query;
+import { fbUrl, twitterUrl, instagramUrl } from "../../../utils/socialMedia";
+import { Container } from "react-bootstrap";
 
 type SocialProps = {
   url: string;
@@ -67,41 +63,43 @@ const Email = () => {
 const Footer = ({}) => {
   var [year] = useState(new Date().getFullYear());
   return (
-    <footer className="footer py-2">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 mx-auto">
-            <FooterLink href="/bylaws">Bylaws</FooterLink>
+    <>
+      <hr className="horizontal dark"></hr>
+      <footer className="footer py-2">
+        <Container>
+          <div className="row">
+            <div className="col-lg-4 mx-auto text-center">
+              <SocialLink url={fbUrl} icon={faFacebook} />
+              <SocialLink url={twitterUrl} icon={faTwitter} />
+              <SocialLink url={instagramUrl} icon={faInstagram} />
+            </div>
+            <div className="col-lg-4 my-2 text-center">
+              <p className="text-secondary">
+                Copyright © {year} Charleston Pride Festival, Inc. <br /> All
+                Rights Reserved.
+              </p>
+            </div>
+            <div className="col-lg-4 my-2">
+              <address>
+                <ul className="fa-ul">
+                  <Address />
+                  <Email />
+                </ul>
+              </address>
+            </div>
           </div>
-          <div className="col-lg-6 my-2 text-center">
-            <SocialLink url={fbUrl} icon={faFacebook} />
-            <SocialLink url={twitterUrl} icon={faTwitter} />
-            <SocialLink url={instagramUrl} icon={faInstagram} />
+          <div className="row">
+            <div className="col-8 mx-auto text-center mt-1">
+              <p className="mb-0 text-secondary">
+                Charleston Pride Festival, Inc. is a 501(c)(3) public charity
+                under the Internal Revenue Service Code of 1986 and the State of
+                South Carolina.
+              </p>
+            </div>
           </div>
-          <div className="col-lg-3 my-2">
-            <address>
-              <ul className="fa-ul">
-                <Address />
-                <Email />
-              </ul>
-            </address>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-8 mx-auto text-center mt-1">
-            <p className="text-secondary">
-              Copyright © {year} Charleston Pride Festival, Inc. All Rights
-              Reserved.
-            </p>
-            <p className="mb-0 text-secondary">
-              Charleston Pride Festival, Inc. is a 501(c)(3) public charity
-              under the Internal Revenue Service Code of 1986 and the State of
-              South Carolina.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+        </Container>
+      </footer>
+    </>
   );
 };
 export default Footer;
