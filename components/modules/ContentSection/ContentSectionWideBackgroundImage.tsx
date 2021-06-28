@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
 
 type Props = {
@@ -41,14 +41,14 @@ const ContentSectionWideBackgroundImage = ({
       </div>
       {children && (
         <Container>
-          <div className="row mt-7">
-            <div className="col-lg-6 d-flex justify-content-center flex-column">
+          <Row className="mt-7">
+            <Col lg="6" className="d-flex justify-content-center flex-column">
               <div className="card card-body d-flex justify-content-center shadow-lg border-radius-lg p-5 blur align-items-center z-index-2 shadow-blur">
                 <h2 className={"text-gradient mb-4 text-" + color}>{title}</h2>
                 <div>{children}</div>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Container>
       )}
     </div>

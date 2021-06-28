@@ -1,16 +1,18 @@
 import React from "react";
 import Layout from "../components/elements/Layout/Layout";
 import ExternalFrame from "../components/modules/ExternalFrame/ExternalFrame";
-import Image from "next/image";
+import { Row, Col } from "react-bootstrap";
 
 const Plans = () => {
   return (
     <>
-      <div className="col-lg-6 col-md-8 mx-auto text-center mb-5">
-        <h3 className="">Pick the best plan for you</h3>
-      </div>
-      <div className="row ">
-        <div className="col-md-6 ms-lg-auto mb-sm-0 mb-5">
+      <Row>
+        <Col md="8" lg="6" className="mx-auto text-center mb-5">
+          <h3 className="">Pick the best plan for you</h3>
+        </Col>
+      </Row>
+      <Row>
+        <Col md="6" className="ms-lg-auto mb-sm-0 mb-5">
           <div className="card text-center bg-gray-200">
             <div className="card-header bg-transparent">
               <h5 className="mt-4 mb-2">Rainbow</h5>
@@ -43,8 +45,8 @@ const Plans = () => {
               </ul>
             </div>
           </div>
-        </div>
-        <div className="col-md-6 me-lg-auto">
+        </Col>
+        <Col md="6" className="me-lg-auto">
           <div className="card text-center bg-gradient-danger">
             <div className="card-header bg-transparent">
               <h5 className="mt-4 mb-2 text-white">Double Rainbow</h5>
@@ -79,10 +81,10 @@ const Plans = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <div className="card my-5">
             <ol>
               <li>
@@ -102,8 +104,8 @@ const Plans = () => {
               </li>
             </ol>
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </>
   );
 };
@@ -114,8 +116,8 @@ const Gift = () => {
       <h3 className="text-center">
         Pick From One of the Following as Your Exclusive Gift
       </h3>
-      <div className="row">
-        <div className="col">
+      <Row>
+        <Col>
           <img
             src="/images/friends/hat.png"
             alt="Friend of Pride Hat"
@@ -123,8 +125,8 @@ const Gift = () => {
             height={300}
             className="border-radius-lg"
           />
-        </div>
-        <div className="col">
+        </Col>
+        <Col>
           <img
             src="/images/friends/shirt.png"
             alt="Friend of Pride Shirt"
@@ -132,8 +134,8 @@ const Gift = () => {
             height={300}
             className="border-radius-lg"
           />
-        </div>
-        <div className="col">
+        </Col>
+        <Col>
           <img
             src="/images/friends/visor.png"
             alt="Friend of Pride Visor"
@@ -141,8 +143,8 @@ const Gift = () => {
             height={300}
             className="border-radius-lg"
           />
-        </div>
-      </div>
+        </Col>
+      </Row>
     </>
   );
 };

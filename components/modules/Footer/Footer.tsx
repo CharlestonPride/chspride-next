@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMap } from "@fortawesome/free-solid-svg-icons";
 import { fbUrl, twitterUrl, instagramUrl } from "../../../utils/socialMedia";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 type SocialProps = {
   url: string;
@@ -67,36 +67,36 @@ const Footer = ({}) => {
       <hr className="horizontal dark"></hr>
       <footer className="footer py-2">
         <Container>
-          <div className="row">
-            <div className="col-lg-4 mx-auto text-center">
-              <SocialLink url={fbUrl} icon={faFacebook} />
-              <SocialLink url={twitterUrl} icon={faTwitter} />
-              <SocialLink url={instagramUrl} icon={faInstagram} />
-            </div>
-            <div className="col-lg-4 my-2 text-center">
-              <p className="text-secondary">
-                Copyright © {year} Charleston Pride Festival, Inc. <br /> All
-                Rights Reserved.
-              </p>
-            </div>
-            <div className="col-lg-4 my-2">
+          <Row>
+            <Col lg="4" className="my-2">
               <address>
                 <ul className="fa-ul">
                   <Address />
                   <Email />
                 </ul>
               </address>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-8 mx-auto text-center mt-1">
+            </Col>
+            <Col lg="4" className="my-2 text-center">
+              <p className="text-secondary">
+                Copyright © {year} Charleston Pride Festival, Inc. <br /> All
+                Rights Reserved.
+              </p>
+            </Col>
+            <Col lg="4" className="mx-auto text-center">
+              <SocialLink url={fbUrl} icon={faFacebook} />
+              <SocialLink url={twitterUrl} icon={faTwitter} />
+              <SocialLink url={instagramUrl} icon={faInstagram} />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs="8" className="mx-auto text-center mt-1">
               <p className="mb-0 text-secondary">
                 Charleston Pride Festival, Inc. is a 501(c)(3) public charity
                 under the Internal Revenue Service Code of 1986 and the State of
                 South Carolina.
               </p>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Container>
       </footer>
     </>

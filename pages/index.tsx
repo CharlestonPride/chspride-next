@@ -9,7 +9,6 @@ import {
   faShoppingCart,
   faHandsHelping,
   faHeart,
-  faStar,
   faSmile,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/ContentSection/ContentSectionTwoColumn";
@@ -17,10 +16,6 @@ import SocialBar from "../components/modules/Social/SocialBar";
 import Smile from "../components/modules/Smile/Smile";
 import ConstantContactInline from "../components/modules/Contact/ConstantContact";
 import ContentSectionImageGallery from "../components/modules/ContentSection/ContentSectionImageGallery";
-import { Container, Row, Col } from "react-bootstrap";
-import styles from "./index.module.css";
-import AdCarousel from "../components/modules/Ad/AdCarousel";
-import ContentSectionWideBackgroundImage from "../components/modules/ContentSection/ContentSectionWideBackgroundImage";
 import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
@@ -247,7 +242,6 @@ const Home = () => {
       <OurPurpose />
       <Smile />
       <Breaker2 />
-
       <Breaker5 />
       <Breaker6 />
     </Layout>

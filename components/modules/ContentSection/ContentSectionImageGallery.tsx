@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import { Content, ContentProps } from "./ContentSectionCore";
 
 type Props = ContentProps & {
@@ -12,25 +13,23 @@ type GalleryItem = {
 
 const ContentSectionImageGallery = (props: Props) => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-6 col-lg-4 my-auto">
+    <Container>
+      <Row>
+        <Col xs="6" lg="4" className="my-auto">
           <Content {...props}></Content>
-        </div>
-        <div className="col-6 d-block d-lg-none">
+        </Col>
+        <Col xs="6" className="d-block d-lg-none">
           <img className="img-fluid shadow" {...props.items[0]}></img>
-        </div>
-        <div className="col-lg-8 ps-5 pe-0 d-none d-lg-block">
-          <div
-            className={"row p-2 border-radius-xl bg-gradient-" + props.color}
-          >
-            <div className="col-lg-3 col-6 ">
+        </Col>
+        <Col lg="8" className="ps-5 pe-0 d-none d-lg-block">
+          <Row className={"p-2 border-radius-xl bg-gradient-" + props.color}>
+            <Col xs="6" lg="3">
               <img
                 className="w-100 border-radius-lg shadow mt-0 mt-lg-7"
                 {...props.items[0]}
               ></img>
-            </div>
-            <div className="col-lg-3 col-6">
+            </Col>
+            <Col xs="6" lg="3">
               <img
                 className="w-100 border-radius-lg shadow"
                 {...props.items[1]}
@@ -39,8 +38,8 @@ const ContentSectionImageGallery = (props: Props) => {
                 className="w-100 border-radius-lg shadow mt-4"
                 {...props.items[2]}
               ></img>
-            </div>
-            <div className="col-lg-3 col-6">
+            </Col>
+            <Col xs="6" lg="3">
               <img
                 className="w-100 border-radius-lg shadow mt-0 mt-lg-5"
                 {...props.items[3]}
@@ -49,8 +48,8 @@ const ContentSectionImageGallery = (props: Props) => {
                 className="w-100 border-radius-lg shadow mt-4"
                 {...props.items[4]}
               ></img>
-            </div>
-            <div className="col-lg-3 col-6">
+            </Col>
+            <Col xs="6" lg="3">
               <img
                 className="w-100 border-radius-lg shadow mt-3"
                 {...props.items[5]}
@@ -59,11 +58,11 @@ const ContentSectionImageGallery = (props: Props) => {
                 className="w-100 border-radius-lg shadow mt-4"
                 {...props.items[6]}
               ></img>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

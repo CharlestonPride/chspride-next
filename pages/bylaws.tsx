@@ -3,7 +3,7 @@ import Layout from "../components/elements/Layout/Layout";
 import WaveComponent from "../components/visual/WaveComponent";
 import { GetStaticProps } from "next";
 import markdownToHtml from "../utils/markdownToHtml";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 type Props = {
   content?: string;
 };
@@ -16,10 +16,10 @@ export const getStaticProps: GetStaticProps = async () => {
 const Bylaws = ({ content }: Props) => {
   return (
     <Layout title="Charleston Pride Bylaws">
-      <section className="pt-3 pt-md-5 pt-lg-7 pb-md-5 pb-lg-7">
+      <div className="pt-3 pt-md-5 pt-lg-7 pb-md-5 pb-lg-7">
         <Container fluid="lg">
           <Row>
-            <div className="col-lg-10 col-12 mx-auto">
+            <Col lg="10" className="mx-auto">
               <div className="card shadow-lg">
                 <div className="card-header p-5 position-relative bg-gradient-success">
                   <h1 className="text-white mb-0">Bylaws</h1>
@@ -35,10 +35,10 @@ const Bylaws = ({ content }: Props) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Col>
           </Row>
         </Container>
-      </section>
+      </div>
     </Layout>
   );
 };

@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
 import WaveComponent from "../../visual/WaveComponent";
 
@@ -15,7 +15,7 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
     <section className="pt-3 pt-md-5 pt-lg-7 pb-md-5 pb-lg-7">
       <Container fluid="lg">
         <Row>
-          <div className="col-lg-10 col-12 mx-auto">
+          <Col lg="10" className="mx-auto">
             <div className="card shadow-lg">
               <div
                 className={
@@ -41,7 +41,7 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </Col>
         </Row>
       </Container>
     </section>

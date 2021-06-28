@@ -1,5 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+
 export default function ObliqueHeader({ style, children }) {
   return (
     <header>
@@ -11,11 +12,15 @@ export default function ObliqueHeader({ style, children }) {
           ></div>
         </div>
         <Container>
-          <div className="row">
-            <div className="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+          <Row>
+            <Col
+              md="7"
+              lg="6"
+              className="d-flex justify-content-center flex-column"
+            >
               {children}
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Container>
       </div>
     </header>
