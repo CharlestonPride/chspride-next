@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
+import CloudImage from "../../elements/CloudImage/CloudImage";
 
 type Props = {
   children?: ReactNode;
@@ -37,7 +38,10 @@ const ContentSectionWideBackgroundImage = ({
         </div>
       </div>
       <div className="position-absolute fixed-top ms-auto w-75 h-75 z-index-1 d-none d-sm-block me-n2">
-        <img className="border-radius-xl" src={imageSrc} alt={imageAlt}></img>
+        <CloudImage
+          className="border-radius-lg"
+          imageId={imageSrc}
+        ></CloudImage>
       </div>
       {children && (
         <Container>

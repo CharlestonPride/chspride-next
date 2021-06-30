@@ -16,6 +16,7 @@
     "@next/mdx": "^10.2.3",
     "bootstrap": "^5.0.1",
     "chart.js": "^3.2.1",
+    "cloudinary-react": "^1.7.0",
     "fs": "0.0.1-security",
     "moment": "^2.29.1",
     "next": "10.2.0",

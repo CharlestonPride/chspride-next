@@ -7,7 +7,7 @@ import Layout from "../components/elements/Layout/Layout";
 import ObliqueHeader from "../components/modules/Header/ObliqueHeader";
 
 const headerStyle = {
-  backgroundImage: `url(/images/rainbow.jpg)`,
+  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/rainbow_qi42lu.jpg)`,
 };
 
 type Board = {

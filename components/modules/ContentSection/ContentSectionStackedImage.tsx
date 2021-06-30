@@ -2,10 +2,10 @@ import React from "react";
 import { Orientation } from "../../../types";
 import { Content, ContentProps } from "./ContentSectionCore";
 import { Container, Row, Col } from "react-bootstrap";
+import CloudImage from "../../elements/CloudImage/CloudImage";
 
 type Props = ContentProps & {
   imageSrc: string;
-  imageAlt: string;
   orientation?: Orientation;
 };
 
@@ -26,11 +26,10 @@ const ContentSectionStackedImage = (props: Props) => {
                   props.color
                 }
               ></div>
-              <img
-                src={props.imageSrc}
+              <CloudImage
+                imageId={props.imageSrc}
                 className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
-                alt={props.imageAlt}
-              ></img>
+              />
             </div>
           </Col>
           <Col
@@ -63,11 +62,10 @@ const ContentSectionStackedImage = (props: Props) => {
                   props.color
                 }
               ></div>
-              <img
-                src={props.imageSrc}
+              <CloudImage
+                imageId={props.imageSrc}
                 className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
-                alt={props.imageAlt}
-              ></img>
+              />
             </div>
           </Col>
         </Row>

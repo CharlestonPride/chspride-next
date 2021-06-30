@@ -1,18 +1,18 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import CloudImage from "../../elements/CloudImage/CloudImage";
 
 type GalleryItem = {
   src: string;
-  alt: string;
 };
 
-const GallerySectionSingleImage = ({ src, alt }: GalleryItem) => {
+const GallerySectionSingleImage = ({ src }: GalleryItem) => {
   return (
     <Container className="my-3">
       <Row>
         <Col xs={{ span: 10, offset: 1 }}>
           <div className="card ">
-            <img className="card-img" src={src} alt={alt} />
+            <CloudImage className="card-img" imageId={src}></CloudImage>
           </div>
         </Col>
       </Row>

@@ -27,8 +27,7 @@ const DonateSection = () => {
       color="warning"
       description="Help Make Charleston Pride a Reality!"
       action={{ href: "/donate", text: "Donate" }}
-      imageSrc="images/parade1.jpg"
-      imageAlt="Donate"
+      imageSrc="parade1_jxra2b"
       icon={faHandHoldingUsd}
       orientation={Orientation.Left}
     >
@@ -54,7 +53,7 @@ const FopSection = () => {
       color="danger"
       description="Let's be Friends (with benefits)"
       action={{ href: "/friends-of-pride", text: "More Info" }}
-      imageSrc="images/prism1.jpg"
+      imageSrc="prism1_w4rd0d"
       imageAlt="Donate"
       icon={faUserFriends}
       orientation={Orientation.Left}
@@ -73,8 +72,7 @@ const Volunteer = () => {
     <ContentSectionStackedImage
       title="Volunteer with Pride"
       color="info"
-      imageSrc="images/volunteer.jpg"
-      imageAlt="Volunteer with Pride"
+      imageSrc="volunteer_rthkil"
       icon={faHandsHelping}
       orientation={Orientation.Left}
       action={{ href: "/volunteer", text: "Volunteer" }}
@@ -93,13 +91,13 @@ const Store = () => {
       title="Shop With Pride"
       description="Purchase Charleston Pride Merchandise"
       items={[
-        { src: "images/store/shop1.png", alt: "pride shirt" },
-        { src: "images/store/shop2.png", alt: "pet bandana" },
-        { src: "images/store/shop3.png", alt: "pride tank top" },
-        { src: "images/store/shop4.png", alt: "anniversary shirt" },
-        { src: "images/store/shop5.png", alt: "water bottle" },
-        { src: "images/store/shop6.png", alt: "travel mug" },
-        { src: "images/store/shop7.png", alt: "trucker hat" },
+        { imageId: "store/shop1_ski6lo", alt: "pride shirt" },
+        { imageId: "store/shop2_oejqfj", alt: "pet bandana" },
+        { imageId: "store/shop3_lnk3cq", alt: "pride tank top" },
+        { imageId: "store/shop4_nokbus", alt: "anniversary shirt" },
+        { imageId: "store/shop5_sk3up1", alt: "water bottle" },
+        { imageId: "store/shop6_tpy5yy", alt: "travel mug" },
+        { imageId: "store/shop7_rr16tb", alt: "trucker hat" },
       ]}
       icon={faShoppingCart}
       color="info"
@@ -109,8 +107,8 @@ const Store = () => {
 };
 
 const Breaker1 = () => {
-  const itemA = { src: "images/venus.jpg", alt: "parade " };
-  const itemB = { src: "images/prism2.jpg", alt: "parade " };
+  const itemA = { src: "venus_gjzkui", alt: "parade " };
+  const itemB = { src: "prism2_tykmea", alt: "parade " };
   return (
     <GallerySectionDualImage
       itemA={itemA}
@@ -121,8 +119,8 @@ const Breaker1 = () => {
 };
 
 const Breaker2 = () => {
-  const itemA = { src: "images/parade4.jpg", alt: "parade " };
-  const itemB = { src: "images/parade5.jpg", alt: "parade " };
+  const itemA = { src: "parade4_ca3ohf", alt: "parade " };
+  const itemB = { src: "parade5_z1dc89", alt: "parade " };
   return (
     <GallerySectionDualImage
       itemA={itemA}
@@ -132,9 +130,9 @@ const Breaker2 = () => {
   );
 };
 const Breaker3 = () => {
-  const itemA = { src: "images/vertical3.jpg", alt: "parade " };
-  const itemB = { src: "images/vertical1.jpg", alt: "parade " };
-  const itemC = { src: "images/vertical2.jpg", alt: "parade " };
+  const itemA = { src: "vertical3_acysj6", alt: "parade " };
+  const itemB = { src: "vertical1_qbwp1d", alt: "parade " };
+  const itemC = { src: "vertical2_u5oj5a", alt: "parade " };
   return (
     <GallerySectionTripleImages
       itemA={itemA}
@@ -147,27 +145,21 @@ const Breaker3 = () => {
 
 const Breaker4 = () => {
   return (
-    <GallerySectionSingleImage
-      src="images/prism3.jpg"
-      alt=""
-    ></GallerySectionSingleImage>
+    <GallerySectionSingleImage src="prism3_j4vabq"></GallerySectionSingleImage>
   );
 };
 
 const Breaker5 = () => {
   return (
     <div className="mt-n6">
-      <GallerySectionSingleImage
-        src="images/mlk.jpg"
-        alt=""
-      ></GallerySectionSingleImage>
+      <GallerySectionSingleImage src="mlk_mvrqqc"></GallerySectionSingleImage>
     </div>
   );
 };
 
 const Breaker6 = () => {
-  const itemA = { src: "images/parade6.jpg", alt: "parade " };
-  const itemB = { src: "images/parade7.jpg", alt: "parade " };
+  const itemA = { src: "parade6_wlmi0c", alt: "parade " };
+  const itemB = { src: "parade7_xbzzqw", alt: "parade " };
   return (
     <div className="mt-n6">
       <GallerySectionDualImage
@@ -184,7 +176,7 @@ const OurMission = () => {
     <ContentSectionTwoColumn
       title="Our Mission"
       color="primary"
-      imageSrc="images/tte1.jpg"
+      imageSrc="tte1_oztwcd"
       imageAlt="Donate"
       icon={faHeart}
       orientation={Orientation.Right}
@@ -203,8 +195,7 @@ const OurPurpose = () => {
     <ContentSectionStackedImage
       title="Our Purpose"
       color="success"
-      imageSrc="images/festival1.jpg"
-      imageAlt="Donate"
+      imageSrc="festival1_lbf5mn"
       icon={faSmile}
       orientation={Orientation.Right}
     >
@@ -219,7 +210,7 @@ const OurPurpose = () => {
 };
 
 const headerStyle = {
-  backgroundImage: `url(/images/manson2.jpg)`,
+  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625013054/manson2_gjv7gs.jpg)`,
   backgroundSize: `cover`,
   backgroundPosition: `center 20%`,
 };
