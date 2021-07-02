@@ -21,7 +21,7 @@ const MailingList = () => {
                   <div className="card-body">
                     <div
                       className="ctct-inline-form"
-                      data-form-id="e7fadf73-5f44-49a4-9fcc-bd7174e9b8f4"
+                      data-form-id="671d80e8-605a-47ca-b2c6-0d1a9d880026"
                     ></div>
                   </div>
                 </div>

@@ -51,7 +51,8 @@ const FopSection = () => {
     <ContentSectionTwoColumn
       title="Friends of Pride"
       color="danger"
-      description="Let's be Friends (with benefits)"
+      description="Let's be Friends"
+      subDescription="(with benefits)"
       action={{ href: "/friends-of-pride", text: "More Info" }}
       imageSrc="prism1_w4rd0d"
       imageAlt="Donate"
@@ -203,7 +204,7 @@ const OurPurpose = () => {
         Our purpose is to highlight the uniqueness and diversity of our
         community through distinct events throughout the year promoting our
         history and culture, including the annual Charleston Pride Parade and
-        Festival
+        Festival.
       </p>
     </ContentSectionStackedImage>
   );
