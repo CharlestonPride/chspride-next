@@ -13,6 +13,22 @@ export default function Layout({
   return (
     <>
       <Head>
+        <script
+          key="ga_script"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-120387138-2"
+        ></script>
+        <script
+          key="ga_init"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-120387138-2');`,
+          }}
+        />
+
         <title key="title">{title}</title>
         <meta key="description" name="description" content={description} />
 
