@@ -1,11 +1,12 @@
-import { Image } from "cloudinary-react";
+import { Image, Transformation } from "cloudinary-react";
 
 type ImageProps = {
   imageId: string;
-  className: string;
+  className?: string;
+  children?: Transformation;
 };
 
-const CloudImage = ({ imageId, className }: ImageProps) => {
+const CloudImage = ({ imageId, className, children }: ImageProps) => {
   return (
     <Image
       className={className}
@@ -16,7 +17,9 @@ const CloudImage = ({ imageId, className }: ImageProps) => {
       width="auto"
       crop="scale"
       responsiveUseBreakpoints="true"
-    ></Image>
+    >
+      {children}
+    </Image>
   );
 };
 
