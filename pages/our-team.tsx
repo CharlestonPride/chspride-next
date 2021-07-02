@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
+import CloudImage from "../components/elements/CloudImage/CloudImage";
 import Layout from "../components/elements/Layout/Layout";
 import ObliqueHeader from "../components/modules/Header/ObliqueHeader";
 
@@ -33,13 +34,10 @@ const Headshot = (memberData: Member) => {
     return (
       <div className="position-relative">
         <div className="blur-shadow-image">
-          <img
+          <CloudImage
+            imageId={"/board/" + memberData.id}
             className="w-100 rounded-3 shadow-lg"
-            src={
-              "https://chaspride.blob.core.windows.net/directors/" +
-              memberData.image
-            }
-          ></img>
+          ></CloudImage>
         </div>
       </div>
     );
@@ -52,7 +50,6 @@ const Headshot = (memberData: Member) => {
             memberData.lastName.charAt(0).toUpperCase()}
           <p>Coming Soon</p>
         </h2>
-        <div className="mask bg-gradient-info border-radius-lg"></div>
       </Card.Body>
     </Card>
   );
@@ -68,11 +65,11 @@ const BoardMember = (memberData: Member) => {
       <Col lg="6" className="my-5">
         <Card className="card-profile card-plain">
           <Row>
-            <Col xs="5">
+            <Col xs={{ span: 6, offset: 3 }} sm={{ span: 5, offset: 0 }}>
               <Headshot {...memberData} />
             </Col>
-            <Col xs="7">
-              <Card.Body className="h-100 pt-5 pb-0">
+            <Col xs="12" sm="7">
+              <Card.Body className="h-100 pt-lg-5 pb-0">
                 <div className="d-flex flex-column align-items-start h-100">
                   <div className="mb-auto">
                     <h5 className="font-weight-bolder mb-0">
@@ -85,8 +82,22 @@ const BoardMember = (memberData: Member) => {
                     <p>
                       <em className="text-sm">{memberData.pronouns}</em>
                     </p>
+                    <div className="d-md-none">
+                      <Button
+                        variant="info"
+                        className="me-2"
+                        href={
+                          "mailto:" + memberData.id + "@charlestonpride.org"
+                        }
+                      >
+                        <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                      </Button>
+                      <Button variant="outline-info" onClick={handleShow}>
+                        Bio
+                      </Button>
+                    </div>
                   </div>
-                  <div className="">
+                  <div className="d-none d-md-block">
                     <Button
                       variant="info"
                       className="me-2"
@@ -95,7 +106,7 @@ const BoardMember = (memberData: Member) => {
                       <FontAwesomeIcon icon={faEnvelope} size="lg" />
                     </Button>
                     <Button variant="outline-info" onClick={handleShow}>
-                      {"More about " + memberData.firstName}
+                      Bio
                     </Button>
                   </div>
                 </div>
@@ -163,7 +174,7 @@ function OurTeam({ board }: InferGetStaticPropsType<typeof getStaticProps>) {
         </Row>
         <Row>
           {board.executives.map((boardMember) => {
-            return <BoardMember {...boardMember} />;
+            return <BoardMember {...boardMember} key={boardMember.id} />;
           })}
         </Row>
         <Row>
@@ -173,7 +184,7 @@ function OurTeam({ board }: InferGetStaticPropsType<typeof getStaticProps>) {
         </Row>
         <Row>
           {board.members.map((boardMember) => {
-            return <BoardMember {...boardMember} />;
+            return <BoardMember {...boardMember} key={boardMember.id} />;
           })}
         </Row>
       </Container>

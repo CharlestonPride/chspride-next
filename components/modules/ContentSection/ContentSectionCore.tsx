@@ -9,6 +9,7 @@ export type ContentProps = {
   title: string;
   color: ThemeColors;
   description?: string;
+  subDescription?: string;
   icon?: IconDefinition;
   action?: Action;
 };
@@ -23,14 +24,29 @@ const Content = ({
   title,
   color,
   description,
+  subDescription,
   icon,
   action,
 }: ContentProps) => {
+  let descriptionElem = undefined;
+  if (description) {
+    if (subDescription) {
+      descriptionElem = (
+        <>
+          <h3>{description}</h3>
+          <h3 className="mb-4">{subDescription}</h3>
+        </>
+      );
+    } else {
+      descriptionElem = <h3 className="mb-4">{description}</h3>;
+    }
+  }
+
   return (
     <>
       {icon && <RoundShadowIcon color={color} icon={icon} />}
       <h3 className={"text-gradient mb-0 text-" + color}>{title}</h3>
-      {description && <h3 className="mb-4">{description}</h3>}
+      {descriptionElem}
       {children}
       {action && (
         <LinkGradientButton href={action.href} color={color}>

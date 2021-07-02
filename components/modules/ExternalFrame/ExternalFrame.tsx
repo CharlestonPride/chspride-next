@@ -13,7 +13,7 @@ type Props = {
 const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
   return (
     <section className="pt-3 pt-md-5 pt-lg-7 pb-md-5 pb-lg-7">
-      <Container fluid="lg">
+      <div>
         <Row>
           <Col lg="10" className="mx-auto">
             <div className="card shadow-lg">
@@ -27,7 +27,7 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
                   <WaveComponent />
                 </div>
               </div>
-              <div className="card-body p-sm-5">
+              <div className="card-body p-sm-5 d-none d-lg-block">
                 {children}
                 <div className="card card-frame mt-2">
                   <div className="card-body">
@@ -43,7 +43,17 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </div>
+      <div className="d-lg-none">
+        <div className="card mt-2 shadow-lg">
+          <iframe
+            title={title}
+            src={iframeSrc}
+            width="100%"
+            height="1000px"
+          ></iframe>
+        </div>
+      </div>
     </section>
   );
 };
