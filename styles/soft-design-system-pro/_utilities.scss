@@ -1,6 +1,11 @@
 @include media-breakpoint-up(xl) {
-  .w-lg-50 {
-    width: 50% !important;
+  .w-100 {
+    &.w-lg-50 {
+      width: 50% !important;
+    }
+    &.w-lg-75 {
+      width: 75% !important;
+    }
   }
 }
 
