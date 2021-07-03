@@ -25,9 +25,6 @@ export default function Header({ style }) {
                       Sunday, October 3, 2021
                     </small>
                   </h2>
-                  <p className="lead pe-sm-5 me-sm-5">
-                    <strong>More Details and Events Coming Soon </strong>
-                  </p>
                   {/* <div className="buttons">
                     <button
                       type="button"

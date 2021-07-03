@@ -10,6 +10,7 @@ import {
   faHandsHelping,
   faHeart,
   faSmile,
+  faFlag,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/ContentSection/ContentSectionTwoColumn";
 import SocialBar from "../components/modules/Social/SocialBar";
@@ -19,6 +20,9 @@ import ContentSectionImageGallery from "../components/modules/ContentSection/Con
 import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
+import { Col, Container, Row } from "react-bootstrap";
+import CloudImage from "../components/elements/CloudImage/CloudImage";
+import { Content } from "../components/modules/ContentSection/ContentSectionCore";
 
 const DonateSection = () => {
   return (
@@ -55,7 +59,6 @@ const FopSection = () => {
       subDescription="(with benefits)"
       action={{ href: "/friends-of-pride", text: "More Info" }}
       imageSrc="prism1_w4rd0d"
-      imageAlt="Donate"
       icon={faUserFriends}
       orientation={Orientation.Left}
     >
@@ -178,7 +181,6 @@ const OurMission = () => {
       title="Our Mission"
       color="primary"
       imageSrc="tte1_oztwcd"
-      imageAlt="Donate"
       icon={faHeart}
       orientation={Orientation.Right}
     >
@@ -216,10 +218,43 @@ const headerStyle = {
   backgroundPosition: `center 20%`,
 };
 
+const FestivalAnnouncement = () => {
+  return (
+    <Container className="my-5">
+      <Row>
+        <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
+          <Content title="" color="success" icon={faFlag}>
+            <p className="lead">
+              <strong>Charleston Pride</strong> is excited to announce the 2021
+              Pride Festival at Riverfront Park on Sunday October 3! Pride Week
+              details and information for sponsors and vendors coming soon! For
+              more information email{" "}
+              <a href="mailto:festival@charlestonpride.org">
+                festival@charlestonpride.org
+              </a>
+            </p>
+          </Content>
+        </Col>
+        <Col
+          xs={{ span: 8, offset: 2 }}
+          lg="4"
+          className="mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto"
+        >
+          <CloudImage
+            className="w-100 border-radius-lg shadow"
+            imageId="festival_ijkvk0"
+          ></CloudImage>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
 const Home = () => {
   return (
     <Layout>
       <Header style={headerStyle} />
+      <FestivalAnnouncement />
       <DonateSection />
       <Breaker3 />
       <FopSection />
