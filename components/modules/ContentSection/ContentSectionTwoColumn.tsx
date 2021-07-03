@@ -6,7 +6,6 @@ import { Content, ContentProps } from "./ContentSectionCore";
 
 type Props = ContentProps & {
   imageSrc: string;
-  imageAlt: string;
   orientation: Orientation;
 };
 

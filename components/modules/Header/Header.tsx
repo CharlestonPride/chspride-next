@@ -8,7 +8,7 @@ export default function Header({ style }) {
         <div className="page-header section-height-100">
           <div
             className={
-              " position-absolute fixed-top ms-auto w-75 h-100 z-index-0 d-block"
+              " position-absolute fixed-top ms-auto w-100 w-lg-75 h-100 z-index-0 d-block"
             }
             style={style}
           ></div>
@@ -17,12 +17,14 @@ export default function Header({ style }) {
               <div className="col-lg-7 d-flex justify-content-center flex-column">
                 <div className="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
                   <h1 className="text-gradient text-primary">
-                    Charleston Pride
+                    Charleston Pride Festival
                   </h1>
-                  {/* <h1 className="mb-4">Bridge the Gap</h1> */}
-                  <p className="lead pe-5 me-5">
-                    <strong>Pride Week 2021 </strong> Details Coming Soon
-                  </p>
+                  <h2 className="mb-4">
+                    Riverfront Park <br />
+                    <small className="text-muted">
+                      Sunday, October 3, 2021
+                    </small>
+                  </h2>
                   {/* <div className="buttons">
                     <button
                       type="button"
