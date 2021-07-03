@@ -17,6 +17,7 @@ const CloudImage = ({ imageId, className, children }: ImageProps) => {
       width="auto"
       crop="scale"
       responsiveUseBreakpoints="true"
+      secure="true"
     >
       {children}
     </Image>
