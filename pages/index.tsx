@@ -223,7 +223,7 @@ const FestivalAnnouncement = () => {
     <Container className="my-5">
       <Row>
         <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
-          <Content title="" color="success" icon={faFlag}>
+          <Content title="2021 Pride Festival" color="success" icon={faFlag}>
             <p className="lead">
               <strong>Charleston Pride</strong> is excited to announce the 2021
               Pride Festival at Riverfront Park on Sunday October 3! Pride Week
