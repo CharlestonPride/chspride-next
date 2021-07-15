@@ -257,7 +257,7 @@ const Home = () => {
       <FestivalAnnouncement />
       <DonateSection />
       <Breaker3 />
-      <FopSection />
+      {/* <FopSection /> */}
       {/* <AdCarousel /> */}
       <SocialBar />
       <Volunteer />

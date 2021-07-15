@@ -24,9 +24,9 @@ const Donate = () => {
             <p>
               Due to this fact, we have to raise money throughout the year in
               order for Charleston Pride to be successful. If you cannot make it
-              to one of our fundraisers, you can now donate here! Also check out
-              our monthly donor program, Friends of Pride.
+              to one of our fundraisers, you can now donate here!
             </p>
+            {/* <p> Also check out our monthly donor program, Friends of Pride.</p> */}
           </Col>
         </Row>
       </ExternalFrame>

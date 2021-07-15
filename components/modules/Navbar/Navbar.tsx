@@ -57,9 +57,9 @@ const AboutUs = () => {
 const GetInvolved = () => {
   return (
     <NavDropdown title="Get Involved" id="get-involved">
-      <NavDropdownItem href="/friends-of-pride">
+      {/* <NavDropdownItem href="/friends-of-pride">
         Become a Friend of Pride
-      </NavDropdownItem>
+      </NavDropdownItem> */}
       <NavDropdownItem href="/donate">Make a donation</NavDropdownItem>
       <NavDropdownItem href="/store">Shop with Pride</NavDropdownItem>
       <NavDropdownItem href="/volunteer">Volunteer with Pride</NavDropdownItem>
