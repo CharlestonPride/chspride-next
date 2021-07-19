@@ -23,6 +23,7 @@ import GallerySectionSingleImage from "../components/modules/GallerySection/Gall
 import { Col, Container, Row } from "react-bootstrap";
 import CloudImage from "../components/elements/CloudImage/CloudImage";
 import { Content } from "../components/modules/ContentSection/ContentSectionCore";
+import AdCarousel from "../components/modules/Ad/AdCarousel";
 
 const DonateSection = () => {
   return (
@@ -258,8 +259,8 @@ const Home = () => {
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}
-      {/* <AdCarousel /> */}
       <SocialBar />
+      <AdCarousel />
       <Volunteer />
       <Breaker4 />
       <ConstantContactInline />
