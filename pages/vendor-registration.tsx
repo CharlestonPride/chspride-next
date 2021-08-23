@@ -13,7 +13,7 @@ const VendorRegistration = () => {
     >
       <ExternalFrame
         title="Charleston Pride Festival 2021 Vendor Registration"
-        color="info"
+        color="success"
         iframeSrc="https://registration.planningpod.com/?ssid=NDE0ODQ0"
         iframeHeight="2000px"
       >
