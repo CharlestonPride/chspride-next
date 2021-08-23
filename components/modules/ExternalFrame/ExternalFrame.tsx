@@ -8,9 +8,16 @@ type Props = {
   title: string;
   color: ThemeColors;
   iframeSrc: string;
+  iframeHeight?: string;
 };
 
-const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
+const ExternalFrame = ({
+  title,
+  color,
+  iframeSrc,
+  children,
+  iframeHeight = "1000px",
+}: Props) => {
   return (
     <section className="pt-3 pt-md-5 pt-lg-7 pb-md-5 pb-lg-7">
       <div>
@@ -27,15 +34,15 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
                   <WaveComponent />
                 </div>
               </div>
-              <div className="card-body p-sm-5 d-none d-lg-block">
+              <div className="card-body p-sm-5 ">
                 {children}
-                <div className="card card-frame mt-2">
+                <div className="card card-frame mt-2 d-none d-lg-block">
                   <div className="card-body">
                     <iframe
                       title={title}
                       src={iframeSrc}
                       width="100%"
-                      height="1000px"
+                      height={iframeHeight}
                     ></iframe>
                   </div>
                 </div>
@@ -50,7 +57,7 @@ const ExternalFrame = ({ title, color, iframeSrc, children }: Props) => {
             title={title}
             src={iframeSrc}
             width="100%"
-            height="1000px"
+            height={iframeHeight}
           ></iframe>
         </div>
       </div>
