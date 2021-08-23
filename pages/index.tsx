@@ -234,6 +234,19 @@ const FestivalAnnouncement = () => {
                 festival@charlestonpride.org
               </a>
             </p>
+            <h4>Calling Queer Artist of Charleston</h4>
+            <p>
+              Charleston Pride will be focusing and highlighting our local
+              entertainment this year! If you are interested in performing at
+              any of the events on October 3rd 2021, fill out{" "}
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeMrM88AyA3R4Qhndg7GSwKGiUlq4gtC916z0PGhApRepS2Xw/viewform?usp=sf_link"
+              >
+                this
+              </a>{" "}
+              form.
+            </p>
           </Content>
         </Col>
         <Col
