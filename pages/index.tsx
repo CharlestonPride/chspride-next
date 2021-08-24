@@ -23,6 +23,8 @@ import GallerySectionSingleImage from "../components/modules/GallerySection/Gall
 import { Col, Container, Row } from "react-bootstrap";
 import CloudImage from "../components/elements/CloudImage/CloudImage";
 import { Content } from "../components/modules/ContentSection/ContentSectionCore";
+import AdCarousel from "../components/modules/Ad/AdCarousel";
+import { LinkGradientButton } from "../components/elements/Button/Button";
 
 const DonateSection = () => {
   return (
@@ -227,25 +229,19 @@ const FestivalAnnouncement = () => {
             <p className="lead">
               <strong>Charleston Pride</strong> is excited to announce the 2021
               Pride Festival at Riverfront Park on Sunday October 3! Pride Week
-              details and information for sponsors and vendors coming soon! For
-              more information email{" "}
+              details and information for sponsors coming soon! For more
+              information email{" "}
               <a href="mailto:festival@charlestonpride.org">
                 festival@charlestonpride.org
               </a>
             </p>
-            <h4>Calling Queer Artist of Charleston</h4>
+            <h4>Vendor Registration</h4>
             <p>
-              Charleston Pride will be focusing and highlighting our local
-              entertainment this year! If you are interested in performing at
-              any of the events on October 3rd 2021, fill out{" "}
-              <a
-                target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeMrM88AyA3R4Qhndg7GSwKGiUlq4gtC916z0PGhApRepS2Xw/viewform?usp=sf_link"
-              >
-                this
-              </a>{" "}
-              form.
+              Vendor registration for the 2021 Pride Festival is now available!
             </p>
+            <LinkGradientButton href="/vendor-registration" color="success">
+              Register
+            </LinkGradientButton>
           </Content>
         </Col>
         <Col
@@ -271,8 +267,8 @@ const Home = () => {
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}
-      {/* <AdCarousel /> */}
       <SocialBar />
+      {/* <AdCarousel /> */}
       <Volunteer />
       <Breaker4 />
       <ConstantContactInline />

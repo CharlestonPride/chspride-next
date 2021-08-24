@@ -87,6 +87,16 @@ const StayInTouch = () => {
   );
 };
 
+const PrideWeek = () => {
+  return (
+    <NavDropdown title="Pride Week" id="pride-week">
+      <NavDropdownItem href="/vendor-registration">
+        Vendor Registration
+      </NavDropdownItem>
+    </NavDropdown>
+  );
+};
+
 export default function MainNavBar({}) {
   return (
     <Navbar bg="light" expand="lg">
@@ -102,14 +112,9 @@ export default function MainNavBar({}) {
             <AboutUs />
             <GetInvolved />
             <StayInTouch />
+            <PrideWeek />
           </Nav>
-          <Nav>
-            {/* <Link passHref href="/">
-              <Button className="bg-gradient-primary btn-round" size="sm">
-                Get Involved
-              </Button>
-            </Link> */}
-          </Nav>
+          {/* <Nav></Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
