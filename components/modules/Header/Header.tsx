@@ -17,13 +17,11 @@ export default function Header({ style }) {
               <div className="col-lg-7 d-flex justify-content-center flex-column">
                 <div className="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
                   <h1 className="text-gradient text-primary">
-                    Charleston Pride Festival
+                    Charleston Pride
                   </h1>
                   <h2 className="mb-4">
-                    Riverfront Park <br />
-                    <small className="text-muted">
-                      Sunday, October 3, 2021
-                    </small>
+                    Pride Week <br />
+                    <small className="text-muted">Details coming soon</small>
                   </h2>
                   {/* <div className="buttons">
                     <button

@@ -10,7 +10,6 @@ import {
   faHandsHelping,
   faHeart,
   faSmile,
-  faFlag,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/ContentSection/ContentSectionTwoColumn";
 import SocialBar from "../components/modules/Social/SocialBar";
@@ -20,11 +19,7 @@ import ContentSectionImageGallery from "../components/modules/ContentSection/Con
 import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
-import { Col, Container, Row } from "react-bootstrap";
-import CloudImage from "../components/elements/CloudImage/CloudImage";
-import { Content } from "../components/modules/ContentSection/ContentSectionCore";
-import AdCarousel from "../components/modules/Ad/AdCarousel";
-import { LinkGradientButton } from "../components/elements/Button/Button";
+import { Container } from "react-bootstrap";
 
 const DonateSection = () => {
   return (
@@ -223,38 +218,39 @@ const headerStyle = {
 const FestivalAnnouncement = () => {
   return (
     <Container className="my-5">
-      <Row>
-        <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
-          <Content title="2021 Pride Festival" color="success" icon={faFlag}>
-            <p className="lead">
-              <strong>Charleston Pride</strong> is excited to announce the 2021
-              Pride Festival at Riverfront Park on Sunday October 3! Pride Week
-              details and information for sponsors coming soon! For more
-              information email{" "}
-              <a href="mailto:festival@charlestonpride.org">
-                festival@charlestonpride.org
-              </a>
-            </p>
-            <h4>Vendor Registration</h4>
-            <p>
-              Vendor registration for the 2021 Pride Festival is now available!
-            </p>
-            <LinkGradientButton href="/vendor-registration" color="success">
-              Register
-            </LinkGradientButton>
-          </Content>
-        </Col>
-        <Col
-          xs={{ span: 8, offset: 2 }}
-          lg="4"
-          className="mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto"
-        >
-          <CloudImage
-            className="w-100 border-radius-lg shadow"
-            imageId="festival_ijkvk0"
-          ></CloudImage>
-        </Col>
-      </Row>
+      <div className="card card-background card-background-mask-primary mt-5">
+        <div className="full-background"></div>
+        <div className="card-body pt-5 text-center">
+          <h1 className="text-white mb-2">2021 Pride Festival Update</h1>
+          <p className="lead">
+            It is with heavy hearts that <strong>Charleston Pride</strong> has
+            made the decision to postpone our annual Pride Parade as well as the
+            October 3rd Pride Festival at Riverfront Park. Originally, the
+            festival was moved to North Charleston to accommodate distance and
+            safety, but the rising Covid cases disallow holding a responsible
+            event for participants.
+          </p>
+          <p className="lead">
+            Several festivals in October have been postponed in the past week
+            out of health and safety concerns, both in South Carolina and
+            surrounding states. <strong>Charleston Pride</strong> agrees that
+            this is the best course of action to ensure the well-being of
+            everyone.
+          </p>
+          <p className="lead">
+            For the duration of the pandemic, we plan to execute smaller,
+            outdoor events and indoor-optional, for those comfortable. To
+            maintain both a safe and fun environment, we will implement strict
+            health-related protocols. Please understand that we did not make
+            this decision lightly and we look forward to gathering again as soon
+            as it is safer.
+          </p>
+          <p className="lead">
+            With love and pride,
+            <br /> Charleston Pride Board of Directors
+          </p>
+        </div>
+      </div>
     </Container>
   );
 };
