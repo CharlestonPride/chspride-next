@@ -21,17 +21,9 @@ export default function Header({ style }) {
                   </h1>
                   <h2 className="mb-4">
                     Pride Week <br />
-                    <small className="text-muted">Details coming soon</small>
+                    <small className="text-muted">Sept 25th - Oct 2nd</small>
                   </h2>
-                  {/* <div className="buttons">
-                    <button
-                      type="button"
-                      className="btn bg-gradient-primary mt-4"
-                    >
-                      <i className="fas fa-arrow-up"></i>
-                      More Info
-                    </button>
-                  </div> */}
+                  <div className="buttons"></div>
                 </div>
               </div>
             </div>

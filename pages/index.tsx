@@ -19,7 +19,7 @@ import ContentSectionImageGallery from "../components/modules/ContentSection/Con
 import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
-import { Container } from "react-bootstrap";
+import Schedule from "../components/modules/PrideGuide/Scedule";
 
 const DonateSection = () => {
   return (
@@ -215,51 +215,11 @@ const headerStyle = {
   backgroundPosition: `center 20%`,
 };
 
-const FestivalAnnouncement = () => {
-  return (
-    <Container className="my-5">
-      <div className="card card-background card-background-mask-primary mt-5">
-        <div className="full-background"></div>
-        <div className="card-body pt-5 text-center">
-          <h1 className="text-white mb-2">2021 Pride Festival Update</h1>
-          <p className="lead">
-            It is with heavy hearts that <strong>Charleston Pride</strong> has
-            made the decision to postpone our annual Pride Parade as well as the
-            October 3rd Pride Festival at Riverfront Park. Originally, the
-            festival was moved to North Charleston to accommodate distance and
-            safety, but the rising Covid cases disallow holding a responsible
-            event for participants.
-          </p>
-          <p className="lead">
-            Several festivals in October have been postponed in the past week
-            out of health and safety concerns, both in South Carolina and
-            surrounding states. <strong>Charleston Pride</strong> agrees that
-            this is the best course of action to ensure the well-being of
-            everyone.
-          </p>
-          <p className="lead">
-            For the duration of the pandemic, we plan to execute smaller,
-            outdoor events and indoor-optional, for those comfortable. To
-            maintain both a safe and fun environment, we will implement strict
-            health-related protocols. Please understand that we did not make
-            this decision lightly and we look forward to gathering again as soon
-            as it is safer.
-          </p>
-          <p className="lead">
-            With love and pride,
-            <br /> Charleston Pride Board of Directors
-          </p>
-        </div>
-      </div>
-    </Container>
-  );
-};
-
 const Home = () => {
   return (
     <Layout>
       <Header style={headerStyle} />
-      <FestivalAnnouncement />
+      <Schedule />
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}
