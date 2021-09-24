@@ -73,14 +73,14 @@ const bingo: Event = {
   what: "Bingo, Beers, and Bowling at The Alley",
   when: "Friday, October 1, Door 5:30pm, 6:30pm Bingo",
   where: "",
-  description: "",
+  description: "Hosted by Ava Clear",
   imageId: "1631859304899_pe7ymd",
 };
 const blockade: Event = {
-  what: "Charleston Blockade Pride Game",
-  when: "Saturday October 2",
-  where: "Location and Time TBD",
-  description: "",
+  what: "Charleston Blockade & Hurricanes Pride Games",
+  when: "Saturday October 2, Noon",
+  where: "Danny Jones Rec Center in North Charleston. ",
+  description: "Blockade kicks off at 12pm and Hurricanes kick off at 2pm.",
   imageId: "blockade_yskplf",
 };
 const prism: Event = {
@@ -89,7 +89,7 @@ const prism: Event = {
   where: "652 King Street, Charleston",
   description:
     "Join us for Charleston Pride's most popular party, the ✨Prism Party✨, at Union Station on Saturday, October 2 from 7-11 pm, featuring dancing, drag queens, and drinks! 💃👑🍹 The event will be indoor/outdoor, with the venue's garage doors kept open and areas available outdoors, weather permitting. Vaccination and masks are strongly encouraged. This is a limited capacity event so purchase tickets in advance to guarantee your attendance. The Prism Party is an 18+ event. IDs will be checked at the door.",
-  imageId: "prism_rtasoe",
+  imageId: "prism_iix5nn",
 };
 
 const EventCard = (props: EventProps) => {
