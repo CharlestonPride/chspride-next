@@ -41,9 +41,10 @@ const tour: Event = {
 };
 const trivia: Event = {
   what: "Let's Get Trivial: LGBTQ Trivia Night at Holy City Brewing",
-  when: "Monday, September 27, 7pm",
+  when: "Monday, September 27, 6:30pm",
   where: "1021 Aragon Ave, North Charleston",
-  description: "",
+  description:
+    "💡Let’s Get Trivial💡Join Charleston Pride at Holy City Brewing tonight, September 27, for an evening of quizzy and boozy fun. 🧠🍻🎉 LGBTQ Trivia hosted by the wonderful Shawna Jarrett and Melody Lucas will take place entirely outdoors (weather permitting). $1 of every 🍻✨HCB Sparkly Princess✨🍻 goes to Charleston Pride.",
   imageId: "1631795725381_zvl0jz",
 };
 const taco: Event = {
@@ -81,7 +82,7 @@ const blockade: Event = {
   when: "Saturday October 2, Noon",
   where: "Danny Jones Rec Center in North Charleston. ",
   description: "Blockade kicks off at 12pm and Hurricanes kick off at 2pm.",
-  imageId: "blockade_yskplf",
+  imageId: "rugby_qn7l9d",
 };
 const prism: Event = {
   what: "Prism Party at Union Station",
