@@ -10,6 +10,7 @@ import {
   faHandsHelping,
   faHeart,
   faSmile,
+  faGrinHearts,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/ContentSection/ContentSectionTwoColumn";
 import SocialBar from "../components/modules/Social/SocialBar";
@@ -83,6 +84,25 @@ const Volunteer = () => {
         the year including fundraising events that will fund Pride Week.
       </p>
     </ContentSectionStackedImage>
+  );
+};
+
+const Serve = () => {
+  return (
+    <ContentSectionTwoColumn
+      title="Serve on the Board"
+      color="danger"
+      imageSrc="board_qqnhnx"
+      icon={faGrinHearts}
+      orientation={Orientation.Left}
+      action={{ href: "/serve-on-the-board", text: "Apply" }}
+    >
+      <p className="lead">
+        As a member of the board, you will work with other board members to plan
+        various fundraising events throughout the year; engage sponsors and
+        community members; and plan and execute Pride Week events.
+      </p>
+    </ContentSectionTwoColumn>
   );
 };
 
@@ -219,7 +239,8 @@ const Home = () => {
   return (
     <Layout>
       <Header style={headerStyle} />
-      <Schedule />
+      {/* <Schedule /> */}
+      <Serve />
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}

@@ -20,7 +20,8 @@ export default function Header({ style }) {
                     Charleston Pride
                   </h1>
                   <h2 className="mb-4">
-                    Pride Week <br />
+                    Pride Week 2021
+                    <br />
                     <small className="text-muted">Sept 25th - Oct 2nd</small>
                   </h2>
                   <div className="buttons"></div>
