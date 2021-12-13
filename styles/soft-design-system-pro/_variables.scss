@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -308,8 +310,8 @@ $gradient: linear-gradient(
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer / 4,
-  2: $spacer / 2,
+  1: math.div($spacer, 4),
+  2: math.div($spacer, 2),
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
@@ -535,7 +537,7 @@ $text-sm-font-size: 0.875rem !default;
 $text-xs-font-size: 0.75rem !default;
 $p-font-size: 1rem !default;
 
-$headings-margin-bottom: $spacer / 2 !default;
+$headings-margin-bottom: math.div($spacer, 2) !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 400 !default;
@@ -1122,7 +1124,10 @@ $navbar-brand-font-size: $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) / 2 !default;
+$navbar-brand-padding-y: math.div(
+  ($nav-link-height - $navbar-brand-height),
+  2
+) !default;
 $navbar-brand-margin-right: 1rem !default;
 
 $navbar-toggler-padding-y: 0.25rem !default;
