@@ -35,7 +35,7 @@ const Headshot = (memberData: Member) => {
       <div className="position-relative">
         <div className="blur-shadow-image">
           <CloudImage
-            imageId={"/board/" + memberData.id}
+            imageId={"/board/" + memberData.image}
             className="w-100 rounded-3 shadow-lg"
           ></CloudImage>
         </div>
