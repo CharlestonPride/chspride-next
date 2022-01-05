@@ -9,6 +9,8 @@ type Props = {
   color: ThemeColors;
   iframeSrc: string;
   iframeHeight?: string;
+  enabled?: boolean;
+  disabledMessage?: string;
 };
 
 const ExternalFrame = ({
@@ -16,6 +18,8 @@ const ExternalFrame = ({
   color,
   iframeSrc,
   children,
+  disabledMessage = "",
+  enabled = true,
   iframeHeight = "1000px",
 }: Props) => {
   return (
@@ -38,12 +42,17 @@ const ExternalFrame = ({
                 {children}
                 <div className="card card-frame mt-2 d-none d-lg-block">
                   <div className="card-body">
-                    <iframe
-                      title={title}
-                      src={iframeSrc}
-                      width="100%"
-                      height={iframeHeight}
-                    ></iframe>
+                    {enabled && (
+                      <iframe
+                        title={title}
+                        src={iframeSrc}
+                        width="100%"
+                        height={iframeHeight}
+                      ></iframe>
+                    )}
+                    {!enabled && disabledMessage && (
+                      <h4 className="text-center">{disabledMessage}</h4>
+                    )}
                   </div>
                 </div>
               </div>
@@ -53,12 +62,17 @@ const ExternalFrame = ({
       </div>
       <div className="d-lg-none">
         <div className="card mt-2 shadow-lg">
-          <iframe
-            title={title}
-            src={iframeSrc}
-            width="100%"
-            height={iframeHeight}
-          ></iframe>
+          {enabled && (
+            <iframe
+              title={title}
+              src={iframeSrc}
+              width="100%"
+              height={iframeHeight}
+            ></iframe>
+          )}
+          {!enabled && disabledMessage && (
+            <h4 className="text-center">{disabledMessage}</h4>
+          )}
         </div>
       </div>
     </section>

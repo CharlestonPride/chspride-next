@@ -240,7 +240,7 @@ const Home = () => {
     <Layout>
       <Header style={headerStyle} />
       {/* <Schedule /> */}
-      <Serve />
+      {/* <Serve /> */}
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}

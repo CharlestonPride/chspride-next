@@ -13,6 +13,8 @@ const ServeOnTheBoard = () => {
         title="Serve on the Board of Directors"
         color="info"
         iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLScbBqRFiax63FW3t_1toWWZaedKDDOCusB7aOwcgPvz-Ao-SQ/viewform?embedded=true"
+        enabled={false}
+        disabledMessage="We are not accepting new applications at this time."
       >
         <p className="lead">
           The Charleston Pride Board of Directors is ultimately responsible for
