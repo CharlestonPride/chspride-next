@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, ColProps, Container, Row } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
 import CloudImage from "../../elements/CloudImage/CloudImage";
 
@@ -13,27 +13,49 @@ type Props = {
 type GalleryItem = {
   src: string;
   alt: string;
+  order: number;
 };
+
+function getColProps(order: number): ColProps {
+  if (order === 1) {
+    return { xs: "12", md: "6", lg: "4" };
+  } else if (order === 2) {
+    return { md: "6", lg: "4" };
+  }
+  return {
+    lg: "4",
+  };
+}
+
+function getImageClass(order: number): string {
+  if (order === 1) {
+    return "img-fluid border-radius-lg shadow";
+  }
+  if (order === 2) {
+    return "d-md-block d-none img-fluid border-radius-lg shadow";
+  }
+  return "d-lg-block d-none img-fluid border-radius-lg shadow";
+}
 
 const GallerySectionTripleImages = ({ itemA, itemB, itemC, color }: Props) => {
   return (
     <Container>
       <Row className={"py-2 border-radius-xl bg-gradient-" + color}>
-        <Col xs="12" md="6" lg="4">
+        <Col {...getColProps(itemA.order)}>
           <CloudImage
-            className="img-fluid border-radius-lg shadow"
+            className={getImageClass(itemA.order)}
             imageId={itemA.src}
           ></CloudImage>
         </Col>
-        <Col md="6" lg="4">
+        <Col {...getColProps(itemB.order)}>
           <CloudImage
-            className="d-md-block d-none img-fluid border-radius-lg shadow"
+            className={getImageClass(itemB.order)}
             imageId={itemB.src}
           ></CloudImage>
         </Col>
-        <Col lg="4">
+        <Col {...getColProps(itemC.order)}>
           <CloudImage
-            className="d-lg-block d-none img-fluid border-radius-lg shadow"
+            className={getImageClass(itemC.order)}
             imageId={itemC.src}
           ></CloudImage>
         </Col>

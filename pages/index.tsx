@@ -151,9 +151,35 @@ const Breaker2 = () => {
   );
 };
 const Breaker3 = () => {
-  const itemA = { src: "vertical3_acysj6", alt: "parade " };
-  const itemB = { src: "vertical1_qbwp1d", alt: "parade " };
-  const itemC = { src: "vertical2_u5oj5a", alt: "parade " };
+  const itemA = { src: "vertical3_acysj6", alt: "parade ", order: 1 };
+  const itemB = { src: "vertical1_qbwp1d", alt: "parade ", order: 2 };
+  const itemC = { src: "vertical2_u5oj5a", alt: "parade ", order: 3 };
+  return (
+    <GallerySectionTripleImages
+      itemA={itemA}
+      itemB={itemB}
+      itemC={itemC}
+      color="primary"
+    ></GallerySectionTripleImages>
+  );
+};
+
+const Parade = () => {
+  const itemA = {
+    src: "PARADE_ANNOUNCEMENT_SLIDE_1_z0vpl2",
+    alt: "parade ",
+    order: 3,
+  };
+  const itemB = {
+    src: "PARADE_ANNOUNCEMENT_SLIDE_2_ybtbxu",
+    alt: "parade ",
+    order: 2,
+  };
+  const itemC = {
+    src: "PARADE_ANNOUNCEMENT_SLIDE_3_ezyg3n",
+    alt: "parade ",
+    order: 1,
+  };
   return (
     <GallerySectionTripleImages
       itemA={itemA}
@@ -239,8 +265,9 @@ const Home = () => {
   return (
     <Layout>
       <Header style={headerStyle} />
+      <Parade />
       {/* <Schedule /> */}
-      {/* <Serve /> */}
+      <Serve />
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}
