@@ -20,7 +20,9 @@ import ContentSectionImageGallery from "../components/modules/ContentSection/Con
 import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
-import Schedule from "../components/modules/PrideGuide/Scedule";
+import { Container, Row, Col } from "react-bootstrap";
+import CloudImage from "../components/elements/CloudImage/CloudImage";
+import GallerySectionDualImageReveal from "../components/modules/GallerySection/GallerySectonDualImageReveal";
 
 const DonateSection = () => {
   return (
@@ -166,27 +168,21 @@ const Breaker3 = () => {
 
 const Parade = () => {
   const itemA = {
-    src: "PARADE_ANNOUNCEMENT_SLIDE_1_z0vpl2",
-    alt: "parade ",
-    order: 3,
+    src: "PARADE_ANNOUNCEMENT_SLIDE_1_ogk2md",
+    alt: "parade announcement part 1",
   };
   const itemB = {
-    src: "PARADE_ANNOUNCEMENT_SLIDE_2_ybtbxu",
-    alt: "parade ",
-    order: 2,
+    src: "PARADE_ANNOUNCEMENT_SLIDE_2_j5iigl",
+    alt: "parade announcement part 2",
   };
   const itemC = {
-    src: "PARADE_ANNOUNCEMENT_SLIDE_3_ezyg3n",
-    alt: "parade ",
-    order: 1,
+    src: "PARADE_ANNOUNCEMENT_STANDALONE_V2_dz1cig",
+    alt: "parade announcement full",
   };
+
+  const items = { itemA, itemB, itemC };
   return (
-    <GallerySectionTripleImages
-      itemA={itemA}
-      itemB={itemB}
-      itemC={itemC}
-      color="primary"
-    ></GallerySectionTripleImages>
+    <GallerySectionDualImageReveal {...items}></GallerySectionDualImageReveal>
   );
 };
 
