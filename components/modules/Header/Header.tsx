@@ -22,7 +22,7 @@ export default function Header({ style }) {
                   <h2 className="mb-4">
                     Pride Week
                     <br />
-                    <small className="text-muted">June 2022</small>
+                    <small className="text-muted">Fall 2022</small>
                   </h2>
                   <div className="buttons"></div>
                 </div>

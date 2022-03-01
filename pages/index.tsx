@@ -182,7 +182,27 @@ const Parade = () => {
 
   const items = { itemA, itemB, itemC };
   return (
-    <GallerySectionDualImageReveal {...items}></GallerySectionDualImageReveal>
+    <>
+      <GallerySectionDualImageReveal {...items}></GallerySectionDualImageReveal>
+      <Container>
+        <div className="card card-background card-background-mask-primary mt-5">
+          <div className="full-background"></div>
+          <div className="card-body pt-5 text-center">
+            <h1 className="text-white mb-2">Charleston Pride Parade</h1>
+            <p className="lead">
+              Charleston Pride is excited to announce that we will be having our
+              annual Pride Parade during Pride Month on June 25, 2022. After
+              much deliberation and consideration of community feedback
+              surrounding celebrations during National Pride Month, the Board of
+              Directors has decided to walk down historic King Street in June
+              and highlight other events during Pride Week in the fall as
+              regularly scheduled. Parade registration options will be available
+              in mid-March.
+            </p>
+          </div>
+        </div>
+      </Container>
+    </>
   );
 };
 
