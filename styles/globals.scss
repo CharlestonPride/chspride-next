@@ -16,7 +16,7 @@
 @import "nucleo-svg";
 
 // Bootstrap Functions
-@import "soft-design-system-pro/bootstrap/functions";
+@import "bootstrap/scss/functions";
 
 // Custom Variables
 @import "soft-design-system-pro/custom/variables";
@@ -25,7 +25,7 @@
 @import "soft-design-system-pro/variables-extend";
 
 // Bootstrap Core
-@import "soft-design-system-pro/bootstrap/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 // Theme Core
 @import "soft-design-system-pro/theme-pro";
