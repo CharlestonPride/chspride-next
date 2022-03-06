@@ -1,5 +1,4 @@
-const withMDX = require("@next/mdx")();
-module.exports = withMDX({
+module.exports = {
   trailingSlash: true,
   exportPathMap: async function () {
     const paths = {
@@ -16,4 +15,4 @@ module.exports = withMDX({
 
     return paths;
   },
-});
+};
