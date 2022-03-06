@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React from "react";
-import Footer from "../../modules/Footer/Footer";
+import Footer from "../../modules/footer/footer";
+import MainNavBar from "../../modules/navbar/navbar";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import MainNavBar from "../../modules/Navbar/Navbar";
 
 export default function Layout({
   children,

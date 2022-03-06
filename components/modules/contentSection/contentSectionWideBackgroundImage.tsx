@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
-import CloudImage from "../../elements/CloudImage/CloudImage";
+import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type Props = {
   children?: ReactNode;

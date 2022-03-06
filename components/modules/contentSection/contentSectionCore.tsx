@@ -1,8 +1,8 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import React, { ReactNode } from "react";
 import { ThemeColors } from "../../../types";
-import { LinkGradientButton } from "../../elements/Button/Button";
-import { RoundShadowIcon } from "../../elements/Icon/Icon";
+import { LinkGradientButton } from "../../elements/button/button";
+import { RoundShadowIcon } from "../../elements/icon/icon";
 
 export type ContentProps = {
   children?: ReactNode | ReactNode[];

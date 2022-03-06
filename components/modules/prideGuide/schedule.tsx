@@ -1,7 +1,7 @@
 import React, { Children, ReactNode } from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import { LinkGradientButton } from "../../elements/Button/Button";
-import CloudImage from "../../elements/CloudImage/CloudImage";
+import { LinkGradientButton } from "../../elements/button/button";
+import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type Event = {
   what: string;

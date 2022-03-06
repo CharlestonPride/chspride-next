@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/elements/Layout/Layout";
-import WaveComponent from "../components/visual/WaveComponent";
+import Layout from "../components/elements/layout/layout";
+import WaveComponent from "../components/visual/waveComponent";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Bylaws = () => {

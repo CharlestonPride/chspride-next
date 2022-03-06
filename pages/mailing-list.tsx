@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
-import Layout from "../components/elements/Layout/Layout";
-import WaveComponent from "../components/visual/WaveComponent";
+import Layout from "../components/elements/layout/layout";
+import WaveComponent from "../components/visual/waveComponent";
 
 const MailingList = () => {
   return (

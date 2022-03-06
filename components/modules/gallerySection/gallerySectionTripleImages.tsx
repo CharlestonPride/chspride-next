@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, ColProps, Container, Row } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
-import CloudImage from "../../elements/CloudImage/CloudImage";
+import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type Props = {
   itemA: GalleryItem;
