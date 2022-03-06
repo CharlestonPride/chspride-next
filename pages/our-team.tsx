@@ -1,5 +1,6 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Moment from "react-moment";
 import { InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
@@ -11,22 +12,27 @@ const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/rainbow_qi42lu.jpg)`,
 };
 
-type Board = {
-  executives: Member[];
-  members: Member[];
+type Pronouns = {
+  subjective: string;
+  objective: string;
+  possessive: string;
 };
 
 type Member = {
   id: string;
+  active: boolean;
+  prefix: string;
   firstName: string;
   lastName: string;
+  suffix: string;
   title: string;
   executive: boolean;
   image: string;
   dateElected: string;
   dateElectedToBoard: string;
-  pronouns: string;
-  bio: string[];
+  pronouns: Pronouns;
+  bio: string;
+  order: number;
 };
 
 const Headshot = (memberData: Member) => {
@@ -55,6 +61,27 @@ const Headshot = (memberData: Member) => {
   );
 };
 
+const formatPronouns = (pronouns: Pronouns) => {
+  return `${titleCase(pronouns.subjective)}/${titleCase(
+    pronouns.objective
+  )}/${titleCase(pronouns.possessive)}`;
+};
+
+const titleCase = (word: string) => {
+  return word[0].toUpperCase() + word.substring(1).toLowerCase();
+};
+
+const formatName = (member: Member) => {
+  let name = member.firstName + " " + member.lastName;
+  if (member.prefix) {
+    name = member.prefix + " " + name;
+  }
+  if (member.suffix) {
+    name += " " + member.suffix;
+  }
+  return name;
+};
+
 const BoardMember = (memberData: Member) => {
   const [show, setShow] = useState(false);
 
@@ -73,14 +100,16 @@ const BoardMember = (memberData: Member) => {
                 <div className="d-flex flex-column align-items-start h-100">
                   <div className="mb-auto">
                     <h5 className="font-weight-bolder mb-0">
-                      {memberData.firstName + " " + memberData.lastName}
+                      {formatName(memberData)}
                     </h5>
 
                     <p className="text-uppercase font-weight-bold mb-0">
                       {memberData.title}
                     </p>
                     <p>
-                      <em className="text-sm">{memberData.pronouns}</em>
+                      <em className="text-sm">
+                        {formatPronouns(memberData.pronouns)}
+                      </em>
                     </p>
                     <div className="d-md-none">
                       <Button
@@ -122,16 +151,16 @@ const BoardMember = (memberData: Member) => {
         <Modal.Body>
           <p>
             <strong>Elected to Position: </strong>
-            {memberData.dateElected}
+            <Moment format="MMMM YYYY">{memberData.dateElected}</Moment>
           </p>
           <p>
             <strong>Served on Board Since: </strong>
-            {memberData.dateElectedToBoard}
+            <Moment format="MMMM YYYY">{memberData.dateElectedToBoard}</Moment>
           </p>
-          {memberData.bio.map((b) => (
+          {memberData.bio?.split(/\r?\n/).map((b) => (
             <p key={b}>{b}</p>
           ))}
-          {!memberData.bio.length && <p>Bio coming soon.</p>}
+          {!memberData.bio?.length && <p>Bio coming soon.</p>}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="info" onClick={handleClose}>
@@ -143,7 +172,10 @@ const BoardMember = (memberData: Member) => {
   );
 };
 
-function OurTeam({ board }: InferGetStaticPropsType<typeof getStaticProps>) {
+function OurTeam({
+  executives,
+  members,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout
       title="Our Team"
@@ -173,7 +205,7 @@ function OurTeam({ board }: InferGetStaticPropsType<typeof getStaticProps>) {
           </Col>
         </Row>
         <Row>
-          {board.executives.map((boardMember) => {
+          {executives.map((boardMember) => {
             return <BoardMember {...boardMember} key={boardMember.id} />;
           })}
         </Row>
@@ -183,7 +215,7 @@ function OurTeam({ board }: InferGetStaticPropsType<typeof getStaticProps>) {
           </Col>
         </Row>
         <Row>
-          {board.members.map((boardMember) => {
+          {members.map((boardMember) => {
             return <BoardMember {...boardMember} key={boardMember.id} />;
           })}
         </Row>
@@ -193,14 +225,27 @@ function OurTeam({ board }: InferGetStaticPropsType<typeof getStaticProps>) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(
-    "https://chspride-api.azurewebsites.net/api/directors"
-  );
-  const board: Board = await res.json();
+  const res = await fetch("/api/Directors");
+  const allMembers: Member[] = await res.json();
+  const executives = allMembers
+    .filter((m) => m.active && m.executive)
+    .sort((a, b) => a.order - b.order);
+  const members = allMembers
+    .filter((m) => m.active && !m.executive)
+    .sort((a, b) => {
+      if (a.dateElectedToBoard < b.dateElectedToBoard) {
+        return -1;
+      }
+      if (a.dateElectedToBoard > b.dateElectedToBoard) {
+        return 1;
+      }
+      return 0;
+    });
 
   return {
     props: {
-      board,
+      executives,
+      members,
     },
   };
 };

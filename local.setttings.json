@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "CosmosDbConnectionString": "AccountEndpoint=https://chspride-db-east.documents.azure.com:443/;AccountKey=jQkGQlaZQ8zyPCSzJTBRhOZNPomhtUhVu1Pm3VJN3CCIqVowReu6fP53cJ9Yjyn9HzxLaAUaFE87wBCrpuwqMw==;"
+  }
+}
