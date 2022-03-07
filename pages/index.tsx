@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/elements/Layout/Layout";
-import ContentSectionStackedImage from "../components/modules/ContentSection/ContentSectionStackedImage";
-import Header from "../components/modules/Header/Header";
+import Layout from "../components/elements/layout/layout";
+import ContentSectionStackedImage from "../components/modules/contentSection/contentSectionStackedImage";
+import Header from "../components/modules/header/header";
 import { Orientation } from "../types";
 import {
   faHandHoldingUsd,
@@ -12,17 +12,16 @@ import {
   faSmile,
   faGrinHearts,
 } from "@fortawesome/free-solid-svg-icons";
-import ContentSectionTwoColumn from "../components/modules/ContentSection/ContentSectionTwoColumn";
-import SocialBar from "../components/modules/Social/SocialBar";
-import Smile from "../components/modules/Smile/Smile";
-import ConstantContactInline from "../components/modules/Contact/ConstantContact";
-import ContentSectionImageGallery from "../components/modules/ContentSection/ContentSectionImageGallery";
-import GallerySectionDualImage from "../components/modules/GallerySection/GallerySectionDualImages";
-import GallerySectionTripleImages from "../components/modules/GallerySection/GallerySectionTripleImages";
-import GallerySectionSingleImage from "../components/modules/GallerySection/GallerySectionSingleImage";
+import ContentSectionTwoColumn from "../components/modules/contentSection/contentSectionTwoColumn";
+import SocialBar from "../components/modules/social/socialBar";
+import Smile from "../components/modules/smile/smile";
+import ConstantContactInline from "../components/modules/contact/constantContact";
+import ContentSectionImageGallery from "../components/modules/contentSection/contentSectionImageGallery";
+import GallerySectionDualImage from "../components/modules/gallerySection/gallerySectionDualImages";
+import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
+import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
 import { Container, Row, Col } from "react-bootstrap";
-import CloudImage from "../components/elements/CloudImage/CloudImage";
-import GallerySectionDualImageReveal from "../components/modules/GallerySection/GallerySectonDualImageReveal";
+import GallerySectionDualImageReveal from "../components/modules/gallerySection/gallerySectionDualImageReveal";
 
 const DonateSection = () => {
   return (

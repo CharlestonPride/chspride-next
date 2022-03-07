@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/elements/Layout/Layout";
+import Layout from "../components/elements/layout/layout";
 import { Container } from "react-bootstrap";
 
 const VendorRegistration = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import CloudImage from "../../elements/CloudImage/CloudImage";
-import { Content, ContentProps } from "./ContentSectionCore";
+import CloudImage from "../../elements/cloudImage/cloudImage";
+import { Content, ContentProps } from "./contentSectionCore";
 
 type Props = ContentProps & {
   items: GalleryItem[];

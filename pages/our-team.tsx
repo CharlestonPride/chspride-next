@@ -4,9 +4,9 @@ import Moment from "react-moment";
 import { InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
-import CloudImage from "../components/elements/CloudImage/CloudImage";
-import Layout from "../components/elements/Layout/Layout";
-import ObliqueHeader from "../components/modules/Header/ObliqueHeader";
+import CloudImage from "../components/elements/cloudImage/cloudImage";
+import Layout from "../components/elements/layout/layout";
+import ObliqueHeader from "../components/modules/header/obliqueHeader";
 
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/rainbow_qi42lu.jpg)`,

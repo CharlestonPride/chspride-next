@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CloudImage from "../../elements/CloudImage/CloudImage";
+import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type GalleryItem = {
   src: string;

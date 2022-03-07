@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import CloudImage from "../../elements/CloudImage/CloudImage";
+import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type Props = {
   itemA: GalleryItem;

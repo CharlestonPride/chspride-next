@@ -1,8 +1,8 @@
 import React from "react";
 import { Orientation } from "../../../types";
-import { Content, ContentProps } from "./ContentSectionCore";
+import { Content, ContentProps } from "./contentSectionCore";
 import { Container, Row, Col } from "react-bootstrap";
-import CloudImage from "../../elements/CloudImage/CloudImage";
+import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type Props = ContentProps & {
   imageSrc: string;

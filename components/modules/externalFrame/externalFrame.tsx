@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ThemeColors } from "../../../types";
-import WaveComponent from "../../visual/WaveComponent";
+import WaveComponent from "../../visual/waveComponent";
 
 type Props = {
   children?: ReactNode | ReactNode[];

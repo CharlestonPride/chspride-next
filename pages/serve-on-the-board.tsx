@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/elements/Layout/Layout";
-import ExternalFrame from "../components/modules/ExternalFrame/ExternalFrame";
+import Layout from "../components/elements/layout/layout";
+import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 import Link from "next/link";
 
 const ServeOnTheBoard = () => {
