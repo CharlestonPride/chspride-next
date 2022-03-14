@@ -12,7 +12,8 @@ const Donate = () => {
       <ExternalFrame
         title="Donate to Charleston Pride"
         color="info"
-        iframeSrc="https://app.etapestry.com/onlineforms/CharlestonPrideFestivalInc/donate.html"
+        iframeSrc="https://forms.donorsnap.com/form?id=5c8403f6-7043-4220-a717-b6ccbcafb936"
+        iframeHeight="900"
       >
         <Row>
           <Col md={{ span: 10, offset: 1 }}>
