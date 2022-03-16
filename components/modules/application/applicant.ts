@@ -38,7 +38,7 @@ export interface Applicant {
     size: number;
   };
   readBylaws: boolean;
-  recaptcha: boolean;
+  recaptcha: string;
 }
 
 export const applicantSchema = yup.object({
@@ -84,7 +84,7 @@ export const applicantSchema = yup.object({
     .oneOf([true], "You must be read the bylaws before applying"),
   file: yup
     .mixed()
-    .required("You must attach a resume.")
+    .required("You must attach a resume")
     .test(
       "fileSize",
       `File too large. Please select a file under 10MB`,
@@ -96,7 +96,7 @@ export const applicantSchema = yup.object({
       (value) =>
         value === null || (value && SUPPORTED_FORMATS.includes(value.type))
     ),
-  recaptcha: yup.boolean().required().oneOf([true]),
+  recaptcha: yup.string().nullable().required(),
 });
 
 export const initialValues: Applicant = {
@@ -126,5 +126,5 @@ export const initialValues: Applicant = {
   file: null,
   resume: null,
   readBylaws: false,
-  recaptcha: false,
+  recaptcha: null,
 };
