@@ -225,7 +225,9 @@ function OurTeam({
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.API_BASE_URL}/api/Directors`);
+  const res = await fetch(
+    "https://chspride-api.azurewebsites.net/api/Directors"
+  );
   const allMembers: Member[] = await res.json();
   const executives = allMembers
     .filter((m) => m.active && m.executive)
