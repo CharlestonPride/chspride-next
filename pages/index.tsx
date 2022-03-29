@@ -196,7 +196,7 @@ const Parade = () => {
               Directors has decided to walk down historic King Street in June
               and highlight other events during Pride Week in the fall as
               regularly scheduled. Parade registration options will be available
-              in mid-March.
+              in early April.
             </p>
           </div>
         </div>
