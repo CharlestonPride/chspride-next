@@ -11,6 +11,7 @@ import {
   faHeart,
   faSmile,
   faGrinHearts,
+  faFlag,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/contentSection/contentSectionTwoColumn";
 import SocialBar from "../components/modules/social/socialBar";
@@ -166,42 +167,24 @@ const Breaker3 = () => {
 };
 
 const Parade = () => {
-  const itemA = {
-    src: "PARADE_ANNOUNCEMENT_SLIDE_1_ogk2md",
-    alt: "parade announcement part 1",
-  };
-  const itemB = {
-    src: "PARADE_ANNOUNCEMENT_SLIDE_2_j5iigl",
-    alt: "parade announcement part 2",
-  };
-  const itemC = {
-    src: "PARADE_ANNOUNCEMENT_STANDALONE_V2_dz1cig",
-    alt: "parade announcement full",
-  };
-
-  const items = { itemA, itemB, itemC };
   return (
-    <>
-      <GallerySectionDualImageReveal {...items}></GallerySectionDualImageReveal>
-      <Container>
-        <div className="card card-background card-background-mask-primary mt-5">
-          <div className="full-background"></div>
-          <div className="card-body pt-5 text-center">
-            <h1 className="text-white mb-2">Charleston Pride Parade</h1>
-            <p className="lead">
-              Charleston Pride is excited to announce that we will be having our
-              annual Pride Parade during Pride Month on June 25, 2022. After
-              much deliberation and consideration of community feedback
-              surrounding celebrations during National Pride Month, the Board of
-              Directors has decided to walk down historic King Street in June
-              and highlight other events during Pride Week in the fall as
-              regularly scheduled. Parade registration options will be available
-              in early April.
-            </p>
-          </div>
-        </div>
-      </Container>
-    </>
+    <ContentSectionTwoColumn
+      title="Parade Registration Now Open"
+      color="warning"
+      description="Register Today!"
+      action={{ href: "/parade-registration", text: "Register" }}
+      imageSrc="2022/lvplxl"
+      icon={faFlag}
+      orientation={Orientation.Right}
+    >
+      <p>
+        On <strong>Saturday, June 25th, 2022</strong> we are excited to
+        celebrate Pride with our annual Pride Parade in historic Downtown
+        Charleston! Whether you and your organization would like to join and
+        walk in the parade, ride along in a vehicle, or create a unique themed
+        float, all are welcome to take part in the festivities.
+      </p>
+    </ContentSectionTwoColumn>
   );
 };
 
