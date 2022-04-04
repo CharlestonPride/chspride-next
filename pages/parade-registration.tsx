@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Layout from "../components/elements/layout/layout";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 import CloudImage from "../components/elements/cloudImage/cloudImage";
 
@@ -115,7 +115,7 @@ const ParadeRegistration = () => {
               <p>
                 Get your steps in with Pride with a walking entry in the parade.
                 This entry covers up to <strong>50</strong> members, with a
-                price as lows as $1 per walking member.
+                price as low as $1 per walking member.
               </p>
               <p>
                 (Note: If you have more than 50 walking members, you will need
