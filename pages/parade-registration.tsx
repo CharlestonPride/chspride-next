@@ -112,11 +112,15 @@ const ParadeRegistration = () => {
             className="mt-3"
           >
             <Entry title="Walking Entry" imageId="parade1_jxra2b" price={50}>
-              Get your steps in with Pride with a walking entry in the parade.
-              This entry covers up to <strong>50</strong> members, with a price
-              as lows as $1 per walking member. (Note: If you have more than 50
-              walking members, you will need to purchase additional walking
-              entries).
+              <p>
+                Get your steps in with Pride with a walking entry in the parade.
+                This entry covers up to <strong>50</strong> members, with a
+                price as lows as $1 per walking member.
+              </p>
+              <p>
+                (Note: If you have more than 50 walking members, you will need
+                to purchase additional walking entries).
+              </p>
             </Entry>
           </Col>
           <Col
@@ -126,12 +130,16 @@ const ParadeRegistration = () => {
             className="mt-3"
           >
             <Entry title="Vehicle Entry" imageId="parade_ryhqxt" price={100}>
-              Ride through in style with a vehicle entry in the parade. This
-              entry covers <strong>1</strong> vehicle and up to{" "}
-              <strong>5</strong> walking members. (Note: These walkers are for
-              crowd safety and driver assistance. If you have more than 5
-              walking members, you will need to purchase additional walking
-              entries).
+              <p>
+                Ride through in style with a vehicle entry in the parade. This
+                entry covers <strong>1</strong> vehicle and up to{" "}
+                <strong>5</strong> walking members.{" "}
+              </p>
+              <p>
+                (Note: These walkers are for crowd safety and driver assistance.
+                If you have more than 5 walking members, you will need to
+                purchase additional walking entries).
+              </p>
             </Entry>
           </Col>
           <Col
@@ -141,14 +149,19 @@ const ParadeRegistration = () => {
             className="mt-3"
           >
             <Entry title="Float Entry" imageId="parade7_xbzzqw" price={150}>
-              Are themed rides something your organization loves? Then the float
-              entry is the option for you! This entry covers <strong>1</strong>{" "}
-              float and up to
-              <strong>10</strong> walking members. Get those creative minds
-              working and design a fun float for your organization to ride
-              through Downtown Charleston. (Note: These walkers are for crowd
-              safety and driver assistance. If you have more than 10 walking
-              members, you will need to purchase additional walking entries).
+              <p>
+                Are themed rides something your organization loves? Then the
+                float entry is the option for you! This entry covers{" "}
+                <strong>1</strong> float and up to
+                <strong>10</strong> walking members. Get those creative minds
+                working and design a fun float for your organization to ride
+                through Downtown Charleston.
+              </p>
+              <p>
+                (Note: These walkers are for crowd safety and driver assistance.
+                If you have more than 10 walking members, you will need to
+                purchase additional walking entries).
+              </p>
             </Entry>
           </Col>
         </Row>
