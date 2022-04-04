@@ -38,7 +38,7 @@ const ParadeRegistration = () => {
         title="Charleston Pride Parade 2022 Registration"
         color="warning"
         iframeSrc="https://registration.planningpod.com/?ssid=NTA1NjAy"
-        iframeHeight="1500px"
+        iframeHeight="2000px"
       >
         <Row>
           <Col
