@@ -69,39 +69,84 @@ const ParadeRegistration = () => {
               </a>
             </p>
             <h3 className="text-gradient text-warning">Rules for the Parade</h3>
+            <p>
+              The person registering agrees that they have read the following
+              waiver and represents the group, business or organization
+              participating in the Charleston Pride Parade.
+            </p>
             <ul className="text-left">
-              <li>
-                Motorcycles cannot rev their engines. Violators will be fined.
-              </li>
               <li>
                 Floats must be secured and inspected for safety during transit.
               </li>
               <li>
-                Items cannot be thrown from floats. This includes any object
-                (flowers, candy, etc.). Participants may walk the route and hand
-                items out to Parade viewers.
+                No items (including flowers, candy, beads, silly string etc.)
+                may be thrown or given out from vehicles such as golf carts,
+                miniature cars, motorcycles, or any other motorized vehicles.
+                Candy or handouts must be given out by walkers who remain along
+                the outer edge of the parade route.
+              </li>
+              <li>
+                Groups will not purposefully stop to perform along the route;
+                all participants must keep the parade moving. Gaps in the parade
+                are a safety threat because they make spectators think the
+                parade is over and then they begin to walk in the street.
+              </li>
+              <li>
+                Riders on vehicles or floats cannot get on or off at any time
+                during the parade.
+              </li>
+              <li>
+                During the parade, all riders must be seated inside vehicles and
+                cannot stand or ride on the hood or roof of a vehicle. Riders on
+                floats must be seated unless there is a handrail available to
+                safely use. Participants may ride in the back of pickup trucks,
+                but the tailgate must be closed.
+              </li>
+              <li>
+                The driver of the vehicle should be at least 18 years of age,
+                possess a valid driver’s license, and have proof of current
+                automobile insurance. This will include all entries including
+                support vehicles such as golf carts, miniature cars,
+                motorcycles, and any other motorized vehicles.
+              </li>
+              <li>
+                All vehicles will adhere to applicable state and city laws
+                regarding safe vehicle operation and will be subject to citation
+                for unlawful and unsafe acts.
+              </li>
+              <li>
+                Motorcycles cannot rev their engines. Violators will be fined.
+              </li>
+              <li>
+                Floats must clear 6 feet below street/traffic lights. Max.
+                height is 11 feet. Please take the low hanging branches
+                surrounding the staging area into consideration during your
+                planning process.
               </li>
               <li>
                 Trash and debris must be cleaned up by your group, especially in
                 the waiting areas prior to the start of the Parade.
               </li>
-              <li>
-                No hanging out of sunroofs or riding on hoods/tops/backs of
-                vehicles. Participants may ride in the back of pickup trucks,
-                but the tailgate must be closed.
-              </li>
-              <li>
-                Floats must clear 6 feet below street/traffic lights. Max.
-                height is 11 feet. Please take the low hanging branches
-                surrounding the staging area at Wragg Mall into consideration
-                during your planning process.
-              </li>
               <li>No nudity or inappropriate attire allowed.</li>
               <li>
-                Parade participants should <strong>not</strong> engage with any
-                protesters along the parade route.
+                Parade participants should not engage with any protesters along
+                the parade route.
+              </li>
+              <li>
+                Parade event managers will distribute parade rules handout to
+                each entry during line up of parade.
               </li>
             </ul>
+            <p>
+              Charleston Pride Festival Inc. is working with the city of
+              Charleston, the city of Charleston Police Department, and the
+              Department of Transportation to ensure the highest level of safety
+              for all parade attendees and participants, while acknowledging
+              road lane closures for emergencies, homeowners, and tourism. If
+              any changes are made to the Parade route, applicable updates will
+              be listed on Charleston Pride Festival Inc's website and on all
+              social media accounts.
+            </p>
           </Col>
         </Row>
         <Row>

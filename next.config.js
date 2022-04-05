@@ -11,6 +11,7 @@ module.exports = {
       "/serve-on-the-board": { page: "/serve-on-the-board" },
       "/store": { page: "/store" },
       "/volunteer": { page: "/volunteer" },
+      "/parade-registration": { page: "/parade-registration" },
     };
 
     return paths;
