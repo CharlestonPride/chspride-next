@@ -42,7 +42,7 @@ const ParadeRegistration = () => {
       >
         <Row>
           <Col
-            xs={{ span: 6, offset: 3 }}
+            xs={{ span: 8, offset: 2 }}
             lg="4"
             className="mx-lg-0 mx-auto px-lg-0 px-md-0 "
           >
