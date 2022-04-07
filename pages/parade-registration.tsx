@@ -48,11 +48,11 @@ const ParadeRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block"
-              imageId="2022/awomtb"
+              imageId="2022/kcjo9j"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-lg-none"
-              imageId="2022/mqnelw"
+              imageId="2022/ng6q9f"
             ></CloudImage>
           </Col>
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
