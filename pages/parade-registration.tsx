@@ -54,6 +54,10 @@ const ParadeRegistration = () => {
               className="w-100 border-radius-lg shadow d-lg-none"
               imageId="2022/ng6q9f"
             ></CloudImage>
+            <CloudImage
+              className="w-100 border-radius-lg shadow d-none d-lg-block my-5"
+              imageId="2022/yioaai"
+            ></CloudImage>
           </Col>
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
             <p className="lead">
@@ -147,6 +151,14 @@ const ParadeRegistration = () => {
               be listed on Charleston Pride Festival Inc's website and on all
               social media accounts.
             </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <CloudImage
+              className="w-100 border-radius-lg shadow d-lg-none"
+              imageId="2022/yioaai"
+            ></CloudImage>
           </Col>
         </Row>
         <Row>
