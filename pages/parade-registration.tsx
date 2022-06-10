@@ -222,6 +222,16 @@ const ParadeRegistration = () => {
             </Entry>
           </Col>
         </Row>
+        <Row>
+          <p className="text-center lead mt-5">
+            Registrations for the Pride Parade are now closed. If you have any
+            questions please email{" "}
+            <a href="mailto:parade@charlestonpride.org">
+              parade@charlestonpride.org
+            </a>
+            .
+          </p>
+        </Row>
       </ExternalFrame>
     </Layout>
   );
