@@ -169,20 +169,19 @@ const Breaker3 = () => {
 const Parade = () => {
   return (
     <ContentSectionTwoColumn
-      title="Parade Registration Now Open"
+      title="Pride 2022 Parade"
       color="warning"
-      description="Register Today!"
-      action={{ href: "/parade-registration", text: "Register" }}
-      imageSrc="2022/lvplxl"
+      description="Saturday June 25 @ 9AM"
+      imageSrc="2022/yioaai"
       icon={faFlag}
       orientation={Orientation.Right}
     >
       <p>
         On <strong>Saturday, June 25th, 2022</strong> we are excited to
         celebrate Pride with our annual Pride Parade in historic Downtown
-        Charleston! Whether you and your organization would like to join and
-        walk in the parade, ride along in a vehicle, or create a unique themed
-        float, all are welcome to take part in the festivities.
+        Charleston! The parade will begin promptly at 9:00 AM and conclude by
+        11:00 AM. The parade will start at Wragg Square on Ann St. and conclude
+        at King St. and Market St.
       </p>
     </ContentSectionTwoColumn>
   );
