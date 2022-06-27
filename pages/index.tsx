@@ -166,22 +166,25 @@ const Breaker3 = () => {
   );
 };
 
-const Parade = () => {
+const Sponsorship = () => {
   return (
     <ContentSectionTwoColumn
-      title="Pride 2022 Parade"
+      title="Become a Sponsor"
       color="warning"
-      description="Saturday June 25 @ 9AM"
-      imageSrc="2022/yioaai"
+      imageSrc="festival_ktw1d1"
       icon={faFlag}
       orientation={Orientation.Right}
+      action={{ href: "/become-a-sponsor", text: "Sponsorship Opportunities" }}
     >
-      <p>
-        On <strong>Saturday, June 25th, 2022</strong> we are excited to
-        celebrate Pride with our annual Pride Parade in historic Downtown
-        Charleston! The parade will begin promptly at 9:00 AM and conclude by
-        11:00 AM. The parade will start at Wragg Square on Ann St. and conclude
-        at King St. and Market St.
+      <p className="lead">
+        Sponsorship is a great way to promote your commitment to equal rights
+        for all! The annual Charleston Pride Festival is the best-attended event
+        during Pride Week and it provides an opportunity to partner with local
+        businesses, non-profits, and other LGBTQIA+ organizations whose mission
+        is to bring awareness, promote diversity, and uplift the community. This
+        year, the Charleston Pride Festival will be celebrating its 12th
+        anniversary here in the Lowcountry and we would love to secure your
+        support through Sponsorship!
       </p>
     </ContentSectionTwoColumn>
   );
@@ -262,7 +265,7 @@ const Home = () => {
   return (
     <Layout>
       <Header style={headerStyle} />
-      <Parade />
+      <Sponsorship />
       {/* <Schedule /> */}
       <Serve />
       <DonateSection />
