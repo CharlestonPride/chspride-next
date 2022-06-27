@@ -176,7 +176,7 @@ const Sponsorships = () => {
                       <Check />
                     </tr>
                     <tr>
-                      <Perk>Charleston Pride Sponsor Logo</Perk>
+                      <Perk>Charleston Pride Sponsor Badge</Perk>
                       <Check />
                       <Check />
                       <Check />
