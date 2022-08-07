@@ -16,13 +16,10 @@ import {
 import ContentSectionTwoColumn from "../components/modules/contentSection/contentSectionTwoColumn";
 import SocialBar from "../components/modules/social/socialBar";
 import Smile from "../components/modules/smile/smile";
-import ConstantContactInline from "../components/modules/contact/constantContact";
 import ContentSectionImageGallery from "../components/modules/contentSection/contentSectionImageGallery";
 import GallerySectionDualImage from "../components/modules/gallerySection/gallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
-import { Container, Row, Col } from "react-bootstrap";
-import GallerySectionDualImageReveal from "../components/modules/gallerySection/gallerySectionDualImageReveal";
 
 const DonateSection = () => {
   return (
@@ -275,7 +272,6 @@ const Home = () => {
       {/* <AdCarousel /> */}
       <Volunteer />
       <Breaker4 />
-      <ConstantContactInline />
       <Store />
       <Breaker1 />
       <OurMission />
