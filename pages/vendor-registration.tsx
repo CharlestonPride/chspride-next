@@ -106,8 +106,8 @@ const VendorRegistration = () => {
             <ul className="list-group">
               <li className="list-group-item">
                 Load-in will be on the day of the festival, and will begin at
-                8am. Tentative festival times are from 12PM to 6PM. Load-out
-                will begin after 6:15pm.{" "}
+                8am. Tentative festival times are from 11AM to 5PM. Load-out
+                will begin after 5:15pm.{" "}
               </li>
               <li className="list-group-item">
                 No cars are allowed in the park due to the irrigation system, so
