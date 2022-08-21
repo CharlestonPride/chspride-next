@@ -1,10 +1,7 @@
 import {
-  faCalculator,
   faCalendarDay,
-  faCheck,
   faClock,
   faCrown,
-  faMapLocation,
   faMapPin,
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
