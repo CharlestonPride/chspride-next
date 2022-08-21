@@ -70,10 +70,6 @@ const GetInvolved = () => {
 const StayInTouch = () => {
   return (
     <NavDropdown title="Stay in Touch" id="stay-in-touch">
-      <NavDropdownItem href="/mailing-list">
-        Join our Mailing List
-      </NavDropdownItem>
-      <NavDropdown.Divider />
       <NavDropdown.Item href={fbUrl} target="_blank">
         Like us on Facebook
       </NavDropdown.Item>
