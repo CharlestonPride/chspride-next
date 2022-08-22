@@ -13,7 +13,7 @@ import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 
 const Tacos = () => {
   return (
-    <Layout title="Taco Boy Taco's and Tattas">
+    <Layout title="Charleston Pride and Taco Boy Nexton Present: Taco’s and Tattas!">
       <ExternalFrame
         title="Taco Boy Taco's and Tattas"
         color="warning"
@@ -23,9 +23,9 @@ const Tacos = () => {
         <Row>
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
             <h1 className="text-gradient text-warning">
-              Taco Boy Taco's and Tattas
+              Charleston Pride and Taco Boy Nexton Present: Taco’s and Tattas!
             </h1>
-            <h2>21+</h2>
+            <h2>18+</h2>
             <p className="lead">
               Join Charleston Pride and the greater Nexton/Summerville community
               for a night of fun with the local LGBTQIA+ community. Drag show,
@@ -38,11 +38,11 @@ const Tacos = () => {
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faCalendarDay} className="me-2" />{" "}
-                Saturday 9/24
+                Saturday, 9/24
               </li>
               <li className="list-group-item">
-                <FontAwesomeIcon icon={faClock} className="me-2" /> Doors @ 830;
-                Show @ 10
+                <FontAwesomeIcon icon={faClock} className="me-2" /> Doors @
+                8:30pm; Show @ 10pm
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faCrown} className="me-2" /> Performances
@@ -54,8 +54,8 @@ const Tacos = () => {
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faTicket} className="me-2" />
-                <strong>21+</strong>, $10 includes complementary Special Pride
-                Cocktail
+                <strong>18-20</strong>: $15 | <strong>21+</strong>: $10 includes
+                complementary Special Pride Cocktail
               </li>
             </ul>
           </Col>
