@@ -42,7 +42,7 @@ const Tacos = () => {
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faClock} className="me-2" /> Doors @
-                8:30pm; Show @ 10pm
+                8:30pm; Show @ 9:30pm
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faCrown} className="me-2" /> Performances
