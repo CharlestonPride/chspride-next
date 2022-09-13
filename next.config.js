@@ -13,6 +13,7 @@ module.exports = {
       "/volunteer": { page: "/volunteer" },
       "/parade-registration": { page: "/parade-registration" },
       "/pageant-registration": { page: "/pageant-registration" },
+      "/vendor-registration": { page: "vendor-registration" },
     };
 
     return paths;
