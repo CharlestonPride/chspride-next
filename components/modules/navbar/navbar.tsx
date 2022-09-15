@@ -77,6 +77,9 @@ const Events = () => {
       <NavDropdownItem href="/tacos-and-tattas">
         Taco's and Tattas!
       </NavDropdownItem>
+      <NavDropdownItem href="/pageant">
+        Pageant: Renaissance Ball
+      </NavDropdownItem>
     </NavDropdown>
   );
 };

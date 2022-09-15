@@ -4,9 +4,15 @@ type ImageProps = {
   imageId: string;
   className?: string;
   children?: Transformation;
+  width?: string;
 };
 
-const CloudImage = ({ imageId, className, children }: ImageProps) => {
+const CloudImage = ({
+  imageId,
+  className,
+  children,
+  width = "auto",
+}: ImageProps) => {
   return (
     <Image
       className={className}
@@ -14,7 +20,7 @@ const CloudImage = ({ imageId, className, children }: ImageProps) => {
       publicId={imageId}
       dpr="auto"
       responsive
-      width="auto"
+      width={width}
       crop="scale"
       responsiveUseBreakpoints="true"
       secure="true"

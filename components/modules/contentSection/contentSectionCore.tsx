@@ -1,7 +1,7 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import React, { ReactNode } from "react";
 import { ThemeColors } from "../../../types";
-import { LinkGradientButton } from "../../elements/button/button";
+import { LinkButton, LinkGradientButton } from "../../elements/button/button";
 import { RoundShadowIcon } from "../../elements/icon/icon";
 
 export type ContentProps = {
@@ -12,6 +12,7 @@ export type ContentProps = {
   subDescription?: string;
   icon?: IconDefinition;
   action?: Action;
+  action2?: Action;
 };
 
 export type Action = {
@@ -27,6 +28,7 @@ const Content = ({
   subDescription,
   icon,
   action,
+  action2,
 }: ContentProps) => {
   let descriptionElem = undefined;
   if (description) {
@@ -48,10 +50,16 @@ const Content = ({
       <h3 className={"text-gradient mb-0 text-" + color}>{title}</h3>
       {descriptionElem}
       {children}
+
       {action && (
         <LinkGradientButton href={action.href} color={color}>
           {action.text}
         </LinkGradientButton>
+      )}
+      {action2 && (
+        <LinkButton href={action2.href} color={color}>
+          {action2.text}
+        </LinkButton>
       )}
     </>
   );
