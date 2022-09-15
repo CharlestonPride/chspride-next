@@ -7,7 +7,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 export default function Layout({
   children,
   title = "Charleston Pride",
-  description = "Charleston Pride",
+  description = "Charleston Pride Week November 6-13 2022",
   imageUrl = "https://res.cloudinary.com/charlestonpride-org/image/upload/c_lpad,g_center,h_628,w_1200/v1625023527/logo_qxgcvs.jpg",
 }) {
   return (
