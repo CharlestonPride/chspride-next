@@ -12,7 +12,7 @@ export type ContentProps = {
   subDescription?: string;
   icon?: IconDefinition;
   action?: Action;
-  action2?: Action;
+  secondaryAction?: Action;
 };
 
 export type Action = {
@@ -28,7 +28,7 @@ const Content = ({
   subDescription,
   icon,
   action,
-  action2,
+  secondaryAction,
 }: ContentProps) => {
   let descriptionElem = undefined;
   if (description) {
@@ -56,9 +56,9 @@ const Content = ({
           {action.text}
         </LinkGradientButton>
       )}
-      {action2 && (
-        <LinkButton href={action2.href} color={color}>
-          {action2.text}
+      {secondaryAction && (
+        <LinkButton href={secondaryAction.href} color={color}>
+          {secondaryAction.text}
         </LinkButton>
       )}
     </>
