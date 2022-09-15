@@ -33,7 +33,7 @@ const GradientButton = ({ color, children }: ButtonProps) => (
 
 const LinkGradientButton = ({ color, children, href }: LinkButtonProps) => (
   <Link href={href} passHref>
-    <button type="button" className={"btn bg-gradient-" + color}>
+    <button type="button" className={"me-1 btn bg-gradient-" + color}>
       {children}
     </button>
   </Link>

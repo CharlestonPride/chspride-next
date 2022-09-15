@@ -17,15 +17,9 @@ export default function Header({ style }) {
               <div className="col-lg-7 d-flex justify-content-center flex-column">
                 <div className="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
                   <h1 className="text-gradient text-primary">
-                    2022 Pride Festival
+                    Charleston Pride Week 2022
                   </h1>
-                  <h2 className="mb-4">
-                    Sunday, November 13th
-                    <br />
-                    <small className="text-muted">
-                      Riverfront Park, North Charleston
-                    </small>
-                  </h2>
+                  <h2 className="mb-4">November 6-12</h2>
                   <div className="buttons"></div>
                 </div>
               </div>

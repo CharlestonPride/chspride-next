@@ -12,6 +12,8 @@ import {
   faSmile,
   faGrinHearts,
   faFlag,
+  faCrown,
+  faTicket,
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/contentSection/contentSectionTwoColumn";
 import SocialBar from "../components/modules/social/socialBar";
@@ -168,9 +170,9 @@ const Sponsorship = () => {
     <ContentSectionTwoColumn
       title="Become a Sponsor"
       color="warning"
-      imageSrc="festival_ktw1d1"
+      imageSrc="v1663270138/festival_ktw1d1"
       icon={faFlag}
-      orientation={Orientation.Right}
+      orientation={Orientation.Left}
       action={{ href: "/become-a-sponsor", text: "Sponsorship Opportunities" }}
     >
       <p className="lead">
@@ -252,6 +254,68 @@ const OurPurpose = () => {
   );
 };
 
+const Tacos = () => {
+  return (
+    <ContentSectionTwoColumn
+      title="Taco’s and Tattas!"
+      color="danger"
+      description="Presented by Charleston Pride and Taco Boy Nexton"
+      action={{ href: "/tacos-and-tattas", text: "more info" }}
+      imageSrc="sponsor/tacoboy"
+      icon={faTicket}
+      orientation={Orientation.Right}
+      disableShadow={true}
+      subDescription="Taco Boy Next, Sept 24 @ 9:30pm | 18+"
+      focusContent={true}
+    >
+      <p>
+        Join Charleston Pride and the greater Nexton/Summerville community for a
+        night of fun with the local LGBTQIA+ community. Drag show, drink
+        specials and dance party with many more surprises in store!
+      </p>
+    </ContentSectionTwoColumn>
+  );
+};
+
+const Pageant = () => {
+  return (
+    <ContentSectionTwoColumn
+      title="Charleston Pride Pageant: Renaissance Ball"
+      color="primary"
+      description="The Hive, Oct 7 2022 @ 9pm"
+      action={{ href: "/pageant", text: "more info" }}
+      secondaryAction={{ href: "/pageant-registration", text: "registration" }}
+      imageSrc="sponsor/hive_hfcvo0"
+      icon={faCrown}
+      orientation={Orientation.Right}
+      disableShadow={true}
+    ></ContentSectionTwoColumn>
+  );
+};
+
+const Festival = () => {
+  return (
+    <ContentSectionTwoColumn
+      title="Charleston Pride Festival"
+      color="info"
+      imageSrc="2022/lvplxl"
+      icon={faFlag}
+      orientation={Orientation.Left}
+      focusContent={true}
+      description="Sunday, November 13th"
+      subDescription="Riverfront Park, North Charleston"
+      action={{ href: "/vendor-registration", text: "vendor registration" }}
+    >
+      <p className="lead">
+        The Charleston Pride Festival will be held at Riverfront Park in North
+        Charleston on Sunday, November 13, 2022. We are excited to bring the
+        festival back after last year’s cancellation, and invite you to join
+        Charleston’s largest Pride event of the year.
+      </p>
+    </ContentSectionTwoColumn>
+  );
+};
+
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625013054/manson2_gjv7gs.jpg)`,
   backgroundSize: `cover`,
@@ -262,7 +326,10 @@ const Home = () => {
   return (
     <Layout>
       <Header style={headerStyle} />
+      <Festival />
+      <Tacos />
       <Sponsorship />
+      <Pageant />
       {/* <Schedule /> */}
       <Serve />
       <DonateSection />
