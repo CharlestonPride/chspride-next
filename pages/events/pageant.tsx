@@ -28,7 +28,7 @@ const Pageant = () => {
               Charleston Pride Pageant: Renaissance Ball
             </h1>
             <p className="lead">
-              We are now inviting contestants for the{" "}
+              We are now inviting guests for the{" "}
               <strong>Charleston Pride Pageant: Renaissance Ball</strong>
             </p>
             <ul className="list-group">
