@@ -64,10 +64,6 @@ const GetInvolved = () => {
       <NavDropdownItem href="/donate">Make a donation</NavDropdownItem>
       <NavDropdownItem href="/store">Shop with Pride</NavDropdownItem>
       <NavDropdownItem href="/volunteer">Volunteer with Pride</NavDropdownItem>
-      <NavDropdown.Divider />
-      <NavDropdownItem href="/pageant-registration">
-        Pageant Registration
-      </NavDropdownItem>
     </NavDropdown>
   );
 };
