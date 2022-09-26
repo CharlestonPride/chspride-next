@@ -18,3 +18,11 @@ export enum Focus {
   Content,
   Image,
 }
+
+export type SponsorLevels =
+  | "red"
+  | "orange"
+  | "yellow"
+  | "green"
+  | "blue"
+  | "purple";

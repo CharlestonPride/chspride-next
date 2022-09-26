@@ -22,6 +22,8 @@ import ContentSectionImageGallery from "../components/modules/contentSection/con
 import GallerySectionDualImage from "../components/modules/gallerySection/gallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
+import SponsorCarousel from "../components/modules/sponsor/sponsorCarousel";
+import Lead from "../components/elements/lead/lead";
 
 const DonateSection = () => {
   return (
@@ -306,12 +308,12 @@ const Festival = () => {
       subDescription="Riverfront Park, North Charleston"
       action={{ href: "/vendor-registration", text: "vendor registration" }}
     >
-      <p className="lead">
+      <Lead>
         The Charleston Pride Festival will be held at Riverfront Park in North
         Charleston on Sunday, November 13, 2022. We are excited to bring the
         festival back after last year’s cancellation, and invite you to join
         Charleston’s largest Pride event of the year.
-      </p>
+      </Lead>
     </ContentSectionTwoColumn>
   );
 };
@@ -327,8 +329,8 @@ const Home = () => {
     <Layout>
       <Header style={headerStyle} />
       <Festival />
-      <Tacos />
       <Sponsorship />
+      <SponsorCarousel />
       <Pageant />
       {/* <Schedule /> */}
       <Serve />
@@ -336,7 +338,7 @@ const Home = () => {
       <Breaker3 />
       {/* <FopSection /> */}
       <SocialBar />
-      {/* <AdCarousel /> */}
+
       <Volunteer />
       <Breaker4 />
       <Store />

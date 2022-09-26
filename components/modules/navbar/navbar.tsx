@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Navbar, NavDropdown, Nav, Container, Button } from "react-bootstrap";
 import { fbUrl, instagramUrl, twitterUrl } from "../../../utils/socialMedia";
+import { LinkButton } from "../../elements/button/button";
 
 const Hamburger = () => {
   return (
@@ -128,7 +129,12 @@ export default function MainNavBar({}) {
             <Events />
             <PrideWeek />
           </Nav>
-          {/* <Nav></Nav> */}
+          <LinkButton color="primary" href="/donate">
+            Make a Donation
+          </LinkButton>
+          <LinkButton color="warning" href="/become-a-sponsor">
+            Become a Sponsor
+          </LinkButton>
         </Navbar.Collapse>
       </Container>
     </Navbar>

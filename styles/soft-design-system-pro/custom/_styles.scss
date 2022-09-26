@@ -28,23 +28,57 @@ input[type="file"]::file-selector-button:hover {
   border-color: #8392ab;
 }
 
-.sponsor {
-  &-red {
-    background: $sponsor-red !important;
+.sponsor-card{
+    max-height: 300px;
+ &.sponsor-card {
+
+   &-red {
+    border-bottom: 3px solid $sponsor-red !important;
   }
   &-orange {
-    background: $sponsor-orange !important;
+    border-bottom: 3px solid $sponsor-orange !important;
   }
   &-yellow {
-    background: $sponsor-yellow !important;
+    border-bottom: 3px solid $sponsor-yellow !important;
   }
   &-blue {
-    background: $sponsor-blue !important;
+    border-bottom: 3px solid $sponsor-blue !important;
   }
   &-green {
-    background: $sponsor-green !important;
+    border-bottom: 3px solid $sponsor-green !important;
   }
   &-purple {
-    background: $sponsor-purple !important;
+    border-bottom: 3px solid $sponsor-purple !important;
+  }
+}
+img {
+width: auto;
+max-height: 125px;
+}
+}
+
+.sponsor {
+  &-red {
+    background: $sponsor-red  !important;
+  }
+
+  &-orange {
+    background: $sponsor-orange  !important;
+  }
+
+  &-yellow {
+    background: $sponsor-yellow  !important;
+  }
+
+  &-blue {
+    background: $sponsor-blue  !important;
+  }
+
+  &-green {
+    background: $sponsor-green  !important;
+  }
+
+  &-purple {
+    background: $sponsor-purple  !important;
   }
 }

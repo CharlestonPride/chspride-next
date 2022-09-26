@@ -19,7 +19,7 @@ const Button = ({ color, children }: ButtonProps) => (
 
 const LinkButton = ({ color, children, href }: LinkButtonProps) => (
   <Link href={href} passHref>
-    <button type="button" className={"btn btn-" + color}>
+    <button type="button" className={"me-1 btn btn-" + color}>
       {children}
     </button>
   </Link>
