@@ -286,7 +286,6 @@ const Pageant = () => {
       color="primary"
       description="The Hive, Oct 7 2022 @ 9pm"
       action={{ href: "/pageant", text: "more info" }}
-      secondaryAction={{ href: "/pageant-registration", text: "registration" }}
       imageSrc="sponsor/hive_hfcvo0"
       icon={faCrown}
       orientation={Orientation.Right}
