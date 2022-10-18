@@ -122,7 +122,7 @@ export default function MainNavBar({}) {
             <AboutUs />
             <GetInvolved />
             <StayInTouch />
-            <Events />
+            {/* <Events /> */}
             <PrideWeek />
           </Nav>
           <LinkButton color="primary" href="/donate">

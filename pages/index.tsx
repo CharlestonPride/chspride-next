@@ -330,7 +330,7 @@ const Home = () => {
       <Festival />
       <Sponsorship />
       <SponsorCarousel />
-      <Pageant />
+      {/* <Pageant /> */}
       {/* <Schedule /> */}
       <Serve />
       <DonateSection />

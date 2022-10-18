@@ -38,6 +38,13 @@ const SponsorCarousel = () => {
           <Sponsor label="Palmetto%20Community%20Care.png" level="green" />
         </Col>
       </Row>
+      <Row className="align-items-end">
+        <Col>
+          <Sponsor label="musc.png" level="blue" />
+        </Col>
+        <Col></Col>
+        <Col></Col>
+      </Row>
     </Container>
   );
 };
