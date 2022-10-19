@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
+import { LinkButton } from "../../elements/button/button";
 import CloudImage from "../../elements/cloudImage/cloudImage";
 
 type EventsProps = {
@@ -17,6 +18,7 @@ type Event = {
   links?: Link[];
   restrictions?: string;
   price?: string;
+  vip?: string[];
 };
 
 type Link = {
@@ -38,23 +40,55 @@ const EventCard = (event: Event) => {
           </a>
         </div>
         <div className="card-body px-1 pt-3">
-          <h5>{event.what}</h5>
-          <p className="text-gradient text-dark mb-2 text-sm">{event.when}</p>
-          {event.where && <p className="text-muted">{event.where}</p>}
-          {event.restrictions && <span>{event.restrictions} </span>}
-          {event.price && <span>{event.price}</span>}
+          <h5 className="text-gradient text-dark">{event.when}</h5>
+          <h4 className="text-muted">{event.where}</h4>
+          <h3>{event.what}</h3>
+          {event.restrictions && (
+            <span className="badge badge-warning me-1">
+              {event.restrictions}{" "}
+            </span>
+          )}
+          {event.price && (
+            <span className="badge badge-info">{event.price}</span>
+          )}
           {event.description ? (
-            <p>
-              {event.description}{" "}
-              {event.subDescription && <em>{event.subDescription}</em>}
-            </p>
+            <>
+              <p>{event.description} </p>
+              {event.subDescription && (
+                <p>
+                  <em>{event.subDescription}</em>
+                </p>
+              )}
+            </>
           ) : (
             <p>More details coming soon.</p>
           )}
+          <Vip {...event} />
+          {event.links.map((link) => (
+            <LinkButton color="primary" href={link.url}>
+              {link.text}
+            </LinkButton>
+          ))}
         </div>
       </div>
     </Col>
   );
+};
+
+const Vip = (event: Event) => {
+  if (event.vip && event.vip.length) {
+    return (
+      <div>
+        VIP Includes:
+        <ul>
+          {event.vip.map((bullet) => (
+            <li>{bullet}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  return <></>;
 };
 
 const Schedule = ({ events }: EventsProps) => {
