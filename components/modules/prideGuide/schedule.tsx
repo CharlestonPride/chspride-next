@@ -12,6 +12,7 @@ type Event = {
   what: string;
   when: string;
   where: string;
+  address: string;
   description: string;
   subDescription?: string;
   imageId: string;
@@ -42,6 +43,7 @@ const EventCard = (event: Event) => {
         <div className="card-body px-1 pt-3">
           <h5 className="text-gradient text-dark">{event.when}</h5>
           <h4 className="text-muted">{event.where}</h4>
+          <span className="text-muted">{event.address}</span>
           <h3>{event.what}</h3>
           {event.restrictions && (
             <span className="badge badge-warning me-1">
