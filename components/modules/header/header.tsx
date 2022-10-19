@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { LinkGradientButton } from "../../elements/button/button";
 
 export default function Header({ style }) {
   return (
@@ -19,7 +20,11 @@ export default function Header({ style }) {
                   Charleston Pride Week
                 </h1>
                 <h2 className="mb-4">November 6-13, 2022</h2>
-                <div className="buttons"></div>
+                <div className="buttons">
+                  <LinkGradientButton color="primary" href="/pride-guide">
+                    Pride Guide
+                  </LinkGradientButton>
+                </div>
               </div>
             </div>
           </div>

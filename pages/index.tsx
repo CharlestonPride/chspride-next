@@ -303,15 +303,19 @@ const Festival = () => {
       icon={faFlag}
       orientation={Orientation.Left}
       focusContent={true}
-      description="Sunday, November 13th"
-      subDescription="Riverfront Park, North Charleston"
-      action={{ href: "/vendor-registration", text: "vendor registration" }}
+      description="Saturday, November 12th"
+      subDescription="The Refinery (1640 Meeting Street)"
+      action={{ href: "/pride-guide", text: "Pride Guide" }}
     >
       <Lead>
-        The Charleston Pride Festival will be held at Riverfront Park in North
-        Charleston on Sunday, November 13, 2022. We are excited to bring the
-        festival back after last year’s cancellation, and invite you to join
-        Charleston’s largest Pride event of the year.
+        The Festival is back! For more than a decade, Charleston Pride has been
+        serving, empowering, and promoting the well-being and visibility of
+        LGBTQIA+ and allied communities. We are so excited about the comeback of
+        one of the largest Pride celebrations in the Lowcountry, the Charleston
+        Pride Festival, on November 12, 2022, from 12-6 pm at The Refinery. This
+        year's event is full of fun for all ages including a curated selection
+        of live entertainment, local food trucks, specialty drinks, and amazing
+        vendors! You don't want to miss this!
       </Lead>
     </ContentSectionTwoColumn>
   );
@@ -331,7 +335,6 @@ const Home = () => {
       <Sponsorship />
       <SponsorCarousel />
       {/* <Pageant /> */}
-      {/* <Schedule /> */}
       <Serve />
       <DonateSection />
       <Breaker3 />

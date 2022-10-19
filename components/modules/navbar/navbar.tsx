@@ -100,6 +100,7 @@ const StayInTouch = () => {
 const PrideWeek = () => {
   return (
     <NavDropdown title="Pride Week" id="pride-week">
+      <NavDropdownItem href="/pride-guide">Pride Guide</NavDropdownItem>
       <NavDropdownItem href="/vendor-registration">
         Vendor Registration
       </NavDropdownItem>
