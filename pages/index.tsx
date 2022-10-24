@@ -306,6 +306,10 @@ const Festival = () => {
       description="Saturday, November 12th"
       subDescription="The Refinery (1640 Meeting Street)"
       action={{ href: "/pride-guide", text: "Pride Guide" }}
+      secondaryAction={{
+        href: "/vendor-registration",
+        text: "Vendor Registration",
+      }}
     >
       <Lead>
         The Festival is back! For more than a decade, Charleston Pride has been

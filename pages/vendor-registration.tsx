@@ -20,8 +20,8 @@ const VendorRegistration = () => {
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
             <p className="lead">
               The Charleston Pride Festival will be held at{" "}
-              <strong>Riverfront Park</strong> in North Charleston on{" "}
-              <strong>Sunday, November 13, 2022</strong>. We are excited to
+              <strong>The Refinery</strong> (1640 Meeting Street) in Charleston
+              on <strong>Saturday, November 12, 2022</strong>. We are excited to
               bring the festival back after last year’s cancellation, and invite
               you to join Charleston’s largest Pride event of the year.
             </p>
@@ -98,10 +98,10 @@ const VendorRegistration = () => {
           <div className="card-body">
             <h4 className="card-title">Vendor Guidelines:</h4>
             <p className="card-description">
-              Riverfront Park is a different venue from the past several
-              festivals, and certain rules have changed, so please read
-              carefully. You will get more specific information closer to the
-              festival, but below are some initial guidelines.
+              The Refinery is a different venue from the past several festivals,
+              and certain rules have changed, so please read carefully. You will
+              get more specific information closer to the festival, but below
+              are some initial guidelines.
             </p>
             <ul className="list-group">
               <li className="list-group-item">
@@ -110,18 +110,8 @@ const VendorRegistration = () => {
                 will begin after 5:15pm.{" "}
               </li>
               <li className="list-group-item">
-                No cars are allowed in the park due to the irrigation system, so
-                plan accordingly. Carts and wagons are acceptable.
-              </li>
-              <li className="list-group-item">
                 Tents are to be 10x10 ft [or 20x20 ] with straight legs, not
-                angled. No spikes are allowed at the park [irrigation system] so
-                tents must be bucketed, ie. legs in 5 gallon buckets weighted
-                down.{" "}
-              </li>
-              <li className="list-group-item">
-                There will be a separate area for parking, but limited to 1 per
-                vendor.{" "}
+                angled.
               </li>
               <li className="list-group-item">
                 Vendors will be allowed 10-15 minutes to unload. This does not
@@ -138,14 +128,14 @@ const VendorRegistration = () => {
                 coverage, you take responsibility for covering any claims.{" "}
               </li>
               <li className="list-group-item">
-                Charleston Pride Festival, Inc., nor the City of North
-                Charleston, takes any responsibility or liability for any damage
-                to your product, person, or equipment.
+                Charleston Pride Festival, Inc., nor the City of Charleston,
+                takes any responsibility or liability for any damage to your
+                product, person, or equipment.
               </li>
               <li className="list-group-item">
                 All documentation, ie. proof of non-profit status, insurance
                 information, etc. must be on file with Charleston Pride Festival
-                by September 15. Information can be uploaded during or after
+                by November 5th. Information can be uploaded during or after
                 registration.
               </li>
               <li className="list-group-item">
@@ -157,7 +147,7 @@ const VendorRegistration = () => {
                 and hauling off any trash.
               </li>
               <li className="list-group-item">
-                Vendor packets will be sent to the email address on-file two
+                Vendor packets will be sent to the email address on-file one
                 weeks prior to the Festival.
               </li>
             </ul>
