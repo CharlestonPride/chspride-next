@@ -54,6 +54,35 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
 
   return (
     <Container>
+      <Row className="align-items-end">
+        <Col>
+          <SponsorCard logo="blackbaud_Gray.png" level="yellow" />
+        </Col>
+        <Col>
+          <SponsorCard
+            logo="Pet%20Supplies%20Plus%20Left%20Aligned.jpg"
+            level="green"
+          />
+        </Col>
+        <Col>
+          <SponsorCard logo="Palmetto%20Community%20Care.png" level="green" />
+        </Col>
+      </Row>
+      <Row className="align-items-end mt-2">
+        <Col>
+          <SponsorCard logo="musc.png" level="blue" />
+        </Col>
+        <Col>
+          <SponsorCard logo="dancedoctors.png" level="blue" />
+        </Col>
+        <Col>
+          <SponsorCard logo="priscillathomas.jpg" level="purple" />
+        </Col>
+      </Row>
+    </Container>
+  );
+  return (
+    <Container>
       {chunkedSponsors.map((sponsorChunk, index) => {
         <Row className="align-items-end">
           <Col>

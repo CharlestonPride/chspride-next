@@ -25,7 +25,11 @@ function PrideGuide({
         <h1>Pride Week</h1>
         <h2>November 6-13, 2022</h2>
       </ObliqueHeader>
-      <SponsorCarousel sponsors={sponsors} />
+
+      <div className="mt-5">
+        <SponsorCarousel sponsors={sponsors} />
+      </div>
+
       <Schedule events={events} />
     </Layout>
   );
