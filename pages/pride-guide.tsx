@@ -3,6 +3,9 @@ import React from "react";
 import Layout from "../components/elements/layout/layout";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
 import { Schedule, Event } from "../components/modules/prideGuide/schedule";
+import SponsorCarousel, {
+  Sponsor,
+} from "../components/modules/sponsor/sponsorCarousel";
 
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/stage_dbk4bc.jpg)`,
@@ -10,6 +13,7 @@ const headerStyle = {
 
 function PrideGuide({
   events,
+  sponsors,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout
@@ -21,19 +25,25 @@ function PrideGuide({
         <h1>Pride Week</h1>
         <h2>November 6-13, 2022</h2>
       </ObliqueHeader>
+      <SponsorCarousel sponsors={sponsors} />
       <Schedule events={events} />
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://chspride-api.azurewebsites.net/api/Events");
-  const events: Event[] = await res.json();
-
-  console.log("retrievd");
+  const resEvents = await fetch(
+    "https://chspride-api.azurewebsites.net/api/Events"
+  );
+  const events: Event[] = await resEvents.json();
+  const resSponsors = await fetch(
+    "https://chspride-api.azurewebsites.net/api/Sponsors"
+  );
+  const sponsors: Sponsor[] = await resSponsors.json();
   return {
     props: {
       events,
+      sponsors,
     },
   };
 };

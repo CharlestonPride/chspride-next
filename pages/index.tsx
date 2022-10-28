@@ -22,8 +22,11 @@ import ContentSectionImageGallery from "../components/modules/contentSection/con
 import GallerySectionDualImage from "../components/modules/gallerySection/gallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
-import SponsorCarousel from "../components/modules/sponsor/sponsorCarousel";
+import SponsorCarousel, {
+  Sponsor,
+} from "../components/modules/sponsor/sponsorCarousel";
 import Lead from "../components/elements/lead/lead";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 const DonateSection = () => {
   return (
@@ -299,7 +302,7 @@ const Festival = () => {
     <ContentSectionTwoColumn
       title="Charleston Pride Festival"
       color="info"
-      imageSrc="2022/lvplxl"
+      imageSrc="2022/festival_dl9ytb"
       icon={faFlag}
       orientation={Orientation.Left}
       focusContent={true}
@@ -331,13 +334,13 @@ const headerStyle = {
   backgroundPosition: `center 20%`,
 };
 
-const Home = () => {
+function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
       <Header style={headerStyle} />
       <Festival />
       <Sponsorship />
-      <SponsorCarousel />
+      <SponsorCarousel sponsors={sponsors} />
       {/* <Pageant /> */}
       <Serve />
       <DonateSection />
@@ -357,6 +360,21 @@ const Home = () => {
       <Breaker6 />
     </Layout>
   );
+}
+
+export const getStaticProps: GetStaticProps<{
+  sponsors: Sponsor[];
+}> = async () => {
+  const res = await fetch(
+    "https://chspride-api.azurewebsites.net/api/Sponsors"
+  );
+  const sponsors: Sponsor[] = await res.json();
+  console.log("retrieved sponsors:" + sponsors.length);
+  return {
+    props: {
+      sponsors,
+    },
+  };
 };
 
 export default Home;

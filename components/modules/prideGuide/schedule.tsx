@@ -66,8 +66,8 @@ const EventCard = (event: Event) => {
             <p>More details coming soon.</p>
           )}
           <Vip {...event} />
-          {event.links.map((link) => (
-            <LinkButton color="primary" href={link.url}>
+          {event.links.map((link, index) => (
+            <LinkButton color="primary" href={link.url} key={index}>
               {link.text}
             </LinkButton>
           ))}
@@ -83,8 +83,8 @@ const Vip = (event: Event) => {
       <div>
         VIP Includes:
         <ul>
-          {event.vip.map((bullet) => (
-            <li>{bullet}</li>
+          {event.vip.map((bullet, index) => (
+            <li key={index}>{bullet}</li>
           ))}
         </ul>
       </div>
