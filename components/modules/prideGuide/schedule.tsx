@@ -20,6 +20,7 @@ type Event = {
   restrictions?: string;
   price?: string;
   vip?: string[];
+  more?: string;
 };
 
 type Link = {
@@ -71,6 +72,11 @@ const EventCard = (event: Event) => {
               {link.text}
             </LinkButton>
           ))}
+          {event.more && (
+            <LinkButton color="success" href={"#" + event.more}>
+              More info
+            </LinkButton>
+          )}
         </div>
       </div>
     </Col>

@@ -54,6 +54,11 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
 
   return (
     <Container>
+      <Row>
+        <Col className="text-center text-gradient text-primary my-3">
+          <h1>Our Sponsors</h1>
+        </Col>
+      </Row>
       <Row className="align-items-end">
         <Col>
           <SponsorCard logo="blackbaud_Gray.png" level="yellow" />
