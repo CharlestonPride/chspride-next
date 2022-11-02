@@ -302,12 +302,12 @@ const Festival = () => {
     <ContentSectionTwoColumn
       title="Charleston Pride Festival"
       color="info"
-      imageSrc="2022/festival_dl9ytb"
+      imageSrc="2022/festival_ciz0qd"
       icon={faFlag}
       orientation={Orientation.Left}
       focusContent={true}
       description="Saturday, November 12th"
-      subDescription="The Refinery (1640 Meeting Street)"
+      subDescription="The Refinery (1640 Meeting Street Rd)"
       action={{ href: "/pride-guide", text: "Pride Guide" }}
       secondaryAction={{
         href: "/vendor-registration",
