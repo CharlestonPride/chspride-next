@@ -81,8 +81,15 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
           <SponsorCard logo="dancedoctors.png" level="blue" />
         </Col>
         <Col>
+          <SponsorCard logo="dmproductions.jpg" level="blue" />
+        </Col>
+      </Row>
+      <Row className="align-items-end mt-2">
+        <Col>
           <SponsorCard logo="priscillathomas.jpg" level="purple" />
         </Col>
+        <Col></Col>
+        <Col></Col>
       </Row>
     </Container>
   );
