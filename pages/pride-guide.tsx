@@ -143,6 +143,13 @@ const Festival = () => {
                 An entertainment line-up will be released soon. Stay tuned!
               </Accordion.Body>
             </Accordion.Item>
+            <Accordion.Item eventKey="8">
+              <Accordion.Header as="h4">What if it rains?</Accordion.Header>
+              <Accordion.Body>
+                Both the Charleston Pride Festival and Prism Party are rain or
+                shine events.
+              </Accordion.Body>
+            </Accordion.Item>
           </Accordion>
         </Col>
       </Row>
