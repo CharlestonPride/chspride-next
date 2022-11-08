@@ -33,6 +33,15 @@ const Festival = () => {
             trucks, specialty drinks, and amazing vendors! You don't want to
             miss this!
           </Lead>
+          <p>
+            The festival will feature drag performances by Emperor Don Javi,
+            Empress Kymmya Starr, Sovereign Jonlly R St. Martin, Mr. Outfest
+            D'Wess Lefaris, Miss Outfest Gouda Judy, Luscious, Leslie Lane,
+            Kylee Lovlee, Ebony Wood, Mira Shatters, and Medusa Chaos. Aerial
+            showcase hosted by Scarlett Ray with aerialists from Uptown Aerial,
+            Aerial Fit, and Out on a Limb. Music by DJ JT-RAZOR and Singer Becky
+            Rasman.
+          </p>
         </Col>
       </Row>
       <Row>
@@ -140,7 +149,13 @@ const Festival = () => {
                 What is the entertainment line-up?
               </Accordion.Header>
               <Accordion.Body>
-                An entertainment line-up will be released soon. Stay tuned!
+                The festival will feature drag performances by Emperor Don Javi,
+                Empress Kymmya Starr, Sovereign Jonlly R St. Martin, Mr. Outfest
+                D'Wess Lefaris, Miss Outfest Gouda Judy, Luscious, Leslie Lane,
+                Kylee Lovlee, Ebony Wood, Mira Shatters, and Medusa Chaos.
+                Aerial showcase hosted by Scarlett Ray with aerialists from
+                Uptown Aerial, Aerial Fit, and Out on a Limb. Music by DJ
+                JT-RAZOR and Singer Becky Rasman.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="8">
