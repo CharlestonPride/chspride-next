@@ -27,6 +27,9 @@ import SponsorCarousel, {
 } from "../components/modules/sponsor/sponsorCarousel";
 import Lead from "../components/elements/lead/lead";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { Alert, Col, Container, Row } from "react-bootstrap";
+import CloudImage from "../components/elements/cloudImage/cloudImage";
+import { RoundShadowIcon } from "../components/elements/icon/icon";
 
 const DonateSection = () => {
   return (
@@ -297,6 +300,29 @@ const Pageant = () => {
   );
 };
 
+const Prism = () => {
+  return (
+    <ContentSectionTwoColumn
+      title="Prism (Rescheduled from Nov 11th)"
+      color="primary"
+      imageSrc="2022/update_fya6u0"
+      icon={faFlag}
+      orientation={Orientation.Left}
+      focusContent={true}
+      description="Saturday, November 12th"
+      subDescription="The Refinery (1640 Meeting Street Rd)"
+      action={{ href: "/pride-guide", text: "Pride Guide" }}
+    >
+      <Lead>
+        Charleston Pride's premier party is back and better than ever! Celebrate
+        with 5 hours of dancing, drag, and drinking on November 12, 2022, from
+        6-11 pm at The Refinery. Food trucks will be on-site throughout the
+        event.
+      </Lead>
+    </ContentSectionTwoColumn>
+  );
+};
+
 const Festival = () => {
   return (
     <ContentSectionTwoColumn
@@ -304,15 +330,11 @@ const Festival = () => {
       color="info"
       imageSrc="2022/festival_ciz0qd"
       icon={faFlag}
-      orientation={Orientation.Left}
+      orientation={Orientation.Right}
       focusContent={true}
       description="Saturday, November 12th"
       subDescription="The Refinery (1640 Meeting Street Rd)"
       action={{ href: "/pride-guide", text: "Pride Guide" }}
-      secondaryAction={{
-        href: "/vendor-registration",
-        text: "Vendor Registration",
-      }}
     >
       <Lead>
         The Festival is back! For more than a decade, Charleston Pride has been
@@ -328,6 +350,28 @@ const Festival = () => {
   );
 };
 
+const Maps = () => {
+  return (
+    <Container>
+      <Row>
+        <h3 className={"text-gradient mb-0 text-danger text-center"}>Maps</h3>
+        <Col lg="6">
+          <CloudImage
+            imageId="2022/festivalmap_iyosfv"
+            className="img-fluid shadow m-3"
+          />
+        </Col>
+        <Col lg="6">
+          <CloudImage
+            imageId="2022/prismmap_ccslog"
+            className="img-fluid shadow m-3"
+          />
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625013054/manson2_gjv7gs.jpg)`,
   backgroundSize: `cover`,
@@ -338,7 +382,15 @@ function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
       <Header style={headerStyle} />
+      <Alert variant="danger" className="my-4">
+        <h2 className="text-center text-white">
+          Due to weather, Prism has been rescheduled to Saturday, November 12,
+          6-11 pm
+        </h2>
+      </Alert>
       <Festival />
+      <Prism />
+      <Maps />
       <Sponsorship />
       <SponsorCarousel sponsors={sponsors} />
       {/* <Pageant /> */}

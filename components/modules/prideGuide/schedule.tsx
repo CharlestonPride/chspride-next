@@ -21,6 +21,7 @@ type Event = {
   price?: string;
   vip?: string[];
   more?: string;
+  order?: number;
 };
 
 type Link = {

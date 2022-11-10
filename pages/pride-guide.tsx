@@ -1,7 +1,8 @@
 import { InferGetStaticPropsType } from "next";
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Alert } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import CloudImage from "../components/elements/cloudImage/cloudImage";
 import Layout from "../components/elements/layout/layout";
 import Lead from "../components/elements/lead/lead";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
@@ -33,7 +34,11 @@ const Festival = () => {
             trucks, specialty drinks, and amazing vendors! You don't want to
             miss this!
           </Lead>
-          <p>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="12" lg="6">
+          <Lead>
             The festival will feature drag performances by Emperor Don Javi,
             Empress Kymmya Starr, Sovereign Jonlly R St. Martin, Mr. Outfest
             D'Wess Lefaris, Miss Outfest Gouda Judy, Luscious, Leslie Lane,
@@ -41,9 +46,54 @@ const Festival = () => {
             showcase hosted by Scarlett Ray with aerialists from Uptown Aerial,
             Aerial Fit, and Out on a Limb. Music by DJ JT-RAZOR and Singer Becky
             Rasman.
-          </p>
+          </Lead>
+        </Col>
+        <Col xs="12" lg="6">
+          <CloudImage
+            imageId="2022/festivalmap_iyosfv"
+            className="img-fluid shadow"
+          />
         </Col>
       </Row>
+    </Container>
+  );
+};
+
+const Prism = () => {
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <h1
+            className="text-center text-gradient text-primary my-3"
+            id="prism"
+          >
+            Prism
+          </h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs="12" lg="6">
+          <Lead>
+            Charleston Pride's premier party is back and better than ever!
+            Celebrate with 5 hours of dancing, drag, and drinking. Food trucks
+            will be on-site throughout the event.
+          </Lead>
+        </Col>
+        <Col xs="12" lg="6">
+          <CloudImage
+            imageId="2022/prismmap_ccslog"
+            className="img-fluid shadow"
+          />
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+const Faq = () => {
+  return (
+    <Container>
       <Row>
         <Col>
           <h2>Frequently Asked Questions</h2>
@@ -138,15 +188,18 @@ const Festival = () => {
             </Accordion.Item>
             <Accordion.Item eventKey="6">
               <Accordion.Header as="h4">
-                Is there a festival map?
+                Is there a Festival map?
               </Accordion.Header>
               <Accordion.Body>
-                A festival map will be released soon. Stay tuned!
+                <CloudImage
+                  imageId="2022/festivalmap_iyosfv"
+                  className="img-fluid shadow"
+                />
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="7">
               <Accordion.Header as="h4">
-                What is the entertainment line-up?
+                What is the Festival entertainment line-up?
               </Accordion.Header>
               <Accordion.Body>
                 The festival will feature drag performances by Emperor Don Javi,
@@ -159,6 +212,15 @@ const Festival = () => {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="8">
+              <Accordion.Header as="h4">Is there a Prism map?</Accordion.Header>
+              <Accordion.Body>
+                <CloudImage
+                  imageId="2022/prismmap_ccslog"
+                  className="img-fluid shadow"
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="9">
               <Accordion.Header as="h4">What if it rains?</Accordion.Header>
               <Accordion.Body>
                 Both the Charleston Pride Festival and Prism Party are rain or
@@ -187,10 +249,22 @@ function PrideGuide({
         <h2>November 6-13, 2022</h2>
       </ObliqueHeader>
 
-      <SponsorCarousel sponsors={sponsors} />
+      <Alert variant="danger" className="my-4">
+        <h2 className="text-center text-white">
+          Due to weather, Prism has been rescheduled to Saturday, November 12,
+          6-11 pm
+        </h2>
+      </Alert>
 
+      <SponsorCarousel sponsors={sponsors} />
+      <hr className="horizontal dark" />
       <Schedule events={events} />
+      <hr className="horizontal dark" />
       <Festival />
+      <hr className="horizontal dark" />
+      <Prism />
+      <hr className="horizontal dark" />
+      <Faq />
     </Layout>
   );
 }
@@ -200,6 +274,7 @@ export const getStaticProps = async () => {
     "https://chspride-api.azurewebsites.net/api/Events"
   );
   const events: Event[] = await resEvents.json();
+  events.sort((a, b) => a.order - b.order);
   const resSponsors = await fetch(
     "https://chspride-api.azurewebsites.net/api/Sponsors"
   );
