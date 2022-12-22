@@ -249,12 +249,12 @@ function PrideGuide({
         <h2>November 6-13, 2022</h2>
       </ObliqueHeader>
 
-      <Alert variant="danger" className="my-4">
+      {/* <Alert variant="danger" className="my-4">
         <h2 className="text-center text-white">
           Due to weather, Prism has been rescheduled to Saturday, November 12,
           6-11 pm
         </h2>
-      </Alert>
+      </Alert> */}
 
       <SponsorCarousel sponsors={sponsors} />
       <hr className="horizontal dark" />

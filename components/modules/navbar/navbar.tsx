@@ -129,9 +129,9 @@ export default function MainNavBar({}) {
           <LinkButton color="primary" href="/donate">
             Make a Donation
           </LinkButton>
-          <LinkButton color="warning" href="/become-a-sponsor">
+          {/* <LinkButton color="warning" href="/become-a-sponsor">
             Become a Sponsor
-          </LinkButton>
+          </LinkButton> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

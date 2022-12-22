@@ -382,15 +382,9 @@ function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
       <Header style={headerStyle} />
-      <Alert variant="danger" className="my-4">
-        <h2 className="text-center text-white">
-          Due to weather, Prism has been rescheduled to Saturday, November 12,
-          6-11 pm
-        </h2>
-      </Alert>
-      <Festival />
+      {/* <Festival />
       <Prism />
-      <Maps />
+      <Maps /> */}
       <Sponsorship />
       <SponsorCarousel sponsors={sponsors} />
       {/* <Pageant /> */}
