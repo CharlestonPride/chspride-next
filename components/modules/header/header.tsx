@@ -1,6 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { LinkGradientButton } from "../../elements/button/button";
+import {
+  LinkGradientButton,
+  LinkOutlineButton,
+} from "../../elements/button/button";
 
 export default function Header({ style }) {
   return (
@@ -16,14 +19,14 @@ export default function Header({ style }) {
           <div className="row">
             <div className="col-lg-7 d-flex justify-content-center flex-column">
               <div className="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
-                <h1 className="text-gradient text-primary">
-                  Charleston Pride Week
-                </h1>
-                <h2 className="mb-4">November 6-13, 2022</h2>
+                <h1 className="text-gradient text-primary">Charleston Pride</h1>
                 <div className="buttons">
-                  <LinkGradientButton color="primary" href="/pride-guide">
-                    Pride Guide
+                  <LinkGradientButton color="primary" href="/donate">
+                    Make a Donation
                   </LinkGradientButton>
+                  <LinkOutlineButton color="primary" href="/become-a-sponsor">
+                    Become a Sponsor
+                  </LinkOutlineButton>
                 </div>
               </div>
             </div>

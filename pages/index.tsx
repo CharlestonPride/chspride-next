@@ -17,19 +17,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/contentSection/contentSectionTwoColumn";
 import SocialBar from "../components/modules/social/socialBar";
-import Smile from "../components/modules/smile/smile";
 import ContentSectionImageGallery from "../components/modules/contentSection/contentSectionImageGallery";
 import GallerySectionDualImage from "../components/modules/gallerySection/gallerySectionDualImages";
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
-import SponsorCarousel, {
-  Sponsor,
-} from "../components/modules/sponsor/sponsorCarousel";
 import Lead from "../components/elements/lead/lead";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { Alert, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import CloudImage from "../components/elements/cloudImage/cloudImage";
-import { RoundShadowIcon } from "../components/elements/icon/icon";
 
 const DonateSection = () => {
   return (
@@ -42,17 +36,17 @@ const DonateSection = () => {
       icon={faHandHoldingUsd}
       orientation={Orientation.Left}
     >
-      <p>
+      <Lead>
         A lot of time, effort, and money goes into organizing and putting on
         Charleston Pride. Charleston Pride Festival, Inc is funded strictly
         through sponsors and funds raised at events.
-      </p>
-      <p className="d-none d-md-block">
+      </Lead>
+      <Lead>
         Due to this fact, we have to raise money throughout the year in order
         for Charleston Pride to be successful. If you cannot make it to one of
         our fundraisers, you can now donate here! Also check out our monthly
         donor program, Friends of Pride.
-      </p>
+      </Lead>
     </ContentSectionStackedImage>
   );
 };
@@ -69,11 +63,11 @@ const FopSection = () => {
       icon={faUserFriends}
       orientation={Orientation.Left}
     >
-      <p>
+      <Lead>
         Become an official Friend of Pride through joining our monthly donor
         program. Friends of Pride get exclusive access to many of our events and
         some extra perks along the way.
-      </p>
+      </Lead>
     </ContentSectionTwoColumn>
   );
 };
@@ -88,10 +82,10 @@ const Volunteer = () => {
       orientation={Orientation.Left}
       action={{ href: "/volunteer", text: "Volunteer" }}
     >
-      <p className="lead">
+      <Lead>
         As a volunteer, you will help ensure the success of events throughout
         the year including fundraising events that will fund Pride Week.
-      </p>
+      </Lead>
     </ContentSectionStackedImage>
   );
 };
@@ -106,11 +100,11 @@ const Serve = () => {
       orientation={Orientation.Left}
       action={{ href: "/serve-on-the-board", text: "Apply" }}
     >
-      <p className="lead">
+      <Lead>
         As a member of the board, you will work with other board members to plan
         various fundraising events throughout the year; engage sponsors and
         community members; and plan and execute Pride Week events.
-      </p>
+      </Lead>
     </ContentSectionTwoColumn>
   );
 };
@@ -180,19 +174,19 @@ const Sponsorship = () => {
       color="warning"
       imageSrc="v1663270138/festival_ktw1d1"
       icon={faFlag}
-      orientation={Orientation.Left}
+      orientation={Orientation.Right}
       action={{ href: "/become-a-sponsor", text: "Sponsorship Opportunities" }}
     >
-      <p className="lead">
+      <Lead>
         Sponsorship is a great way to promote your commitment to equal rights
         for all! The annual Charleston Pride Festival is the best-attended event
         during Pride Week and it provides an opportunity to partner with local
         businesses, non-profits, and other LGBTQIA+ organizations whose mission
         is to bring awareness, promote diversity, and uplift the community. This
-        year, the Charleston Pride Festival will be celebrating its 12th
+        year, the Charleston Pride Festival will be celebrating its 13th
         anniversary here in the Lowcountry and we would love to secure your
         support through Sponsorship!
-      </p>
+      </Lead>
     </ContentSectionTwoColumn>
   );
 };
@@ -234,11 +228,11 @@ const OurMission = () => {
       icon={faHeart}
       orientation={Orientation.Right}
     >
-      <p className="lead">
+      <Lead>
         Our mission is to promote the visibility of the LGBTQ community by
         educating society, honoring our heritage, advocating for our culture,
         and celebrating our diverse society.
-      </p>
+      </Lead>
     </ContentSectionTwoColumn>
   );
 };
@@ -252,12 +246,12 @@ const OurPurpose = () => {
       icon={faSmile}
       orientation={Orientation.Right}
     >
-      <p className="lead">
+      <Lead>
         Our purpose is to highlight the uniqueness and diversity of our
         community through distinct events throughout the year promoting our
         history and culture, including the annual Charleston Pride Parade and
         Festival.
-      </p>
+      </Lead>
     </ContentSectionStackedImage>
   );
 };
@@ -276,11 +270,11 @@ const Tacos = () => {
       subDescription="Taco Boy Next, Sept 24 @ 9:30pm | 18+"
       focusContent={true}
     >
-      <p>
+      <Lead>
         Join Charleston Pride and the greater Nexton/Summerville community for a
         night of fun with the local LGBTQIA+ community. Drag show, drink
         specials and dance party with many more surprises in store!
-      </p>
+      </Lead>
     </ContentSectionTwoColumn>
   );
 };
@@ -378,7 +372,7 @@ const headerStyle = {
   backgroundPosition: `center 20%`,
 };
 
-function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
+function Home() {
   return (
     <Layout>
       <Header style={headerStyle} />
@@ -386,41 +380,41 @@ function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
       <Prism />
       <Maps /> */}
       <Sponsorship />
-      <SponsorCarousel sponsors={sponsors} />
+      {/* <SponsorCarousel sponsors={sponsors} /> */}
       {/* <Pageant /> */}
       <Serve />
       <DonateSection />
       <Breaker3 />
       {/* <FopSection /> */}
       <SocialBar />
-
       <Volunteer />
       <Breaker4 />
       <Store />
       <Breaker1 />
       <OurMission />
       <OurPurpose />
-      <Smile />
-      <Breaker2 />
+      <div className="my-5 mt-lg-10">
+        <Breaker2 />
+      </div>
       <Breaker5 />
       <Breaker6 />
     </Layout>
   );
 }
 
-export const getStaticProps: GetStaticProps<{
-  sponsors: Sponsor[];
-}> = async () => {
-  const res = await fetch(
-    "https://chspride-api.azurewebsites.net/api/Sponsors"
-  );
-  const sponsors: Sponsor[] = await res.json();
-  console.log("retrieved sponsors:" + sponsors.length);
-  return {
-    props: {
-      sponsors,
-    },
-  };
-};
+// export const getStaticProps: GetStaticProps<{
+//   sponsors: Sponsor[];
+// }> = async () => {
+//   const res = await fetch(
+//     "https://chspride-api.azurewebsites.net/api/Sponsors"
+//   );
+//   const sponsors: Sponsor[] = await res.json();
+//   console.log("retrieved sponsors:" + sponsors.length);
+//   return {
+//     props: {
+//       sponsors,
+//     },
+//   };
+// };
 
 export default Home;

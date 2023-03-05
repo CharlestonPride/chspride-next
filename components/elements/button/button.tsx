@@ -45,10 +45,19 @@ const OutlineButton = ({ color, children }: ButtonProps) => (
   </button>
 );
 
+const LinkOutlineButton = ({ color, children, href }: LinkButtonProps) => (
+  <Link href={href} passHref>
+    <button type="button" className={"btn btn-outline-" + color}>
+      {children}
+    </button>
+  </Link>
+);
+
 export {
   Button,
   GradientButton,
   OutlineButton,
   LinkButton,
   LinkGradientButton,
+  LinkOutlineButton,
 };
