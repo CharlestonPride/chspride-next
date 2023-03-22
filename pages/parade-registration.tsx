@@ -169,7 +169,7 @@ const ParadeRegistration = () => {
             className="mt-3"
           >
             <Entry
-              title="Walking and wheeling Entry"
+              title="Walking and Wheeling Entry"
               imageId="parade1_jxra2b"
               price={50}
             >
