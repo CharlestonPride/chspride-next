@@ -7,7 +7,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 export default function Layout({
   children,
   title = "Charleston Pride",
-  description = "Charleston Pride Parade - Saturday, June 19th, 2023 @ 9:00 am",
+  description = "Charleston Pride Parade - Saturday, June 17th, 2023 @ 9:00 am",
   imageUrl = "https://res.cloudinary.com/charlestonpride-org/image/upload/v1679511376/2023/paradecover_s1b5ey.png",
 }) {
   return (

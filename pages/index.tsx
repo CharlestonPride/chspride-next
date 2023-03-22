@@ -378,7 +378,7 @@ const Parade = () => {
       orientation={Orientation.Left}
     >
       <p>
-        On <strong>Saturday, June 19th, 2023</strong> we are excited to
+        On <strong>Saturday, June 17th, 2023</strong> we are excited to
         celebrate Pride with our annual Pride Parade in historic Downtown
         Charleston! Whether you and your organization would like to join and
         walk in the parade, ride along in a vehicle, or create a unique themed
