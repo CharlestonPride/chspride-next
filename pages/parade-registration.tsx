@@ -73,7 +73,7 @@ const ParadeRegistration = () => {
                 parade@charlestonpride.org
               </a>
             </p>
-            <h3 className="text-gradient text-warning">Rules for the Parade</h3>
+            <h3 className="text-gradient text-info">Rules for the Parade</h3>
             <p>
               The person registering agrees that they have read the following
               waiver and represents the group, business or organization
@@ -158,7 +158,7 @@ const ParadeRegistration = () => {
           <Col>
             <CloudImage
               className="w-100 border-radius-lg shadow d-lg-none"
-              imageId="2023/yioaai"
+              imageId="2023/paraderoute_lnurz1"
             ></CloudImage>
           </Col>
         </Row>
@@ -166,25 +166,27 @@ const ParadeRegistration = () => {
           <Col
             md={{ span: 8, offset: 2 }}
             lg={{ span: 6, offset: 3 }}
-            xl={{ span: 4, offset: 0 }}
             className="mt-3"
           >
-            <Entry title="Walking Entry" imageId="parade1_jxra2b" price={50}>
+            <Entry
+              title="Walking and wheeling Entry"
+              imageId="parade1_jxra2b"
+              price={50}
+            >
               <p>
-                Get your steps in with Pride with a walking entry in the parade.
-                This entry covers up to <strong>50</strong> members, with a
-                price as low as $1 per walking member.
+                Get your steps in with Pride with a walking and wheeling entry
+                in the parade. This entry covers up to <strong>50</strong>{" "}
+                members, with a price as low as $1 per member.
               </p>
               <p>
-                (Note: If you have more than 50 walking members, you will need
-                to purchase additional walking entries).
+                (Note: If you have more than 50 members, you will need to
+                purchase additional walking and wheeling entries).
               </p>
             </Entry>
           </Col>
           <Col
             md={{ span: 8, offset: 2 }}
             lg={{ span: 6, offset: 3 }}
-            xl={{ span: 4, offset: 0 }}
             className="mt-3"
           >
             <Entry title="Vehicle Entry" imageId="parade_ryhqxt" price={100}>
@@ -203,7 +205,6 @@ const ParadeRegistration = () => {
           <Col
             md={{ span: 8, offset: 2 }}
             lg={{ span: 6, offset: 3 }}
-            xl={{ span: 4, offset: 0 }}
             className="mt-3"
           >
             <Entry title="Float Entry" imageId="parade7_xbzzqw" price={150}>
