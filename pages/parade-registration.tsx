@@ -31,13 +31,14 @@ const Entry = ({ title, imageId, price, children }: Props) => {
 const ParadeRegistration = () => {
   return (
     <Layout
-      title="Charleston Pride Parade 2022 Registration"
-      description="Parade registration for Charleston Pride 2022."
+      title="Charleston Pride Parade 2023 Registration"
+      description="Parade registration for Charleston Pride 2023."
+      imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1679511376/2023/paradecover_s1b5ey.png"
     >
       <ExternalFrame
-        title="Charleston Pride Parade 2022 Registration"
-        color="warning"
-        iframeSrc="https://registration.planningpod.com/?ssid=NTI1NTM5"
+        title="Charleston Pride Parade 2023 Registration"
+        color="info"
+        iframeSrc="https://registration.planningpod.com/?ssid=NzM2ODMw"
         iframeHeight="2000px"
       >
         <Row>
@@ -48,26 +49,26 @@ const ParadeRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block"
-              imageId="2022/kcjo9j"
+              imageId="2023/parade_ftrcyu"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-lg-none"
-              imageId="2022/ng6q9f"
+              imageId="2023/paradecover_s1b5ey"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block my-5"
-              imageId="2022/yioaai"
+              imageId="2023/paraderoute_lnurz1"
             ></CloudImage>
           </Col>
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
             <p className="lead">
-              On <strong>Saturday, June 25th, 2022</strong> we are excited to
-              celebrate Pride with our annual <strong>Pride Parade</strong> in
-              historic Downtown Charleston! Whether you and your organization
-              would like to join and walk in the parade, ride along in a
-              vehicle, or create a unique themed float, all are welcome to take
-              part in the festivities. If you have any questions about parade
-              and float entries, please email{" "}
+              On <strong>Saturday, June 19th, 2023 @ 9:00 am</strong> we are
+              excited to celebrate Pride with our annual{" "}
+              <strong>Pride Parade</strong> in historic Downtown Charleston!
+              Whether you and your organization would like to join and walk in
+              the parade, ride along in a vehicle, or create a unique themed
+              float, all are welcome to take part in the festivities. If you
+              have any questions about parade and float entries, please email{" "}
               <a href="mailto:parade@charlestonpride.org">
                 parade@charlestonpride.org
               </a>
@@ -157,7 +158,7 @@ const ParadeRegistration = () => {
           <Col>
             <CloudImage
               className="w-100 border-radius-lg shadow d-lg-none"
-              imageId="2022/yioaai"
+              imageId="2023/yioaai"
             ></CloudImage>
           </Col>
         </Row>
@@ -222,7 +223,7 @@ const ParadeRegistration = () => {
             </Entry>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <p className="text-center lead mt-5">
             Registrations for the Pride Parade are now closed. If you have any
             questions please email{" "}
@@ -231,7 +232,7 @@ const ParadeRegistration = () => {
             </a>
             .
           </p>
-        </Row>
+        </Row> */}
       </ExternalFrame>
     </Layout>
   );

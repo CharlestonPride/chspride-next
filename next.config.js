@@ -11,7 +11,7 @@ module.exports = {
       "/serve-on-the-board": { page: "/serve-on-the-board" },
       "/store": { page: "/store" },
       "/volunteer": { page: "/volunteer" },
-      // "/parade-registration": { page: "/parade-registration" },
+      "/parade-registration": { page: "/parade-registration" },
       // "/pageant-registration": { page: "/pageant-registration" },
       // "/pageant": { page: "/events/pageant" },
       // "/vendor-registration": { page: "vendor-registration" },
