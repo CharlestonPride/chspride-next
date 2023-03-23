@@ -179,11 +179,12 @@ const Sponsorship = () => {
     >
       <Lead>
         Sponsorship is a great way to promote your commitment to equal rights
-        for all! The annual Charleston Pride Festival is the best-attended event
-        during Pride Week and it provides an opportunity to partner with local
-        businesses, non-profits, and other LGBTQIA+ organizations whose mission
-        is to bring awareness, promote diversity, and uplift the community. This
-        year, the Charleston Pride Festival will be celebrating its 13th
+        for all! The Charleston Pride Parade, Week, and Festival bring together
+        thousands of participants and attendees to celebrate the LGBTQ+
+        community each year. These events provide a great opportunity to partner
+        with local businesses, non-profits, and other LGBTQIA+ organizations
+        whose mission is to bring awareness, promote diversity, and uplift the
+        community. This year, Charleston Pride will be celebrating its 13th
         anniversary here in the Lowcountry and we would love to secure your
         support through Sponsorship!
       </Lead>

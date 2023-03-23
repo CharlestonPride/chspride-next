@@ -4,7 +4,6 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import Layout from "../components/elements/layout/layout";
 import Lead from "../components/elements/lead/lead";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/parade2_zpui4d.jpg)`,
@@ -51,26 +50,26 @@ const Sponsorships = () => {
       <Container className="mt-5">
         <Row>
           <Col>
-            <h3>2022 Festival Sponsorship Packages</h3>
+            <h3>2023 Sponsorship Packages</h3>
             <Lead>
               Charleston Pride is the Lowcountry’s largest non-profit
-              organization that celebrates the LGBTQIA+ community. During our
-              official Pride Week, participants can attend several events
-              focused on both advocacy and education, while honoring our
-              heritage and promoting our visibility. While the COVID-19 pandemic
-              presented many challenges since our 2019 10th Anniversary
-              celebration, Charleston Pride has found unique ways to celebrate,
-              and with your financial support, we are excited to relaunch our
-              annual Festival this Fall.
+              organization that celebrates the LGBTQIA+ community. Throughout
+              the year, Charleston Pride hosts many events focused on both
+              advocacy and education, while honoring our heritage and promoting
+              our visibility.
             </Lead>
             <Lead>
-              Sponsorship is a great way to promote your commitment to equal
-              rights for all! The annual Charleston Pride Festival is the
-              best-attended event during Pride Week and it provides an
-              opportunity to partner with local businesses, non-profits, and
-              other LGBTQIA+ organizations whose mission is to bring awareness,
-              promote diversity, and uplift the community. This year, the
-              Charleston Pride Festival will be celebrating its 12th anniversary
+              Our largest staple events are our annual Pride Parade, Pride Week,
+              and Pride Festival. Sponsorship is a great way to promote your
+              commitment to equal rights for all! Hosted during National Pride
+              Month, June, the parade marches down Historic King Street bringing
+              together thousands of participants and spectators to celebrate the
+              LGBTQ+ community. The annual Charleston Pride Festival, hosted in
+              the fall, is the best-attended event during Pride Week and it
+              provides an opportunity to partner with local businesses,
+              non-profits, and other LGBTQIA+ organizations whose mission is to
+              bring awareness, promote diversity, and uplift the community. This
+              year, Charleston Pride will be celebrating its 13th anniversary
               here in the Lowcountry and we would love to secure your support
               through Sponsorship!
             </Lead>
