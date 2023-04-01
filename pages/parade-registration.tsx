@@ -32,8 +32,8 @@ const ParadeRegistration = () => {
   return (
     <Layout
       title="Charleston Pride Parade 2023 Registration"
-      description="Join us Saturday, June 17th, 2023 @ 9:00 am"
-      imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1679511376/2023/paradecover_s1b5ey.png"
+      description="Join us Saturday, June 3rd, 2023 @ 9:00 am"
+      imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1680390918/parade_bzmuos.jpg"
     >
       <ExternalFrame
         title="Charleston Pride Parade 2023 Registration"
@@ -49,11 +49,11 @@ const ParadeRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block"
-              imageId="2023/parade_ftrcyu"
+              imageId="parade_bzmuos"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-lg-none"
-              imageId="2023/paradecover_s1b5ey"
+              imageId="parade_bzmuos"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block my-5"
@@ -62,7 +62,7 @@ const ParadeRegistration = () => {
           </Col>
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
             <p className="lead">
-              On <strong>Saturday, June 17th, 2023 @ 9:00 am</strong> we are
+              On <strong>Saturday, June 3rd, 2023 @ 9:00 am</strong> we are
               excited to celebrate Pride with our annual{" "}
               <strong>Pride Parade</strong> in historic Downtown Charleston!
               Whether you and your organization would like to join and walk in
