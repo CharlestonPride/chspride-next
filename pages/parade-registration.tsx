@@ -33,7 +33,7 @@ const ParadeRegistration = () => {
     <Layout
       title="Charleston Pride Parade 2023 Registration"
       description="Join us Saturday, June 3rd, 2023 @ 9:00 am"
-      imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1679511376/2023/paradecover_s1b5ey.png"
+      imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1680390918/parade_bzmuos.jpg"
     >
       <ExternalFrame
         title="Charleston Pride Parade 2023 Registration"
@@ -49,11 +49,11 @@ const ParadeRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block"
-              imageId="2023/parade_ftrcyu"
+              imageId="parade_bzmuos"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-lg-none"
-              imageId="2023/paradecover_s1b5ey"
+              imageId="parade_bzmuos"
             ></CloudImage>
             <CloudImage
               className="w-100 border-radius-lg shadow d-none d-lg-block my-5"

@@ -374,7 +374,7 @@ const Parade = () => {
       color="info"
       description="Register Today!"
       action={{ href: "/parade-registration", text: "Register" }}
-      imageSrc="2023/parade_ftrcyu"
+      imageSrc="parade_bzmuos"
       icon={faFlag}
       orientation={Orientation.Left}
     >
