@@ -171,7 +171,7 @@ const Sponsorship = () => {
   return (
     <ContentSectionTwoColumn
       title="Become a Sponsor"
-      color="warning"
+      color="success"
       imageSrc="v1663270138/festival_ktw1d1"
       icon={faFlag}
       orientation={Orientation.Right}
@@ -260,15 +260,15 @@ const OurPurpose = () => {
 const Tacos = () => {
   return (
     <ContentSectionTwoColumn
-      title="Taco’s and Tattas!"
-      color="danger"
-      description="Presented by Charleston Pride and Taco Boy Nexton"
-      action={{ href: "/tacos-and-tattas", text: "more info" }}
-      imageSrc="sponsor/tacoboy"
+      title="Tacos & Tattas 2.0!"
+      color="warning"
+      description="The Yellow Party"
+      action={{ href: "/tacos-and-tattas", text: "tickets" }}
+      imageSrc="2023/TACO_BOY_o1y9ba"
       icon={faTicket}
       orientation={Orientation.Right}
       disableShadow={true}
-      subDescription="Taco Boy Next, Sept 24 @ 9:30pm | 18+"
+      subDescription="Taco Boy Nexton, April 29 @ 9:30pm | 18+"
       focusContent={true}
     >
       <Lead>
@@ -400,6 +400,7 @@ function Home() {
     <Layout>
       <Header style={headerStyle} />
       <Parade />
+      <Tacos />
       {/* <Festival />
       <Prism />
       <Maps /> */}

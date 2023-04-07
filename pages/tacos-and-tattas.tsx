@@ -1,7 +1,6 @@
 import {
   faCalendarDay,
   faClock,
-  faCrown,
   faMapPin,
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
@@ -13,19 +12,22 @@ import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 
 const Tacos = () => {
   return (
-    <Layout title="Charleston Pride and Taco Boy Nexton Present: Taco’s and Tattas!">
+    <Layout
+      title="Taco's & Tattas 2.0 | The Yellow Party | Tacoboy @ Nexton!"
+      description="Featuring the 2022 Charleston Pride Royal Court | Saturday April 29 @ 9:30PM"
+      imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1680832783/2023/TACO_BOY_rtaozg.png"
+    >
       <ExternalFrame
-        title="Taco Boy Taco's and Tattas"
+        title=""
         color="warning"
-        iframeSrc="https://registration.planningpod.com?ssid=NTkwMzMx"
+        iframeSrc="https://registration.planningpod.com?ssid=NzQ1NDMy"
         iframeHeight="2000px"
       >
         <Row>
-          <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
-            <h1 className="text-gradient text-warning">
-              Charleston Pride and Taco Boy Nexton Present: Taco’s and Tattas!
-            </h1>
-            <h2>18+</h2>
+          <Col xl="6" className="mx-auto py-5 text-lg-left text-center">
+            <h1 className="text-gradient text-warning">Tacos & Tattas 2.0</h1>
+            <h2>The Yellow Party</h2>
+            <h3>18+</h3>
             <p className="lead">
               Join Charleston Pride and the greater Nexton/Summerville community
               for a night of fun with the local LGBTQIA+ community. Drag show,
@@ -38,19 +40,11 @@ const Tacos = () => {
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faCalendarDay} className="me-2" />{" "}
-                Saturday, 9/24
+                Saturday, April 29
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faClock} className="me-2" /> Doors @
-                8:30pm; Show @ 9:30pm
-              </li>
-              <li className="list-group-item">
-                <FontAwesomeIcon icon={faCrown} className="me-2" /> Performances
-                by: <strong>Ava Clear</strong> (host),{" "}
-                <strong>Diamond Giovanni</strong> (Empress of Charleston 2019),{" "}
-                <strong>Beau O’ Bishop</strong> (Emperor of Charleston Pride
-                2019), <strong>Mercy Madison</strong>, and{" "}
-                <strong>Kymmya Starr</strong>
+                9:30pm; Show @ 10:00pm
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faTicket} className="me-2" />
@@ -59,14 +53,10 @@ const Tacos = () => {
               </li>
             </ul>
           </Col>
-          <Col
-            xs={{ span: 8, offset: 2 }}
-            lg="4"
-            className="mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto"
-          >
+          <Col xl="4" className="mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto">
             <CloudImage
               className="w-100 "
-              imageId="sponsor/tacoboy"
+              imageId="2023/TACO_BOY_o1y9ba"
             ></CloudImage>
           </Col>
         </Row>
