@@ -148,7 +148,7 @@ const Sponsorships = () => {
                       <Value value={50}>1</Value>
                     </tr>
                     <tr>
-                      <Perk>2022 Pride Gift Bags</Perk>
+                      <Perk>2023 Pride Swag Bags</Perk>
                       <Value value={750}>10</Value>
                       <Value value={600}>8</Value>
                       <Value value={450}>6</Value>
