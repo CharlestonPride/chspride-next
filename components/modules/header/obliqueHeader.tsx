@@ -15,7 +15,7 @@ export default function ObliqueHeader({ style, children }) {
           <Row>
             <Col
               md="7"
-              lg="6"
+              lg="5"
               className="d-flex justify-content-center flex-column"
             >
               {children}
