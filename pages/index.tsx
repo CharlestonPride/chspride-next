@@ -24,6 +24,9 @@ import GallerySectionSingleImage from "../components/modules/gallerySection/gall
 import Lead from "../components/elements/lead/lead";
 import { Col, Container, Row } from "react-bootstrap";
 import CloudImage from "../components/elements/cloudImage/cloudImage";
+import { getSponsors } from "../lib/prepr";
+import { InferGetStaticPropsType } from "next";
+import SponsorCarousel from "../components/modules/sponsor/sponsorCarousel";
 
 const DonateSection = () => {
   return (
@@ -395,7 +398,7 @@ const headerStyle = {
   backgroundPosition: `center 20%`,
 };
 
-function Home() {
+function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
       <Header style={headerStyle} />
@@ -404,7 +407,7 @@ function Home() {
       <Prism />
       <Maps /> */}
       <Sponsorship />
-      {/* <SponsorCarousel sponsors={sponsors} /> */}
+      <SponsorCarousel sponsors={sponsors} />
       {/* <Pageant /> */}
       <Serve />
       <DonateSection />
@@ -426,19 +429,12 @@ function Home() {
   );
 }
 
-// export const getStaticProps: GetStaticProps<{
-//   sponsors: Sponsor[];
-// }> = async () => {
-//   const res = await fetch(
-//     "https://chspride-api.azurewebsites.net/api/Sponsors"
-//   );
-//   const sponsors: Sponsor[] = await res.json();
-//   console.log("retrieved sponsors:" + sponsors.length);
-//   return {
-//     props: {
-//       sponsors,
-//     },
-//   };
-// };
+export async function getStaticProps() {
+  const sponsors = await getSponsors();
+
+  return {
+    props: { sponsors },
+  };
+}
 
 export default Home;

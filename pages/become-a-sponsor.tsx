@@ -4,7 +4,11 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import Layout from "../components/elements/layout/layout";
 import Lead from "../components/elements/lead/lead";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
-import { getSponsorships, getSponsorshipsPage } from "../lib/prepr";
+import {
+  SponsorshipPage,
+  getSponsorships,
+  getSponsorshipsPage,
+} from "../lib/prepr";
 import { InferGetStaticPropsType } from "next";
 import { titleCase } from "../utils/utils";
 
@@ -12,51 +16,6 @@ const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/parade2_zpui4d.jpg)`,
 };
 
-type SponsorshipPage = {
-  title: string;
-  description: string;
-  subtitle: string;
-  call_to_action: string;
-  registration: boolean;
-  registration_form: {
-    height: string;
-    url: string;
-    width: string;
-  };
-  closed_message: string;
-  naming_rights: string;
-  media_posts: string;
-  tshirt_recognition: string;
-  vendor_plot: string;
-  festival_ticket: string;
-  swag_bags: string;
-  prism_ticket: string;
-  logo_attribution: string;
-  sponsorship_badge: string;
-  festival_ticket_value: number;
-  swag_bag_value: number;
-  prism_ticket_value: number;
-  large_plot_value: number;
-  small_plot_value: number;
-};
-
-type Sponsorships = {
-  total: number;
-  items: [
-    {
-      _id: string;
-      level: string;
-      price: number;
-      naming_rights: boolean;
-      media_posts: boolean;
-      tshirt_recognition: boolean;
-      vendor_plot_size: string;
-      festival_tickets: number;
-      swag_bags: number;
-      prism_tickets: number;
-    }
-  ];
-};
 const Perk = ({ children }) => {
   return <td className="table-secondary">{children}</td>;
 };
@@ -128,9 +87,10 @@ const Sponsorships = ({
                   <thead>
                     <tr>
                       <th></th>
-                      {sponsorships.items.map((sponsorship) => {
+                      {sponsorships.items.map((sponsorship, index) => {
                         return (
                           <th
+                            key={index}
                             className={
                               "sponsor-" +
                               sponsorship.level.toLowerCase() +
@@ -146,8 +106,8 @@ const Sponsorships = ({
                   <tbody>
                     <tr>
                       <Perk>Sponsorship Level</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return <Price>{sponsorship.price}</Price>;
+                      {sponsorships.items.map((sponsorship, index) => {
+                        return <Price key={index}>{sponsorship.price}</Price>;
                       })}
                     </tr>
                     <tr>
@@ -265,8 +225,8 @@ const Sponsorships = ({
 };
 
 export async function getStaticProps() {
-  const page = (await getSponsorshipsPage()) as SponsorshipPage;
-  const sponsorships = (await getSponsorships()) as Sponsorships;
+  const page = await getSponsorshipsPage();
+  const sponsorships = await getSponsorships();
 
   return {
     props: { page, sponsorships },

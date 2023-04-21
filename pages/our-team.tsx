@@ -5,31 +5,10 @@ import React, { useState } from "react";
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
 import Layout from "../components/elements/layout/layout";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
-import { getTeamMembersPage } from "../lib/prepr";
+import { TeamMember, getTeamMembersPage } from "../lib/prepr";
 
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/rainbow_qi42lu.jpg)`,
-};
-
-type Page = {
-  title: string;
-  stack: TeamMemberCollection[];
-};
-
-type TeamMemberCollection = {
-  name: string;
-  people: TeamMember[];
-};
-
-type TeamMember = {
-  title: string;
-  full_name: string;
-  email: string;
-  bio: string;
-  profile_pic: [{ url: string }];
-  subjective: string;
-  possessive: string;
-  objective: string;
 };
 
 const Headshot = (memberData: TeamMember) => {
@@ -152,13 +131,10 @@ const BoardMember = (memberData: TeamMember) => {
 
 function OurTeam({ page }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Layout title={page.title} description="The Charleston Pride Team">
-      <div>{JSON.stringify(page)}</div>
+    <Layout title={page.title} description={page.description}>
       <ObliqueHeader style={headerStyle}>
-        <h1 className="text-gradient text-primary">Our Team</h1>
-        <h1>
-          Charleston Pride is brought to you by a group of dedicated volunteers
-        </h1>
+        <h1 className="text-gradient text-primary">{page.title}</h1>
+        <h1>{page.description}</h1>
       </ObliqueHeader>
       <Container className="mt-5">
         <Row>
@@ -171,29 +147,33 @@ function OurTeam({ page }: InferGetStaticPropsType<typeof getStaticProps>) {
             </p>
           </Col>
         </Row>
-        {page.stack.map((collection) => {
-          return (
-            <>
-              <Row>
-                <Col className="mx-auto text-center mb-5">
-                  <h2 className="text-gradient text-info">{collection.name}</h2>
-                </Col>
-              </Row>
-              <Row>
-                {collection.people.map((teamMember) => {
-                  return BoardMember(teamMember);
-                })}
-              </Row>
-            </>
-          );
-        })}
+        <Row>
+          <Col className="mx-auto text-center mb-5">
+            <h2 className="text-gradient text-info">The Executive Committee</h2>
+          </Col>
+        </Row>
+        <Row>
+          {page.executive_committee.map((teamMember, index) => {
+            return <BoardMember {...teamMember} key={index} />;
+          })}
+        </Row>
+        <Row>
+          <Col className="mx-auto text-center mb-5">
+            <h2 className="text-gradient text-info">The Board Members</h2>
+          </Col>
+        </Row>
+        <Row>
+          {page.board_members.map((teamMember, index) => {
+            return <BoardMember {...teamMember} key={index} />;
+          })}
+        </Row>
       </Container>
     </Layout>
   );
 }
 
 export async function getStaticProps({ preview = false }) {
-  const page = (await getTeamMembersPage(preview)) as Page;
+  const page = await getTeamMembersPage(preview);
 
   return {
     props: { page },
