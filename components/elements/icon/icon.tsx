@@ -1,14 +1,21 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import {
+  IconLookup,
+  IconDefinition,
+  findIconDefinition,
+  IconName,
+} from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { ThemeColors } from "../../../types";
 
 type IconProps = {
   color: ThemeColors;
-  icon: IconDefinition;
+  icon: IconName;
 };
 
 const RoundShadowIcon = (props: IconProps) => {
+  const lookup: IconLookup = { prefix: "fas", iconName: props.icon };
+  const iconDefinition: IconDefinition = findIconDefinition(lookup);
   return (
     <div
       className={
@@ -16,7 +23,7 @@ const RoundShadowIcon = (props: IconProps) => {
         props.color
       }
     >
-      <FontAwesomeIcon icon={props.icon} size="lg" />
+      <FontAwesomeIcon icon={iconDefinition} size="lg" />
     </div>
   );
 };

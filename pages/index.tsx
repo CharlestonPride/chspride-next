@@ -2,19 +2,8 @@ import React from "react";
 import Layout from "../components/elements/layout/layout";
 import ContentSectionStackedImage from "../components/modules/contentSection/contentSectionStackedImage";
 import Header from "../components/modules/header/header";
-import { Orientation } from "../types";
-import {
-  faHandHoldingUsd,
-  faUserFriends,
-  faShoppingCart,
-  faHandsHelping,
-  faHeart,
-  faSmile,
-  faGrinHearts,
-  faFlag,
-  faCrown,
-  faTicket,
-} from "@fortawesome/free-solid-svg-icons";
+import { Orientation, ThemeColors } from "../types";
+import { IconName } from "@fortawesome/free-solid-svg-icons";
 import ContentSectionTwoColumn from "../components/modules/contentSection/contentSectionTwoColumn";
 import SocialBar from "../components/modules/social/socialBar";
 import ContentSectionImageGallery from "../components/modules/contentSection/contentSectionImageGallery";
@@ -22,9 +11,7 @@ import GallerySectionDualImage from "../components/modules/gallerySection/galler
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
 import Lead from "../components/elements/lead/lead";
-import { Col, Container, Row } from "react-bootstrap";
-import CloudImage from "../components/elements/cloudImage/cloudImage";
-import { getSponsors } from "../lib/prepr";
+import { getHomePage, getSponsors } from "../lib/prepr";
 import { InferGetStaticPropsType } from "next";
 import SponsorCarousel from "../components/modules/sponsor/sponsorCarousel";
 
@@ -36,7 +23,7 @@ const DonateSection = () => {
       description="Help Make Charleston Pride a Reality!"
       action={{ href: "/donate", text: "Donate" }}
       imageSrc="parade1_jxra2b"
-      icon={faHandHoldingUsd}
+      icon={"hand-holding-usd"}
       orientation={Orientation.Left}
     >
       <Lead>
@@ -54,34 +41,13 @@ const DonateSection = () => {
   );
 };
 
-const FopSection = () => {
-  return (
-    <ContentSectionTwoColumn
-      title="Friends of Pride"
-      color="danger"
-      description="Let's be Friends"
-      subDescription="(with benefits)"
-      action={{ href: "/friends-of-pride", text: "More Info" }}
-      imageSrc="prism1_w4rd0d"
-      icon={faUserFriends}
-      orientation={Orientation.Left}
-    >
-      <Lead>
-        Become an official Friend of Pride through joining our monthly donor
-        program. Friends of Pride get exclusive access to many of our events and
-        some extra perks along the way.
-      </Lead>
-    </ContentSectionTwoColumn>
-  );
-};
-
 const Volunteer = () => {
   return (
     <ContentSectionStackedImage
       title="Volunteer with Pride"
       color="info"
       imageSrc="volunteer_rthkil"
-      icon={faHandsHelping}
+      icon={"handshake"}
       orientation={Orientation.Left}
       action={{ href: "/volunteer", text: "Volunteer" }}
     >
@@ -99,7 +65,7 @@ const Serve = () => {
       title="Serve on the Board"
       color="danger"
       imageSrc="board_qqnhnx"
-      icon={faGrinHearts}
+      icon={"grin-hearts"}
       orientation={Orientation.Left}
       action={{ href: "/serve-on-the-board", text: "Apply" }}
     >
@@ -126,7 +92,7 @@ const Store = () => {
         { imageId: "store/shop6_tpy5yy", alt: "travel mug" },
         { imageId: "store/shop7_rr16tb", alt: "trucker hat" },
       ]}
-      icon={faShoppingCart}
+      icon={"shopping-cart"}
       color="info"
       action={{ href: "/store", text: "Shop" }}
     ></ContentSectionImageGallery>
@@ -149,13 +115,16 @@ const Breaker2 = () => {
   const itemA = { src: "parade4_ca3ohf", alt: "parade " };
   const itemB = { src: "parade5_z1dc89", alt: "parade " };
   return (
-    <GallerySectionDualImage
-      itemA={itemA}
-      itemB={itemB}
-      variant={2}
-    ></GallerySectionDualImage>
+    <div className="my-5 mt-lg-10">
+      <GallerySectionDualImage
+        itemA={itemA}
+        itemB={itemB}
+        variant={2}
+      ></GallerySectionDualImage>
+    </div>
   );
 };
+
 const Breaker3 = () => {
   const itemA = { src: "vertical3_acysj6", alt: "parade ", order: 1 };
   const itemB = { src: "vertical1_qbwp1d", alt: "parade ", order: 2 };
@@ -176,7 +145,7 @@ const Sponsorship = () => {
       title="Become a Sponsor"
       color="warning"
       imageSrc="v1663270138/festival_ktw1d1"
-      icon={faFlag}
+      icon={"flag"}
       orientation={Orientation.Right}
       action={{ href: "/become-a-sponsor", text: "Sponsorship Opportunities" }}
     >
@@ -229,7 +198,7 @@ const OurMission = () => {
       title="Our Mission"
       color="primary"
       imageSrc="tte1_oztwcd"
-      icon={faHeart}
+      icon={"heart"}
       orientation={Orientation.Right}
     >
       <Lead>
@@ -247,7 +216,7 @@ const OurPurpose = () => {
       title="Our Purpose"
       color="success"
       imageSrc="festival1_lbf5mn"
-      icon={faSmile}
+      icon={"smile"}
       orientation={Orientation.Right}
     >
       <Lead>
@@ -260,161 +229,95 @@ const OurPurpose = () => {
   );
 };
 
-const Tacos = () => {
-  return (
-    <ContentSectionTwoColumn
-      title="Taco’s and Tattas!"
-      color="danger"
-      description="Presented by Charleston Pride and Taco Boy Nexton"
-      action={{ href: "/tacos-and-tattas", text: "more info" }}
-      imageSrc="sponsor/tacoboy"
-      icon={faTicket}
-      orientation={Orientation.Right}
-      disableShadow={true}
-      subDescription="Taco Boy Next, Sept 24 @ 9:30pm | 18+"
-      focusContent={true}
-    >
-      <Lead>
-        Join Charleston Pride and the greater Nexton/Summerville community for a
-        night of fun with the local LGBTQIA+ community. Drag show, drink
-        specials and dance party with many more surprises in store!
-      </Lead>
-    </ContentSectionTwoColumn>
-  );
-};
-
-const Pageant = () => {
-  return (
-    <ContentSectionTwoColumn
-      title="Charleston Pride Pageant: Renaissance Ball"
-      color="primary"
-      description="The Hive, Oct 7 2022 @ 9pm"
-      action={{ href: "/pageant", text: "more info" }}
-      imageSrc="sponsor/hive_hfcvo0"
-      icon={faCrown}
-      orientation={Orientation.Right}
-      disableShadow={true}
-    ></ContentSectionTwoColumn>
-  );
-};
-
-const Prism = () => {
-  return (
-    <ContentSectionTwoColumn
-      title="Prism (Rescheduled from Nov 11th)"
-      color="primary"
-      imageSrc="2022/update_fya6u0"
-      icon={faFlag}
-      orientation={Orientation.Left}
-      focusContent={true}
-      description="Saturday, November 12th"
-      subDescription="The Refinery (1640 Meeting Street Rd)"
-      action={{ href: "/pride-guide", text: "Pride Guide" }}
-    >
-      <Lead>
-        Charleston Pride's premier party is back and better than ever! Celebrate
-        with 5 hours of dancing, drag, and drinking on November 12, 2022, from
-        6-11 pm at The Refinery. Food trucks will be on-site throughout the
-        event.
-      </Lead>
-    </ContentSectionTwoColumn>
-  );
-};
-
-const Festival = () => {
-  return (
-    <ContentSectionTwoColumn
-      title="Charleston Pride Festival"
-      color="info"
-      imageSrc="2022/festival_ciz0qd"
-      icon={faFlag}
-      orientation={Orientation.Right}
-      focusContent={true}
-      description="Saturday, November 12th"
-      subDescription="The Refinery (1640 Meeting Street Rd)"
-      action={{ href: "/pride-guide", text: "Pride Guide" }}
-    >
-      <Lead>
-        The Festival is back! For more than a decade, Charleston Pride has been
-        serving, empowering, and promoting the well-being and visibility of
-        LGBTQIA+ and allied communities. We are so excited about the comeback of
-        one of the largest Pride celebrations in the Lowcountry, the Charleston
-        Pride Festival, on November 12, 2022, from 12-6 pm at The Refinery. This
-        year's event is full of fun for all ages including a curated selection
-        of live entertainment, local food trucks, specialty drinks, and amazing
-        vendors! You don't want to miss this!
-      </Lead>
-    </ContentSectionTwoColumn>
-  );
-};
-
-const Maps = () => {
-  return (
-    <Container>
-      <Row>
-        <h3 className={"text-gradient mb-0 text-danger text-center"}>Maps</h3>
-        <Col lg="6">
-          <CloudImage
-            imageId="2022/festivalmap_iyosfv"
-            className="img-fluid shadow m-3"
-          />
-        </Col>
-        <Col lg="6">
-          <CloudImage
-            imageId="2022/prismmap_ccslog"
-            className="img-fluid shadow m-3"
-          />
-        </Col>
-      </Row>
-    </Container>
-  );
-};
-
-const Parade = () => {
-  return (
-    <ContentSectionTwoColumn
-      title="Parade Registration Now Open"
-      color="info"
-      description="Register Today!"
-      action={{ href: "/parade-registration", text: "Register" }}
-      imageSrc="2023/parade_ftrcyu"
-      icon={faFlag}
-      orientation={Orientation.Left}
-    >
-      <p>
-        On <strong>Saturday, June 17th, 2023</strong> we are excited to
-        celebrate Pride with our annual Pride Parade in historic Downtown
-        Charleston! Whether you and your organization would like to join and
-        walk in the parade, ride along in a vehicle, or create a unique themed
-        float, all are welcome to take part in the festivities.
-      </p>
-    </ContentSectionTwoColumn>
-  );
-};
-
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625013054/manson2_gjv7gs.jpg)`,
   backgroundSize: `cover`,
   backgroundPosition: `center 20%`,
 };
 
-function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
+function Home({
+  sponsors,
+  homePage,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Layout>
-      <Header style={headerStyle} />
-      <Parade />
-      {/* <Festival />
-      <Prism />
-      <Maps /> */}
-      <Sponsorship />
+    <Layout
+      title={homePage.seo.title}
+      description={homePage.seo.description}
+      imageUrl={homePage.seo.social_media_image.url}
+    >
+      <Header
+        style={headerStyle}
+        {...homePage}
+        theme="primary"
+        primaryAction={homePage.primary_action}
+        secondaryAction={homePage.secondary_action}
+      />
+      {homePage.sections.map((section, index) => {
+        let orientation = index % 2 ? Orientation.Right : Orientation.Left;
+        if (section.show_background_stack) {
+          return (
+            <ContentSectionStackedImage
+              key={index}
+              title={section.title}
+              description={section.subtitle}
+              color={section.theme as ThemeColors}
+              imageSrc={section.image[0].url}
+              icon={section.icon as IconName}
+              orientation={orientation}
+              action={{
+                href: section.primary_action?.url,
+                text: section.primary_action?.name,
+              }}
+              secondaryAction={{
+                href: section.secondary_action?.url,
+                text: section.secondary_action?.name,
+              }}
+            >
+              <div
+                className="lead"
+                dangerouslySetInnerHTML={{
+                  __html: section.description,
+                }}
+              ></div>
+            </ContentSectionStackedImage>
+          );
+        }
+        return (
+          <ContentSectionTwoColumn
+            key={index}
+            title={section.title}
+            description={section.subtitle}
+            color={section.theme as ThemeColors}
+            imageSrc={section.image[0].url}
+            icon={section.icon as IconName}
+            orientation={orientation}
+            focusContent={section.focus_on_content}
+            disableShadow={!section.show_image_shadow}
+            action={{
+              href: section.primary_action?.url,
+              text: section.primary_action?.name,
+            }}
+            secondaryAction={{
+              href: section.secondary_action?.url,
+              text: section.secondary_action?.name,
+            }}
+          >
+            <div
+              className="lead"
+              dangerouslySetInnerHTML={{
+                __html: section.description,
+              }}
+            ></div>
+          </ContentSectionTwoColumn>
+        );
+      })}
       <SponsorCarousel sponsors={sponsors} />
-      {/* <Pageant /> */}
-      <Serve />
-      <DonateSection />
+      <Sponsorship />
+      {homePage.show_apply_section && <Serve />}
+      {homePage.show_donate_section && <DonateSection />}
       <Breaker3 />
-      {/* <FopSection /> */}
       <SocialBar />
-      <Volunteer />
+      {homePage.show_volunteer_section && <Volunteer />}
       <Breaker4 />
       <Store />
       <Breaker1 />
@@ -431,9 +334,10 @@ function Home({ sponsors }: InferGetStaticPropsType<typeof getStaticProps>) {
 
 export async function getStaticProps() {
   const sponsors = await getSponsors();
+  const homePage = await getHomePage();
 
   return {
-    props: { sponsors },
+    props: { sponsors, homePage },
   };
 }
 

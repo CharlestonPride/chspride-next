@@ -32,7 +32,7 @@ const ParadeRegistration = () => {
   return (
     <Layout
       title="Charleston Pride Parade 2023 Registration"
-      description="Join us Saturday, June 17th, 2023 @ 9:00 am"
+      description="Join us Saturday, June 3rd, 2023 @ 9:00 am"
       imageUrl="https://res.cloudinary.com/charlestonpride-org/image/upload/v1679511376/2023/paradecover_s1b5ey.png"
     >
       <ExternalFrame

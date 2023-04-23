@@ -94,6 +94,12 @@ p,
   line-height: $lead-line-height;
 }
 
+div.lead > p {
+    font-size: $lead-font-size;
+      font-weight: $lead-font-weight;
+      line-height: $lead-line-height;
+}
+
 h1,
 .h1,
 h2,
