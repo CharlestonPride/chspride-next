@@ -11,9 +11,9 @@ import GallerySectionDualImage from "../components/modules/gallerySection/galler
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
 import Lead from "../components/elements/lead/lead";
-import { getHomePage, getSponsors } from "../lib/prepr";
 import { InferGetStaticPropsType } from "next";
 import SponsorCarousel from "../components/modules/sponsor/sponsorCarousel";
+import { getSponsors, getHomePage } from "../lib/prepr";
 
 const DonateSection = () => {
   return (
@@ -143,7 +143,7 @@ const Sponsorship = () => {
   return (
     <ContentSectionTwoColumn
       title="Become a Sponsor"
-      color="warning"
+      color="success"
       imageSrc="v1663270138/festival_ktw1d1"
       icon={"flag"}
       orientation={Orientation.Right}

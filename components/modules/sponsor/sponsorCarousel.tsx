@@ -49,7 +49,7 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
               md={{ span: 6, offset: 0 }}
               lg={{ span: 3, offset: 0 }}
             >
-              <SponsorCard {...sponsorChunk} />
+              <SponsorCard key={index} {...sponsorChunk} />
             </Col>
           );
         })}

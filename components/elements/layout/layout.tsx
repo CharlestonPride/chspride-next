@@ -4,19 +4,12 @@ import Footer from "../../modules/footer/footer";
 import MainNavBar from "../../modules/navbar/navbar";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-type Props = {
-  children: ReactElement;
-  title: string;
-  description: string;
-  imageUrl?: string;
-};
-
 export default function Layout({
   children,
   title = "Charleston Pride",
-  description = "Charleston Pride Parade - Saturday, June 17th, 2023 @ 9:00 am",
-  imageUrl,
-}: Props) {
+  description = "Our mission is to promote the visibility of the LGBTQ community in Charleston and the greater Southeast region. We strive to highlight the uniqueness and diversity of our community through distinct programming and events throughout the year promoting our history and culture. Charleston Pride seeks to educate society, honor our heritage, promote our culture, and celebrate our people.",
+  imageUrl = "https://res.cloudinary.com/charlestonpride-org/image/upload/v1625276576/CHSPride_Logo_4C_wSymbol_pkar3i.jpg",
+}) {
   return (
     <>
       <Head>

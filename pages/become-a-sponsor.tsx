@@ -156,16 +156,13 @@ const Sponsorships = ({
                       })}
                     </tr>
                     <tr>
-                      <Perk>{page.swag_bags}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return (
-                          <Value
-                            value={sponsorship.swag_bags * page.swag_bag_value}
-                          >
-                            {sponsorship.swag_bags}
-                          </Value>
-                        );
-                      })}
+                      <Perk>2023 Pride Swag Bags</Perk>
+                      <Value value={750}>10</Value>
+                      <Value value={600}>8</Value>
+                      <Value value={450}>6</Value>
+                      <Value value={300}>4</Value>
+                      <Value value={150}>2</Value>
+                      <Value value={75}>1</Value>
                     </tr>
                     <tr>
                       <Perk>{page.prism_ticket}</Perk>
