@@ -19,6 +19,7 @@ import {
   faStar,
   faHandshake,
 } from "@fortawesome/free-solid-svg-icons";
+import { SSRProvider } from "react-bootstrap";
 
 library.add(
   faHandHoldingUsd,
@@ -40,7 +41,11 @@ library.add(
 );
 
 function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <SSRProvider>
+      <Component {...pageProps} />
+    </SSRProvider>
+  );
 }
 
 export default App;
