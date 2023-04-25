@@ -1,8 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Sponsor } from "../../../lib/prepr";
-import { json } from "stream/consumers";
-import { chunk } from "lodash";
 
 type SponsorProps = {
   sponsors: Sponsor[];
@@ -45,11 +43,12 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
         {sortedSponsors.map((sponsorChunk, index) => {
           return (
             <Col
+              key={index}
               xs={{ span: 8, offset: 2 }}
               md={{ span: 6, offset: 0 }}
               lg={{ span: 3, offset: 0 }}
             >
-              <SponsorCard key={index} {...sponsorChunk} />
+              <SponsorCard {...sponsorChunk} />
             </Col>
           );
         })}
