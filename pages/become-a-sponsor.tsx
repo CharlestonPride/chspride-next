@@ -4,6 +4,13 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import Layout from "../components/elements/layout/layout";
 import Lead from "../components/elements/lead/lead";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
+import {
+  SponsorshipPage,
+  getSponsorships,
+  getSponsorshipsPage,
+} from "../lib/prepr";
+import { InferGetStaticPropsType } from "next";
+import { titleCase } from "../utils/utils";
 
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/parade2_zpui4d.jpg)`,
@@ -14,65 +21,62 @@ const Perk = ({ children }) => {
 };
 
 const Price = ({ children }) => {
-  return <td className="font-weight-bolder">{children}</td>;
+  return <td className="font-weight-bolder">${children}</td>;
 };
 
-const Check = () => {
-  return (
-    <td>
-      <FontAwesomeIcon icon={faCheck} />
-    </td>
-  );
+const Check = ({ value }) => {
+  return <td>{value && <FontAwesomeIcon icon={faCheck} />}</td>;
 };
 
 const Value = ({ children, value }) => {
   return (
     <td>
       {children}
-      <span className="d-block text-xs text-secondary">(${value} Value)</span>
+      {!!value && (
+        <span className="d-block text-xs text-secondary">(${value} Value)</span>
+      )}
     </td>
   );
 };
 
-const Sponsorships = () => {
+const Registration = (page: SponsorshipPage) => {
+  if (page.registration) {
+    return (
+      <iframe
+        src={page.registration_form.url}
+        height={page.registration_form.height}
+        width={page.registration_form.width}
+      />
+    );
+  }
+  return <div className="text-center">{page.closed_message}</div>;
+};
+const getBoothValue = (sponsorship, page) => {
+  switch (sponsorship.vendor_plot_size) {
+    case "20x20":
+      return page.large_plot_value;
+    case "10x10":
+      return page.small_plot_value;
+    default:
+      return 0;
+  }
+};
+
+const Sponsorships = ({
+  page,
+  sponsorships,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <Layout
-      title="Become a Sponsor"
-      description="Charleston Pride Sponsorship Opportunities"
-    >
+    <Layout title={page.title} description={page.description}>
       <ObliqueHeader style={headerStyle}>
-        <h1 className="text-gradient text-warning">Become a Sponsor</h1>
-        <h1>
-          Sponsorship is a great way to promote your commitment to equal rights
-          for all!
-        </h1>
+        <h1 className="text-gradient text-warning">{page.title}</h1>
+        <h1>{page.description}</h1>
       </ObliqueHeader>
       <Container className="mt-5">
         <Row>
           <Col>
-            <h3>2023 Sponsorship Packages</h3>
-            <Lead>
-              Charleston Pride is the Lowcountry’s largest non-profit
-              organization that celebrates the LGBTQIA+ community. Throughout
-              the year, Charleston Pride hosts many events focused on both
-              advocacy and education, while honoring our heritage and promoting
-              our visibility.
-            </Lead>
-            <Lead>
-              Our largest staple events are our annual Pride Parade, Pride Week,
-              and Pride Festival. Sponsorship is a great way to promote your
-              commitment to equal rights for all! Hosted during National Pride
-              Month, June, the parade marches down Historic King Street bringing
-              together thousands of participants and spectators to celebrate the
-              LGBTQ+ community. The annual Charleston Pride Festival, hosted in
-              the fall, is the best-attended event during Pride Week and it
-              provides an opportunity to partner with local businesses,
-              non-profits, and other LGBTQIA+ organizations whose mission is to
-              bring awareness, promote diversity, and uplift the community. This
-              year, Charleston Pride will be celebrating its 13th anniversary
-              here in the Lowcountry and we would love to secure your support
-              through Sponsorship!
-            </Lead>
+            <h3>{page.subtitle}</h3>
+            <Lead>{page.call_to_action}</Lead>
           </Col>
         </Row>
         <Row>
@@ -83,69 +87,73 @@ const Sponsorships = () => {
                   <thead>
                     <tr>
                       <th></th>
-                      <th className="sponsor-red text-black">Red</th>
-                      <th className="sponsor-orange  text-black">Orange</th>
-                      <th className="sponsor-yellow  text-black">Yellow</th>
-                      <th className="sponsor-green  text-black">Green</th>
-                      <th className="sponsor-blue  text-black">Blue</th>
-                      <th className="sponsor-purple  text-black">Purple</th>
+                      {sponsorships.items.map((sponsorship, index) => {
+                        return (
+                          <th
+                            key={index}
+                            className={
+                              "sponsor-" +
+                              sponsorship.level.toLowerCase() +
+                              " text-black"
+                            }
+                          >
+                            {titleCase(sponsorship.level)}
+                          </th>
+                        );
+                      })}
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <Perk>Sponsorship Level</Perk>
-                      <Price>$10,000</Price>
-                      <Price>$7,500</Price>
-                      <Price>$5,000</Price>
-                      <Price>$2,500</Price>
-                      <Price>$1,000</Price>
-                      <Price>$500</Price>
+                      {sponsorships.items.map((sponsorship, index) => {
+                        return <Price key={index}>{sponsorship.price}</Price>;
+                      })}
                     </tr>
                     <tr>
-                      <Perk>Exclusive Naming Rights</Perk>
-                      <Check />
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <Perk>{page.naming_rights}</Perk>
+                      {sponsorships.items.map((sponsorship) => {
+                        return <Check value={sponsorship.naming_rights} />;
+                      })}
                     </tr>
                     <tr>
-                      <Perk>Custom Social Media Posts</Perk>
-                      <Check />
-                      <Check />
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <Perk>{page.media_posts}</Perk>
+                      {sponsorships.items.map((sponsorship) => {
+                        return <Check value={sponsorship.media_posts} />;
+                      })}
                     </tr>
                     <tr>
-                      <Perk>Volunteer T-Shirt Recognition</Perk>
-                      <Check />
-                      <Check />
-                      <Check />
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <Perk>{page.tshirt_recognition}</Perk>
+                      {sponsorships.items.map((sponsorship) => {
+                        return <Check value={sponsorship.tshirt_recognition} />;
+                      })}
                     </tr>
                     <tr>
-                      <Perk>Vendor Booth Plot (by Size)</Perk>
-                      <Value value={750}>20x20</Value>
-                      <Value value={750}>20x20</Value>
-                      <Value value={300}>10x10</Value>
-                      <Value value={300}>10x10</Value>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <Perk>{page.vendor_plot}</Perk>
+                      {sponsorships.items.map((sponsorship) => {
+                        return (
+                          <Value value={getBoothValue(sponsorship, page)}>
+                            {sponsorship.vendor_plot_size !== "NA"
+                              ? sponsorship.vendor_plot_size
+                              : ""}
+                          </Value>
+                        );
+                      })}
                     </tr>
                     <tr>
-                      <Perk>VIP Pride Festival Ticket</Perk>
-                      <Value value={500}>10</Value>
-                      <Value value={400}>8</Value>
-                      <Value value={300}>6</Value>
-                      <Value value={200}>4</Value>
-                      <Value value={100}>2</Value>
-                      <Value value={50}>1</Value>
+                      <Perk>{page.festival_ticket}</Perk>
+                      {sponsorships.items.map((sponsorship) => {
+                        return (
+                          <Value
+                            value={
+                              sponsorship.festival_tickets *
+                              page.festival_ticket_value
+                            }
+                          >
+                            {sponsorship.festival_tickets}
+                          </Value>
+                        );
+                      })}
                     </tr>
                     <tr>
                       <Perk>2023 Pride Swag Bags</Perk>
@@ -157,31 +165,31 @@ const Sponsorships = () => {
                       <Value value={75}>1</Value>
                     </tr>
                     <tr>
-                      <Perk>VIP Ticket to Prism Party</Perk>
-                      <Value value={1000}>10</Value>
-                      <Value value={800}>8</Value>
-                      <Value value={600}>6</Value>
-                      <Value value={400}>4</Value>
-                      <Value value={200}>2</Value>
-                      <Value value={100}>1</Value>
+                      <Perk>{page.prism_ticket}</Perk>
+                      {sponsorships.items.map((sponsorship) => {
+                        return (
+                          <Value
+                            value={
+                              sponsorship.prism_tickets *
+                              page.prism_ticket_value
+                            }
+                          >
+                            {sponsorship.prism_tickets}
+                          </Value>
+                        );
+                      })}
                     </tr>
                     <tr>
-                      <Perk>Logo Attribution on Website</Perk>
-                      <Check />
-                      <Check />
-                      <Check />
-                      <Check />
-                      <Check />
-                      <Check />
+                      <Perk>{page.logo_attribution}</Perk>
+                      {sponsorships.items.map(() => {
+                        return <Check value={true} />;
+                      })}
                     </tr>
                     <tr>
-                      <Perk>Charleston Pride Sponsor Badge</Perk>
-                      <Check />
-                      <Check />
-                      <Check />
-                      <Check />
-                      <Check />
-                      <Check />
+                      <Perk>{page.sponsorship_badge}</Perk>
+                      {sponsorships.items.map(() => {
+                        return <Check value={true} />;
+                      })}
                     </tr>
                   </tbody>
                 </table>
@@ -200,14 +208,10 @@ const Sponsorships = () => {
           <Col>
             <Card className="mt-4">
               <Card.Header>
-                <h3 className="">Sponsorship Registration</h3>
+                <h3>Sponsorship Registration</h3>
               </Card.Header>
               <Card.Body>
-                <iframe
-                  src="https://forms.donorsnap.com/form?id=54b257fd-96ee-4d89-bf45-6000e1a71b28"
-                  height="650"
-                  width="99%"
-                />
+                <Registration {...page} />
               </Card.Body>
             </Card>
           </Col>
@@ -216,5 +220,14 @@ const Sponsorships = () => {
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const page = await getSponsorshipsPage();
+  const sponsorships = await getSponsorships();
+
+  return {
+    props: { page, sponsorships },
+  };
+}
 
 export default Sponsorships;

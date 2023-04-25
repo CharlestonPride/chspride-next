@@ -31,10 +31,14 @@ const ContentSectionTwoColumn = (props: Props) => {
             lg={props.focusContent ? 4 : 6}
             className="mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto"
           >
-            <CloudImage
-              className={imgClass}
-              imageId={props.imageSrc}
-            ></CloudImage>
+            {props.imageSrc.startsWith("https://") ? (
+              <img src={props.imageSrc} className={imgClass} />
+            ) : (
+              <CloudImage
+                className={imgClass}
+                imageId={props.imageSrc}
+              ></CloudImage>
+            )}
           </Col>
         </Row>
       </Container>
@@ -48,10 +52,14 @@ const ContentSectionTwoColumn = (props: Props) => {
             lg={props.focusContent ? 4 : 6}
             className="mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto"
           >
-            <CloudImage
-              className={imgClass}
-              imageId={props.imageSrc}
-            ></CloudImage>
+            {props.imageSrc.startsWith("https://") ? (
+              <img src={props.imageSrc} className={imgClass} />
+            ) : (
+              <CloudImage
+                className={imgClass}
+                imageId={props.imageSrc}
+              ></CloudImage>
+            )}
           </Col>
           <Col
             xs="10"

@@ -1,49 +1,25 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Moment from "react-moment";
 import { InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
-import CloudImage from "../components/elements/cloudImage/cloudImage";
 import Layout from "../components/elements/layout/layout";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
+import { TeamMember, getTeamMembersPage } from "../lib/prepr";
 
 const headerStyle = {
   backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/rainbow_qi42lu.jpg)`,
 };
 
-type Pronouns = {
-  subjective: string;
-  objective: string;
-  possessive: string;
-};
-
-type Member = {
-  id: string;
-  active: boolean;
-  prefix: string;
-  firstName: string;
-  lastName: string;
-  suffix: string;
-  title: string;
-  executive: boolean;
-  image: string;
-  dateElected: string;
-  dateElectedToBoard: string;
-  pronouns: Pronouns;
-  bio: string;
-  order: number;
-};
-
-const Headshot = (memberData: Member) => {
-  if (memberData.image) {
+const Headshot = (memberData: TeamMember) => {
+  if (memberData.profile_pic?.length) {
     return (
       <div className="position-relative">
         <div className="blur-shadow-image">
-          <CloudImage
-            imageId={"/board/" + memberData.image}
+          <img
+            src={memberData.profile_pic[0].url}
             className="w-100 rounded-3 shadow-lg"
-          ></CloudImage>
+          ></img>
         </div>
       </div>
     );
@@ -52,8 +28,7 @@ const Headshot = (memberData: Member) => {
     <Card className="bg-cover text-center">
       <Card.Body className="z-index-2 py-8">
         <h2>
-          {memberData.firstName.charAt(0).toUpperCase() +
-            memberData.lastName.charAt(0).toUpperCase()}
+          {getInitials(memberData)}
           <p>Coming Soon</p>
         </h2>
       </Card.Body>
@@ -61,30 +36,24 @@ const Headshot = (memberData: Member) => {
   );
 };
 
-const formatPronouns = (pronouns: Pronouns) => {
-  return `${titleCase(pronouns.subjective)}/${titleCase(
-    pronouns.objective
-  )}/${titleCase(pronouns.possessive)}`;
+const getInitials = (teamMember: TeamMember) => {
+  let name = teamMember.email.split("@")[0].split(".");
+  return name[0][0].toUpperCase() + name[1][0].toUpperCase();
+};
+
+const formatPronouns = (teamMember: TeamMember) => {
+  return [teamMember.subjective, teamMember.objective, teamMember.possessive]
+    .filter((p) => p)
+    .map((p) => titleCase(p))
+    .join("/");
 };
 
 const titleCase = (word: string) => {
   return word[0].toUpperCase() + word.substring(1).toLowerCase();
 };
 
-const formatName = (member: Member) => {
-  let name = member.firstName + " " + member.lastName;
-  if (member.prefix) {
-    name = member.prefix + " " + name;
-  }
-  if (member.suffix) {
-    name += " " + member.suffix;
-  }
-  return name;
-};
-
-const BoardMember = (memberData: Member) => {
+const BoardMember = (memberData: TeamMember) => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -100,24 +69,20 @@ const BoardMember = (memberData: Member) => {
                 <div className="d-flex flex-column align-items-start h-100">
                   <div className="mb-auto">
                     <h5 className="font-weight-bolder mb-0">
-                      {formatName(memberData)}
+                      {memberData.full_name}
                     </h5>
 
                     <p className="text-uppercase font-weight-bold mb-0">
                       {memberData.title}
                     </p>
                     <p>
-                      <em className="text-sm">
-                        {formatPronouns(memberData.pronouns)}
-                      </em>
+                      <em className="text-sm">{formatPronouns(memberData)}</em>
                     </p>
                     <div className="d-md-none">
                       <Button
                         variant="info"
                         className="me-2"
-                        href={
-                          "mailto:" + memberData.id + "@charlestonpride.org"
-                        }
+                        href={"mailto:" + memberData.email}
                       >
                         <FontAwesomeIcon icon={faEnvelope} size="lg" />
                       </Button>
@@ -130,7 +95,7 @@ const BoardMember = (memberData: Member) => {
                     <Button
                       variant="info"
                       className="me-2"
-                      href={"mailto:" + memberData.id + "@charlestonpride.org"}
+                      href={"mailto:" + memberData.email}
                     >
                       <FontAwesomeIcon icon={faEnvelope} size="lg" />
                     </Button>
@@ -146,17 +111,9 @@ const BoardMember = (memberData: Member) => {
       </Col>
       <Modal show={show} onHide={handleClose} size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>{"About " + memberData.firstName}</Modal.Title>
+          <Modal.Title>{"About " + memberData.full_name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>
-            <strong>Elected to Position: </strong>
-            <Moment format="MMMM YYYY">{memberData.dateElected}</Moment>
-          </p>
-          <p>
-            <strong>Served on Board Since: </strong>
-            <Moment format="MMMM YYYY">{memberData.dateElectedToBoard}</Moment>
-          </p>
           {memberData.bio?.split(/\r?\n/).map((b) => (
             <p key={b}>{b}</p>
           ))}
@@ -172,20 +129,12 @@ const BoardMember = (memberData: Member) => {
   );
 };
 
-function OurTeam({
-  executives,
-  members,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+function OurTeam({ page }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Layout
-      title="Our Team"
-      description="The Charleston Pride Board of Directors &amp; Staff"
-    >
+    <Layout title={page.title} description={page.description}>
       <ObliqueHeader style={headerStyle}>
-        <h1 className="text-gradient text-primary">Our Team</h1>
-        <h1>
-          Charleston Pride is brought to you by a group of dedicated volunteers
-        </h1>
+        <h1 className="text-gradient text-primary">{page.title}</h1>
+        <h1>{page.description}</h1>
       </ObliqueHeader>
       <Container className="mt-5">
         <Row>
@@ -198,15 +147,14 @@ function OurTeam({
             </p>
           </Col>
         </Row>
-
         <Row>
           <Col className="mx-auto text-center mb-5">
             <h2 className="text-gradient text-info">The Executive Committee</h2>
           </Col>
         </Row>
         <Row>
-          {executives.map((boardMember) => {
-            return <BoardMember {...boardMember} key={boardMember.id} />;
+          {page.executive_committee.map((teamMember, index) => {
+            return <BoardMember {...teamMember} key={index} />;
           })}
         </Row>
         <Row>
@@ -215,8 +163,8 @@ function OurTeam({
           </Col>
         </Row>
         <Row>
-          {members.map((boardMember) => {
-            return <BoardMember {...boardMember} key={boardMember.id} />;
+          {page.board_members.map((teamMember, index) => {
+            return <BoardMember {...teamMember} key={index} />;
           })}
         </Row>
       </Container>
@@ -224,32 +172,12 @@ function OurTeam({
   );
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch(
-    "https://chspride-api.azurewebsites.net/api/Directors"
-  );
-  const allMembers: Member[] = await res.json();
-  const executives = allMembers
-    .filter((m) => m.active && m.executive)
-    .sort((a, b) => a.order - b.order);
-  const members = allMembers
-    .filter((m) => m.active && !m.executive)
-    .sort((a, b) => {
-      if (a.dateElectedToBoard < b.dateElectedToBoard) {
-        return -1;
-      }
-      if (a.dateElectedToBoard > b.dateElectedToBoard) {
-        return 1;
-      }
-      return 0;
-    });
+export async function getStaticProps({ preview = false }) {
+  const page = await getTeamMembersPage(preview);
 
   return {
-    props: {
-      executives,
-      members,
-    },
+    props: { page },
   };
-};
+}
 
 export default OurTeam;

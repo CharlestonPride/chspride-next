@@ -1,4 +1,4 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IconName } from "@fortawesome/fontawesome-svg-core";
 import React, { ReactNode } from "react";
 import { ThemeColors } from "../../../types";
 import { LinkButton, LinkGradientButton } from "../../elements/button/button";
@@ -10,7 +10,7 @@ export type ContentProps = {
   color: ThemeColors;
   description?: string;
   subDescription?: string;
-  icon?: IconDefinition;
+  icon?: IconName;
   action?: Action;
   secondaryAction?: Action;
 };
@@ -51,12 +51,12 @@ const Content = ({
       {descriptionElem}
       {children}
 
-      {action && (
+      {action && action.href && action.text && (
         <LinkGradientButton href={action.href} color={color}>
           {action.text}
         </LinkGradientButton>
       )}
-      {secondaryAction && (
+      {secondaryAction && secondaryAction.href && secondaryAction.text && (
         <LinkButton href={secondaryAction.href} color={color}>
           {secondaryAction.text}
         </LinkButton>

@@ -256,7 +256,7 @@ function PrideGuide({
         </h2>
       </Alert> */}
 
-      <SponsorCarousel sponsors={sponsors} />
+      {/* <SponsorCarousel sponsors={sponsors} /> */}
       <hr className="horizontal dark" />
       <Schedule events={events} />
       <hr className="horizontal dark" />
