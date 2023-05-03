@@ -21,7 +21,7 @@ const DonateSection = () => {
       title="Donate"
       color="warning"
       description="Help Make Charleston Pride a Reality!"
-      action={{ href: "/donate", text: "Donate" }}
+      buttons={[{ href: "/donate", text: "Donate" }]}
       imageSrc="parade1_jxra2b"
       icon={"hand-holding-usd"}
       orientation={Orientation.Left}
@@ -49,7 +49,7 @@ const Volunteer = () => {
       imageSrc="volunteer_rthkil"
       icon={"handshake"}
       orientation={Orientation.Left}
-      action={{ href: "/volunteer", text: "Volunteer" }}
+      buttons={[{ href: "/volunteer", text: "Volunteer" }]}
     >
       <Lead>
         As a volunteer, you will help ensure the success of events throughout
@@ -67,7 +67,7 @@ const Serve = () => {
       imageSrc="board_qqnhnx"
       icon={"grin-hearts"}
       orientation={Orientation.Left}
-      action={{ href: "/serve-on-the-board", text: "Apply" }}
+      buttons={[{ href: "/serve-on-the-board", text: "Apply" }]}
     >
       <Lead>
         As a member of the board, you will work with other board members to plan
@@ -94,7 +94,7 @@ const Store = () => {
       ]}
       icon={"shopping-cart"}
       color="info"
-      action={{ href: "/store", text: "Shop" }}
+      buttons={[{ href: "/store", text: "Shop" }]}
     ></ContentSectionImageGallery>
   );
 };
@@ -147,7 +147,9 @@ const Sponsorship = () => {
       imageSrc="v1663270138/festival_ktw1d1"
       icon={"flag"}
       orientation={Orientation.Right}
-      action={{ href: "/become-a-sponsor", text: "Sponsorship Opportunities" }}
+      buttons={[
+        { href: "/become-a-sponsor", text: "Sponsorship Opportunities" },
+      ]}
     >
       <Lead>
         Sponsorship is a great way to promote your commitment to equal rights
@@ -245,13 +247,7 @@ function Home({
       description={homePage.seo.description}
       imageUrl={homePage.seo.social_media_image.url}
     >
-      <Header
-        style={headerStyle}
-        {...homePage}
-        theme="primary"
-        primaryAction={homePage.primary_action}
-        secondaryAction={homePage.secondary_action}
-      />
+      <Header style={headerStyle} {...homePage} theme="primary" />
       {homePage.sections.map((section, index) => {
         let orientation = index % 2 ? Orientation.Right : Orientation.Left;
         if (section.show_background_stack) {
@@ -264,14 +260,7 @@ function Home({
               imageSrc={section.image[0].url}
               icon={section.icon as IconName}
               orientation={orientation}
-              action={{
-                href: section.primary_action?.url,
-                text: section.primary_action?.name,
-              }}
-              secondaryAction={{
-                href: section.secondary_action?.url,
-                text: section.secondary_action?.name,
-              }}
+              buttons={section.buttons}
             >
               <div
                 className="lead"
@@ -293,14 +282,7 @@ function Home({
             orientation={orientation}
             focusContent={section.focus_on_content}
             disableShadow={!section.show_image_shadow}
-            action={{
-              href: section.primary_action?.url,
-              text: section.primary_action?.name,
-            }}
-            secondaryAction={{
-              href: section.secondary_action?.url,
-              text: section.secondary_action?.name,
-            }}
+            buttons={section.buttons}
           >
             <div
               className="lead"

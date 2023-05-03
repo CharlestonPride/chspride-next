@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import { ThemeColors } from "../../../types";
 import { LinkButton, LinkGradientButton } from "../../elements/button/button";
 import { RoundShadowIcon } from "../../elements/icon/icon";
+import { Button } from "../../../lib/prepr";
 
 export type ContentProps = {
   children?: ReactNode | ReactNode[];
@@ -11,13 +12,7 @@ export type ContentProps = {
   description?: string;
   subDescription?: string;
   icon?: IconName;
-  action?: Action;
-  secondaryAction?: Action;
-};
-
-export type Action = {
-  href: string;
-  text: string;
+  buttons?: Button[];
 };
 
 const Content = ({
@@ -27,8 +22,7 @@ const Content = ({
   description,
   subDescription,
   icon,
-  action,
-  secondaryAction,
+  buttons = [],
 }: ContentProps) => {
   let descriptionElem = undefined;
   if (description) {
@@ -51,14 +45,14 @@ const Content = ({
       {descriptionElem}
       {children}
 
-      {action && action.href && action.text && (
-        <LinkGradientButton href={action.href} color={color}>
-          {action.text}
+      {buttons.length && (
+        <LinkGradientButton href={buttons[0].href} color={color}>
+          {buttons[0].text}
         </LinkGradientButton>
       )}
-      {secondaryAction && secondaryAction.href && secondaryAction.text && (
-        <LinkButton href={secondaryAction.href} color={color}>
-          {secondaryAction.text}
+      {buttons.length >= 2 && (
+        <LinkButton href={buttons[1].href} color={color}>
+          {buttons[1].text}
         </LinkButton>
       )}
     </>

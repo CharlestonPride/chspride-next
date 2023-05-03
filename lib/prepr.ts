@@ -150,13 +150,9 @@ export async function getHomePage() {
 	HomePage { 
 		title
 		subtitle
-    secondary_action {
-      name
-      url
-    }
-    primary_action {
-      url
-      name
+    buttons {
+      text
+      href
     }
 		sections { 
     title
@@ -164,13 +160,9 @@ export async function getHomePage() {
     subtitle
     show_image_shadow
     show_background_stack
-    secondary_action {
-      name
-      url
-    }
-    primary_action {
-      url
-      name
+    buttons {
+      text
+      href
     }
     image {
       url
@@ -233,8 +225,7 @@ export type AppConfig = {
 export type HomePage = {
   title: string;
   subtitle: string;
-  primary_action: Button;
-  secondary_action: Button;
+  buttons: Button[];
   sections: ContentSection[];
   show_sponsorships_section: boolean;
   show_apply_section: boolean;
@@ -317,8 +308,7 @@ export type ContentSection = {
   theme: string;
   subtitle: string;
   description: string;
-  primary_action: Button;
-  secondary_action: Button;
+  buttons: Button[];
   show_image_shadow: boolean;
   show_background_stack: boolean;
   focus_on_content: boolean;
@@ -329,8 +319,8 @@ export type ContentSection = {
 // Components
 
 export type Button = {
-  url: string;
-  name: string;
+  text: string;
+  href: string;
 };
 
 export type Seo = {

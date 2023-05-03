@@ -12,8 +12,7 @@ type Props = {
   style: CSSProperties;
   title: string;
   subtitle: string;
-  primaryAction: Button;
-  secondaryAction: Button;
+  buttons: Button[];
   theme: ThemeColors;
 };
 type ActionButtonProps = {
@@ -22,17 +21,17 @@ type ActionButtonProps = {
   primary?: boolean;
 };
 const ActionButton = ({ button, theme, primary = true }: ActionButtonProps) => {
-  if (button && button.name && button.url) {
+  if (button && button.text && button.href) {
     if (primary) {
       return (
-        <LinkGradientButton color={theme} href={button.url}>
-          {button.name}
+        <LinkGradientButton color={theme} href={button.href}>
+          {button.text}
         </LinkGradientButton>
       );
     }
     return (
-      <LinkOutlineButton color={theme} href={button.url}>
-        {button.name}
+      <LinkOutlineButton color={theme} href={button.href}>
+        {button.text}
       </LinkOutlineButton>
     );
   }
@@ -43,8 +42,7 @@ export default function Header({
   style,
   title,
   subtitle,
-  primaryAction,
-  secondaryAction,
+  buttons,
   theme,
 }: Props) {
   return (
@@ -63,12 +61,16 @@ export default function Header({
                 <ThemedHeader1 theme={theme}>{title}</ThemedHeader1>
                 {subtitle && <h2>{subtitle}</h2>}
                 <div className="buttons">
-                  <ActionButton button={primaryAction} theme={theme} />
-                  <ActionButton
-                    button={secondaryAction}
-                    theme={theme}
-                    primary={false}
-                  />
+                  {buttons.length && (
+                    <ActionButton button={buttons[0]} theme={theme} />
+                  )}
+                  {buttons.length >= 2 && (
+                    <ActionButton
+                      button={buttons[1]}
+                      theme={theme}
+                      primary={false}
+                    />
+                  )}
                 </div>
               </div>
             </div>
