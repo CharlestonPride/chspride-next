@@ -9,7 +9,7 @@ import {
   getSponsorships,
   getSponsorshipsPage,
 } from "../lib/prepr";
-import { InferGetStaticPropsType } from "next";
+import { InferGetServerSidePropsType } from "next";
 import { titleCase } from "../utils/utils";
 
 const headerStyle = {
@@ -65,7 +65,7 @@ const getBoothValue = (sponsorship, page) => {
 const Sponsorships = ({
   page,
   sponsorships,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <Layout title={page.title} description={page.description}>
       <ObliqueHeader style={headerStyle}>
@@ -221,7 +221,7 @@ const Sponsorships = ({
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const page = await getSponsorshipsPage();
   const sponsorships = await getSponsorships();
 

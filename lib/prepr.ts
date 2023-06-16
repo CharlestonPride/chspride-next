@@ -214,6 +214,40 @@ export async function getAppConfig() {
   return data.data.AppConfig as AppConfig;
 }
 
+export async function getSection(contentSectionId: string) {
+  const data =
+    (await prepr
+      .graphqlQuery(
+        `query ($contentSectionId: String) {
+	ContentSection(id: $contentSectionId) { 
+		_id
+		title
+		subtitle
+		description
+		icon
+		theme
+		image { 
+			_id
+			url
+		}
+		buttons { 
+			text,
+			href
+		}
+		focus_on_content
+		show_image_shadow
+		show_background_stack
+	}
+}`
+      )
+      .graphqlVariables({
+        contentSectionId,
+      })
+      .fetch()) || {};
+  console.log(data);
+  return data;
+}
+
 // Type Definitions
 
 export type AppConfig = {

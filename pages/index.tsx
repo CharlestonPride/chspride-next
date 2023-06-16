@@ -11,7 +11,7 @@ import GallerySectionDualImage from "../components/modules/gallerySection/galler
 import GallerySectionTripleImages from "../components/modules/gallerySection/gallerySectionTripleImages";
 import GallerySectionSingleImage from "../components/modules/gallerySection/gallerySectionSingleImage";
 import Lead from "../components/elements/lead/lead";
-import { InferGetStaticPropsType } from "next";
+import { InferGetServerSidePropsType } from "next";
 import SponsorCarousel from "../components/modules/sponsor/sponsorCarousel";
 import { getSponsors, getHomePage } from "../lib/prepr";
 
@@ -240,7 +240,7 @@ const headerStyle = {
 function Home({
   sponsors,
   homePage,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <Layout
       title={homePage.seo.title}
@@ -314,7 +314,7 @@ function Home({
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const sponsors = await getSponsors();
   const homePage = await getHomePage();
 
