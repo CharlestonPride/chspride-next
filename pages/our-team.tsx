@@ -1,6 +1,6 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { InferGetServerSidePropsType } from "next";
+import { InferGetStaticPropsType } from "next";
 import React, { useState } from "react";
 import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
 import Layout from "../components/elements/layout/layout";
@@ -129,9 +129,7 @@ const BoardMember = (memberData: TeamMember) => {
   );
 };
 
-function OurTeam({
-  page,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+function OurTeam({ page }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout title={page.title} description={page.description}>
       <ObliqueHeader style={headerStyle}>
@@ -174,7 +172,7 @@ function OurTeam({
   );
 }
 
-export async function getServerSideProps({ preview = false }) {
+export async function getStaticProps({ preview = false }) {
   const page = await getTeamMembersPage(preview);
 
   return {
