@@ -15,6 +15,7 @@ module.exports = {
       // "/pageant-registration": { page: "/pageant-registration" },
       // "/pageant": { page: "/events/pageant" },
       // "/vendor-registration": { page: "vendor-registration" },
+      "/gold-membership": { page: "/gold-membership" },
     };
 
     return paths;
