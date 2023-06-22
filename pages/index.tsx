@@ -245,7 +245,7 @@ function Home({
     <Layout
       title={homePage.seo.title}
       description={homePage.seo.description}
-      imageUrl={homePage.seo.social_media_image.url}
+      imageUrl={homePage.seo.social_media_image[0].url}
     >
       <Header style={headerStyle} {...homePage} theme="primary" />
       {homePage.sections.map((section, index) => {

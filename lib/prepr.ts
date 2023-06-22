@@ -360,9 +360,7 @@ export type Button = {
 export type Seo = {
   title: string;
   description: string;
-  social_media_image: {
-    url: string;
-  };
+  social_media_image: [{ url: string }];
 };
 
 export type EmbeddedForm = {
