@@ -1,7 +1,10 @@
 import {
   faCalendarDay,
   faClock,
+  faCrown,
+  faListCheck,
   faMapPin,
+  faPen,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Row, Col } from "react-bootstrap";
@@ -9,40 +12,37 @@ import CloudImage from "../../components/elements/cloudImage/cloudImage";
 import Layout from "../../components/elements/layout/layout";
 import ExternalFrame from "../../components/modules/externalFrame/externalFrame";
 
-const Pageant = () => {
+const Cocktail = () => {
   return (
-    <Layout title="Charleston Pride Pageant">
+    <Layout title="Drag Queen Cocktail Making Class">
       <ExternalFrame
-        title="Charleston Pride Pageant"
+        title="Drag Queen Cocktail Making Class"
         color="primary"
-        iframeSrc="https://registration.planningpod.com?ssid=ODExMjU0"
+        iframeSrc="https://registration.planningpod.com/?ssid=ODE4NzY2"
         iframeHeight="2000px"
       >
         <Row>
           <Col xs="10" lg="6" className="mx-auto py-5 text-lg-left text-center">
             <h1 className="text-gradient text-primary">
-              Charleston Pride Pageant
+              Drag Queen Cocktail Making Class
             </h1>
             <p className="lead">
-              The <strong>Charleston Pride Pageant</strong> is back! On August
-              25th at Quarters K. For more information regarding Pageant
-              Contestant Rules & Regulations, please email us at{" "}
-              <a href="mailto:info@charlestonpride.org">
-                info@charlestonpride.org
-              </a>
+              Join Charleston Pride for the newest event in the area! Join Drag
+              Entertainers Crystal Gem & Bunny Monroe for a Cocktail making
+              class sponsored by Chambord and Huerradura Tequila!
             </p>
             <ul className="list-group">
               <li className="list-group-item">
-                <FontAwesomeIcon icon={faMapPin} className="me-2" /> Quarters K,
-                Riverfront Park
+                <FontAwesomeIcon icon={faMapPin} className="me-2" /> Bodega
+                Charleston
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faCalendarDay} className="me-2" /> Friday
-                August 25, 2023
+                July 26, 2023
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faClock} className="me-2" />
-                VIP Early Entry - 7:00pm, General Admission - 8:00pm
+                6-8 pm
               </li>
             </ul>
           </Col>
@@ -53,7 +53,7 @@ const Pageant = () => {
           >
             <CloudImage
               className="w-100 "
-              imageId="Pageant_hxqigu"
+              imageId="Cocktail_Making_Class_uxfdsp"
             ></CloudImage>
           </Col>
         </Row>
@@ -62,4 +62,4 @@ const Pageant = () => {
   );
 };
 
-export default Pageant;
+export default Cocktail;

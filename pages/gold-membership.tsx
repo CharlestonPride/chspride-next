@@ -17,13 +17,11 @@ const GoldMembership = () => {
         <p className="lead">
           Interested in VIP access to our ticketed events? Missing our Friends
           of Pride program? Well, great news: We've created the Charleston Pride{" "}
-          <strong>Gold Membership</strong> just for you! For the remainder of
-          June -- in celebration and honor of Pride Month -- the 2023 Charleston
-          Pride <strong>Gold Membership</strong> is only <strong>$150</strong>.
-          That makes each VIP access ticket $37.50 or less for the remainder of
-          the year! Benefits can include, but are not limited to: access to VIP
-          bars, drink specials, early event entry, meet-and-greet opportunities,
-          VIP exclusive events, and more!
+          <strong>Gold Membership</strong>! The 2023 Charleston Pride{" "}
+          <strong>Gold Membership</strong> is only <strong>$175</strong>.
+          Benefits can include, but are not limited to: access to VIP bars,
+          drink specials, early event entry, meet-and-greet opportunities, VIP
+          exclusive events, and more!
         </p>
         <p className="lead">
           As a 2023 <strong>Gold Membership</strong> card holder, you not only
