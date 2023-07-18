@@ -37,8 +37,8 @@ const Cocktail = () => {
                 Charleston
               </li>
               <li className="list-group-item">
-                <FontAwesomeIcon icon={faCalendarDay} className="me-2" /> Friday
-                July 26, 2023
+                <FontAwesomeIcon icon={faCalendarDay} className="me-2" />{" "}
+                Wednesday, July 26, 2023
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faClock} className="me-2" />
