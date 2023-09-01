@@ -24,21 +24,20 @@ const Pageant = () => {
               Charleston Pride Pageant
             </h1>
             <p className="lead">
-              The <strong>Charleston Pride Pageant</strong> is back! On August
-              25th at Quarters K. For more information regarding Pageant
-              Contestant Rules & Regulations, please email us at{" "}
+              The <strong>Charleston Pride Pageant</strong> is back! On
+              September 14th at the Music Farm. For more information regarding
+              Pageant Contestant Rules & Regulations, please email us at{" "}
               <a href="mailto:info@charlestonpride.org">
                 info@charlestonpride.org
               </a>
             </p>
             <ul className="list-group">
               <li className="list-group-item">
-                <FontAwesomeIcon icon={faMapPin} className="me-2" /> Quarters K,
-                Riverfront Park
+                <FontAwesomeIcon icon={faMapPin} className="me-2" /> Music Farm
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faCalendarDay} className="me-2" /> Friday
-                August 25, 2023
+                September 14, 2023
               </li>
               <li className="list-group-item">
                 <FontAwesomeIcon icon={faClock} className="me-2" />
@@ -53,7 +52,7 @@ const Pageant = () => {
           >
             <CloudImage
               className="w-100 "
-              imageId="Pageant_hxqigu"
+              imageId="2wzxnc59vwmz-pageant_ovqxue"
             ></CloudImage>
           </Col>
         </Row>
