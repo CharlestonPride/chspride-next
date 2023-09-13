@@ -45,7 +45,7 @@ const Content = ({
       {descriptionElem}
       {children}
 
-      {buttons.length && (
+      { buttons.length >=1 && (
         <LinkGradientButton href={buttons[0].href} color={color}>
           {buttons[0].text}
         </LinkGradientButton>

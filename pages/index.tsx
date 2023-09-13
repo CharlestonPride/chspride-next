@@ -180,6 +180,14 @@ const Breaker5 = () => {
   );
 };
 
+const Schedule = () => {
+  return (
+    <div className="mt-n6">
+      <GallerySectionSingleImage src="cscvj0"></GallerySectionSingleImage>
+    </div>
+  );
+};
+
 const Breaker6 = () => {
   const itemA = { src: "parade6_wlmi0c", alt: "parade " };
   const itemB = { src: "parade7_xbzzqw", alt: "parade " };
@@ -248,6 +256,7 @@ function Home({
       imageUrl={homePage.seo.social_media_image[0].url}
     >
       <Header style={headerStyle} {...homePage} theme="primary" />
+      <Schedule/>
       {homePage.sections.map((section, index) => {
         let orientation = index % 2 ? Orientation.Right : Orientation.Left;
         if (section.show_background_stack) {
