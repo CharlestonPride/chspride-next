@@ -301,7 +301,7 @@ function Home({
           </ContentSectionTwoColumn>
         );
       })}
-      {homePage.show_sponsor_section && <SponsorCarousel sponsors={sponsors} />}
+      {homePage.show_sponsors_section && <SponsorCarousel sponsors={sponsors} />}
       {homePage.show_sponsorships_section && <Sponsorship />}
       {homePage.show_apply_section && <Serve />}
       {homePage.show_donate_section && <DonateSection />}
