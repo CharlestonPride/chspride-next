@@ -256,7 +256,6 @@ function Home({
       imageUrl={homePage.seo.social_media_image[0].url}
     >
       <Header style={headerStyle} {...homePage} theme="primary" />
-      <Schedule/>
       {homePage.sections.map((section, index) => {
         let orientation = index % 2 ? Orientation.Right : Orientation.Left;
         if (section.show_background_stack) {
