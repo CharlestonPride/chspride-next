@@ -7,7 +7,7 @@ import { InferGetStaticPropsType } from "next";
 
 const Bylaws = ({ page }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <Layout title={page.title +"tst"}>
+    <Layout title={page.title}>
       <div className="pt-3 pt-md-5 pt-lg-7 pb-md-5 pb-lg-7">
         <Container fluid="lg">
           <Row>
@@ -41,7 +41,6 @@ const Bylaws = ({ page }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
 export async function getStaticProps() {
   const page = await getPage('88816545-7eb9-40f9-b590-bb939fb2dca0');
-console.log(JSON.stringify(page))
   return {
     props: { page },
   };
