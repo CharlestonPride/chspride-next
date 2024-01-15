@@ -248,6 +248,43 @@ export async function getSection(contentSectionId: string) {
   return data;
 }
 
+export async function getPage(pageId: string)
+{
+  const data = (await prepr.graphqlQuery(`query ($pageId: String) {
+    Page(id: $pageId) {
+      _id
+      title
+      _slug
+      content {
+        __typename
+        ... on EmbeddedForm {
+          height
+          url
+          width
+        }
+        ... on Text {
+          body
+        }
+      }
+      seo {
+        _id
+        title
+        description
+        social_media_image {
+          _id
+          url
+        }
+      }
+    }
+  }
+  `).graphqlVariables({
+    pageId,
+  })
+  .fetch()) || {};
+//console.log(JSON.stringify(data));
+  return data.data.Page as Page;
+}
+
 // Type Definitions
 
 export type AppConfig = {
@@ -299,6 +336,15 @@ export type SponsorshipPage = {
   large_plot_value: number;
   small_plot_value: number;
 };
+
+export type Page = {
+  title: string;
+  _slug: string;
+  content: [{
+    __typename: string;
+    body: any;
+  }]
+}
 
 // Models
 export type TeamMember = {
