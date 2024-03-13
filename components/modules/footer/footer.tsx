@@ -39,14 +39,9 @@ const Address = () => {
   return (
     <li>
       <FontAwesomeIcon icon={faMap} listItem />
-      <a
-        href="https://www.google.com/maps/place/Equality+Hub,+1801+Reynolds+Ave+unit+a,+North+Charleston,+SC+29405/@32.859267,-79.9685244,17z/data=!4m2!3m1!1s0x88fe6579cc60afd1:0x6c33e511c9a81493"
-        target="_blank"
-      >
-        The Equality Hub
-        <br /> 1801 Reynolds Ave. Unit A <br />
-        North Charleston, SC 29405
-      </a>
+        Charleston Pride Festival, Inc
+        <br /> PO Box #71084 <br />
+        North Charleston, SC 29415
     </li>
   );
 };
