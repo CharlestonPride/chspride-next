@@ -240,7 +240,7 @@ const OurPurpose = () => {
 };
 
 const headerStyle = {
-  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625013054/manson2_gjv7gs.jpg)`,
+  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1716947118/cover_j0ctty.jpg)`,
   backgroundSize: `cover`,
   backgroundPosition: `center 20%`,
 };
