@@ -120,7 +120,7 @@ export async function getSponsors() {
     (await prepr
       .graphqlQuery(
         `query {
-  Sponsors {
+  Sponsors (limit: 50) {
     total
     items {
 		name
@@ -380,7 +380,7 @@ export type Sponsor = {
   name: string;
   website: string;
   logo: [{ url: string }];
-  sponsorship: [{ price: number; css_selector: string }];
+  sponsorship?: [{ price: number; css_selector: string }];
 };
 
 export type ContentSection = {

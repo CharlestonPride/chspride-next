@@ -10,7 +10,7 @@ const SponsorCard = (sponsor: Sponsor) => {
     <div
       className={
         "text-center mb-2 pb-2 sponsor-card sponsor-card-" +
-        sponsor.sponsorship[0].css_selector
+        sponsor.sponsorship[0]?.css_selector
       }
     >
       <a href={sponsor.website} target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@ function spliceIntoChunks(arr: Sponsor[], chunkSize) {
 
 const SponsorCarousel = ({ sponsors }: SponsorProps) => {
   const sortedSponsors = sponsors.sort((a, b) => {
-    return b.sponsorship[0].price - a.sponsorship[0].price;
+    return b.sponsorship[0]?.price - a.sponsorship[0]?.price;
   });
   return (
     <Container>
@@ -44,9 +44,9 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
           return (
             <Col
               key={index}
-              xs={{ span: 8, offset: 2 }}
-              md={{ span: 6, offset: 0 }}
-              lg={{ span: 3, offset: 0 }}
+              xs={{ span: 6, offset: 0 }}
+              md={{ span: 4, offset: 0 }}
+              lg={{ span: 2, offset: 0 }}
             >
               <SponsorCard {...sponsorChunk} />
             </Col>
