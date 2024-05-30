@@ -7,11 +7,11 @@ import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 const VendorRegistration = () => {
   return (
     <Layout
-      title="Charleston Pride Festival 2022 Vendor Registration"
-      description="Vendor registration for the Charleston Pride Festival 2022."
+      title="Charleston Pride Festival 2024 Vendor Registration"
+      description="Vendor registration for the Charleston Pride Festival 2024."
     >
       <ExternalFrame
-        title="Charleston Pride Festival 2023 Vendor Registration"
+        title="Charleston Pride Festival 2024 Vendor Registration"
         color="primary"
         iframeSrc="https://registration.planningpod.com?ssid=ODM1MTgw"
         iframeHeight="2000px"
@@ -21,7 +21,7 @@ const VendorRegistration = () => {
             <p className="lead">
               The Charleston Pride Festival will be held at{" "}
               <strong>The Refinery</strong> (1640 Meeting Street) in Charleston
-              on <strong>Saturday, September 16, 2023</strong>. We are excited
+              on <strong>Saturday, September 21, 2024</strong>. We are excited
               to bring the festival back after last year’s cancellation, and
               invite you to join Charleston’s largest Pride event of the year.
             </p>
@@ -45,7 +45,7 @@ const VendorRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow"
-              imageId="festival2023_u20agq"
+              imageId="2024/ytgy2gjfliuvpf1avmpu"
             ></CloudImage>
           </Col>
         </Row>
@@ -155,7 +155,7 @@ const VendorRegistration = () => {
         </div>
 
         <p className="lead text-center my-3">
-          We are excited for a great 2023 Pride Festival and look forward to
+          We are excited for a great 2024 Pride Festival and look forward to
           your participation! If you have any questions, please feel free to
           contact us at{" "}
           <a href="mailto:festival@charlestonpride.org">

@@ -257,7 +257,10 @@ function Home({
     >
       <Header style={headerStyle} {...homePage} theme="primary" />
       {homePage.sections.map((section, index) => {
-        let orientation = index % 2 ? Orientation.Right : Orientation.Left;
+        let orientation= index % 2 ? Orientation.Right : Orientation.Left;
+        if(section.orientation){
+            orientation = section.orientation == "RIGHT" ? Orientation.Right : Orientation.Left;
+        }
         if (section.show_background_stack) {
           return (
             <ContentSectionStackedImage

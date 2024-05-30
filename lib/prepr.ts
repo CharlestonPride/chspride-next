@@ -170,7 +170,8 @@ export async function getHomePage() {
     }
     focus_on_content
     description
-    icon
+    icon,
+    orientation
   }
 		show_sponsorships_section
 		show_apply_section
@@ -394,6 +395,7 @@ export type ContentSection = {
   focus_on_content: boolean;
   image: Image[];
   icon: string;
+  orientation?: string;
 };
 
 // Components
