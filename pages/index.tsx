@@ -291,6 +291,7 @@ function Home({
             focusContent={section.focus_on_content}
             disableShadow={!section.show_image_shadow}
             buttons={section.buttons}
+            images={section.image.slice(1)}
           >
             <div
               className="lead"

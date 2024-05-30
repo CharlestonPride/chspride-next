@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import { ThemeColors } from "../../../types";
 import { LinkButton, LinkGradientButton } from "../../elements/button/button";
 import { RoundShadowIcon } from "../../elements/icon/icon";
-import { Button } from "../../../lib/prepr";
+import { Button, Image } from "../../../lib/prepr";
 
 export type ContentProps = {
   children?: ReactNode | ReactNode[];
@@ -13,6 +13,7 @@ export type ContentProps = {
   subDescription?: string;
   icon?: IconName;
   buttons?: Button[];
+  images?: Image[];
 };
 
 const Content = ({
@@ -23,6 +24,7 @@ const Content = ({
   subDescription,
   icon,
   buttons = [],
+  images = []
 }: ContentProps) => {
   let descriptionElem = undefined;
   if (description) {
@@ -37,6 +39,19 @@ const Content = ({
       descriptionElem = <h3 className="mb-4">{description}</h3>;
     }
   }
+  let imagesElems = undefined;
+  if(images.length)
+    {
+      imagesElems = images.map((image) => {
+        if(image.caption)
+          {
+            return (<><h4>{image.caption}</h4>
+            <img src={image.url} className="w-100 mb-2" /></>)
+          }
+          return (<img src={image.url} className="w-100 mb-2" />)
+      })
+       
+    }
 
   return (
     <>
@@ -55,6 +70,8 @@ const Content = ({
           {buttons[1].text}
         </LinkButton>
       )}
+
+      {imagesElems}
     </>
   );
 };
