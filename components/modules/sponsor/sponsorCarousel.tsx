@@ -32,8 +32,16 @@ function spliceIntoChunks(arr: Sponsor[], chunkSize) {
 
 const SponsorCarousel = ({ sponsors }: SponsorProps) => {
   const sortedSponsors = sponsors.sort((a, b) => {
-    return b.sponsorship[0]?.price - a.sponsorship[0]?.price;
-  });
+    if(!a.sponsorship[0])
+      {
+        return -1;
+      }
+    if(!b.sponsorship[0])
+      {
+        return -1;
+      }
+    return a.sponsorship[0].price - b.sponsorship[0].price;
+  }).reverse();
   return (
     <Container>
       <h1 className="text-gradient text-primary text-center mb-3">
