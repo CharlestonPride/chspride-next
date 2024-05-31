@@ -1,5 +1,6 @@
-import { randomUUID } from "crypto";
+
 import * as yup from "yup";
+import { v4 } from 'uuid';
 
 const FILE_SIZE = 1024 * 1024 * 10;
 const SUPPORTED_FORMATS = [
@@ -102,7 +103,7 @@ export const applicantSchema = yup.object({
 });
 
 export const initialValues: Applicant = {
-  id: randomUUID(),
+  id: v4(),
   firstName: "",
   lastName: "",
   email: "",
