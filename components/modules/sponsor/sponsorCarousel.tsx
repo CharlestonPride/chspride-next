@@ -40,7 +40,21 @@ const SponsorCarousel = ({ sponsors }: SponsorProps) => {
         Thank You To Our Sponsors
       </h1>
       <Row className="align-items-end">
-        {sortedSponsors.map((sponsorChunk, index) => {
+        {sortedSponsors.filter(sponsor => sponsor?.featured).map((sponsorChunk, index) => {
+          return (
+            <Col
+              key={index}
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 6, offset: 2 }}
+              lg={{ span: 4, offset: 1 }}
+            >
+              <SponsorCard {...sponsorChunk} />
+            </Col>
+          );
+        })}
+      </Row>
+      <Row className="align-items-end">
+        {sortedSponsors.filter(sponsor => !sponsor?.featured).map((sponsorChunk, index) => {
           return (
             <Col
               key={index}

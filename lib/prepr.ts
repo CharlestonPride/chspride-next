@@ -125,6 +125,7 @@ export async function getSponsors() {
     items {
 		name
 		website
+    featured
 		sponsorship { 
     css_selector
     price
@@ -382,6 +383,7 @@ export type Sponsor = {
   website: string;
   logo: [{ url: string }];
   sponsorship?: [{ price: number; css_selector: string }];
+  featured?: boolean;
 };
 
 export type ContentSection = {
