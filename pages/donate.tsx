@@ -6,7 +6,7 @@ import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 import ObliqueHeader from "../components/modules/header/obliqueHeader";
 
 const headerStyle = {
-  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/festival_yx5s7m.jpg)`,
+  backgroundImage: `url(https://charleston-pride.stream.prepr.io//5xcwstriokh1-festival-yx5s7m.jpg)`,
 };
 
 const Donate = () => {

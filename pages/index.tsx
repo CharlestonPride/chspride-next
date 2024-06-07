@@ -22,7 +22,7 @@ const DonateSection = () => {
       color="warning"
       description="Help Make Charleston Pride a Reality!"
       buttons={[{ href: "/donate", text: "Donate" }]}
-      imageSrc="parade1_jxra2b"
+      imageSrc="/2ldj4xg5cxmn-parade1-jxra2b.jpg"
       icon={"hand-holding-usd"}
       orientation={Orientation.Left}
     >
@@ -46,7 +46,7 @@ const Volunteer = () => {
     <ContentSectionStackedImage
       title="Volunteer with Pride"
       color="info"
-      imageSrc="volunteer_rthkil"
+      imageSrc="/76dv4zbgykw3-volunteer-rthkil"
       icon={"handshake"}
       orientation={Orientation.Left}
       buttons={[{ href: "/volunteer", text: "Volunteer" }]}
@@ -64,7 +64,7 @@ const Serve = () => {
     <ContentSectionTwoColumn
       title="Serve on the Board"
       color="danger"
-      imageSrc="board_qqnhnx"
+      imageSrc="/e2ero0hm9fj-board-qqnhnx.jpg"
       icon={"grin-hearts"}
       orientation={Orientation.Left}
       buttons={[{ href: "/serve-on-the-board", text: "Apply" }]}
@@ -84,13 +84,13 @@ const Store = () => {
       title="Shop With Pride"
       description="Purchase Charleston Pride Merchandise"
       items={[
-        { imageId: "store/shop1_ski6lo", alt: "pride shirt" },
-        { imageId: "store/shop2_oejqfj", alt: "pet bandana" },
-        { imageId: "store/shop3_lnk3cq", alt: "pride tank top" },
-        { imageId: "store/shop4_nokbus", alt: "anniversary shirt" },
-        { imageId: "store/shop5_sk3up1", alt: "water bottle" },
-        { imageId: "store/shop6_tpy5yy", alt: "travel mug" },
-        { imageId: "store/shop7_rr16tb", alt: "trucker hat" },
+        { imageId: "/5887clohmcld-shop1-ski6lo.png", alt: "pride shirt" },
+        { imageId: "/1gwus7omyse9-shop2-oejqfj.png", alt: "pet bandana" },
+        { imageId: "/3mn67n3tvfpd-shop3-lnk3cq.png", alt: "pride tank top" },
+        { imageId: "/2ru42z1l7n7l-shop4-nokbus.png", alt: "anniversary shirt" },
+        { imageId: "/3l8y2421sg8y-shop5-sk3up1.png", alt: "water bottle" },
+        { imageId: "/3zvvjjnxfp6q-shop6-tpy5yy.png", alt: "travel mug" },
+        { imageId: "/3zvvjjnxfp6q-shop6-tpy5yy.png", alt: "trucker hat" },
       ]}
       icon={"shopping-cart"}
       color="info"
@@ -100,8 +100,8 @@ const Store = () => {
 };
 
 const Breaker1 = () => {
-  const itemA = { src: "venus_gjzkui", alt: "parade " };
-  const itemB = { src: "prism2_tykmea", alt: "parade " };
+  const itemA = { src: "/6a24a2vobvwi-venus-gjzkui.jpg", alt: "parade " };
+  const itemB = { src: "/6a24a2vobvwi-venus-gjzkui.jpg", alt: "parade " };
   return (
     <GallerySectionDualImage
       itemA={itemA}
@@ -112,8 +112,8 @@ const Breaker1 = () => {
 };
 
 const Breaker2 = () => {
-  const itemA = { src: "parade4_ca3ohf", alt: "parade " };
-  const itemB = { src: "parade5_z1dc89", alt: "parade " };
+  const itemA = { src: "/4ba7qqyun41r-parade4-ca3ohf.jpg", alt: "parade " };
+  const itemB = { src: "/11if9hl8fyv4-parade5-z1dc89.jpg", alt: "parade " };
   return (
     <div className="my-5 mt-lg-10">
       <GallerySectionDualImage
@@ -126,9 +126,9 @@ const Breaker2 = () => {
 };
 
 const Breaker3 = () => {
-  const itemA = { src: "vertical3_acysj6", alt: "parade ", order: 1 };
-  const itemB = { src: "vertical1_qbwp1d", alt: "parade ", order: 2 };
-  const itemC = { src: "vertical2_u5oj5a", alt: "parade ", order: 3 };
+  const itemA = { src: "/6eqnr04ghiyr-vertical3-acysj6.jpg", alt: "parade ", order: 1 };
+  const itemB = { src: "/1328egud0qbn-vertical1-qbwp1d.jpg", alt: "parade ", order: 2 };
+  const itemC = { src: "/4a80r2yvgchv-vertical2-u5oj5a.jpg", alt: "parade ", order: 3 };
   return (
     <GallerySectionTripleImages
       itemA={itemA}
@@ -144,7 +144,7 @@ const Sponsorship = () => {
     <ContentSectionTwoColumn
       title="Become a Sponsor"
       color="success"
-      imageSrc="v1663270138/festival_ktw1d1"
+      imageSrc="/401gvr8tv4xm-festival-ktw1d1.jpg"
       icon={"flag"}
       orientation={Orientation.Right}
       buttons={[
@@ -168,29 +168,21 @@ const Sponsorship = () => {
 
 const Breaker4 = () => {
   return (
-    <GallerySectionSingleImage src="prism3_j4vabq"></GallerySectionSingleImage>
+    <GallerySectionSingleImage src="/3evnuzc4hrnl-prism3-j4vabq.jpg"></GallerySectionSingleImage>
   );
 };
 
 const Breaker5 = () => {
   return (
     <div className="mt-n6">
-      <GallerySectionSingleImage src="mlk_mvrqqc"></GallerySectionSingleImage>
-    </div>
-  );
-};
-
-const Schedule = () => {
-  return (
-    <div className="mt-n6">
-      <GallerySectionSingleImage src="cscvj0"></GallerySectionSingleImage>
+      <GallerySectionSingleImage src="/42nydosyqdrz-mlk-mvrqqc.jpg"></GallerySectionSingleImage>
     </div>
   );
 };
 
 const Breaker6 = () => {
-  const itemA = { src: "parade6_wlmi0c", alt: "parade " };
-  const itemB = { src: "parade7_xbzzqw", alt: "parade " };
+  const itemA = { src: "/21kpykd589c1-parade6-wlmi0c.jpg", alt: "parade " };
+  const itemB = { src: "/5jcbyprddfsx-parade7-xbzzqw.jpg", alt: "parade " };
   return (
     <div className="mt-n6">
       <GallerySectionDualImage
@@ -207,7 +199,7 @@ const OurMission = () => {
     <ContentSectionTwoColumn
       title="Our Mission"
       color="primary"
-      imageSrc="tte1_oztwcd"
+      imageSrc="/i42g6e9odab-tte1-oztwcd.jpg"
       icon={"heart"}
       orientation={Orientation.Right}
     >
@@ -225,7 +217,7 @@ const OurPurpose = () => {
     <ContentSectionStackedImage
       title="Our Purpose"
       color="success"
-      imageSrc="festival1_lbf5mn"
+      imageSrc="/28wt7lnzj41r-festival1-lbf5mn.jpg"
       icon={"smile"}
       orientation={Orientation.Right}
     >
@@ -240,7 +232,7 @@ const OurPurpose = () => {
 };
 
 const headerStyle = {
-  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1716947118/cover_j0ctty.jpg)`,
+  backgroundImage: `url(https://charleston-pride.stream.prepr.io//7kefmbxfhrtq-recommended-cover.jpg)`,
   backgroundSize: `cover`,
   backgroundPosition: `center 20%`,
 };

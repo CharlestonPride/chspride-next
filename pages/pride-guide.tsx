@@ -12,7 +12,7 @@ import SponsorCarousel, {
 } from "../components/modules/sponsor/sponsorCarousel";
 
 const headerStyle = {
-  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/stage_dbk4bc.jpg)`,
+  backgroundImage: `url(https://charleston-pride.stream.prepr.io//2opkhhj72erl-rainbow-qi42lu.jpg)`,
 };
 
 const Festival = () => {

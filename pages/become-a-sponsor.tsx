@@ -13,7 +13,7 @@ import { InferGetStaticPropsType } from "next";
 import { titleCase } from "../utils/utils";
 
 const headerStyle = {
-  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/parade2_zpui4d.jpg)`,
+  backgroundImage: `url(https://charleston-pride.stream.prepr.io//1k92v88y3wov-parade2-zpui4d.jpg)`,
 };
 
 const Perk = ({ children }) => {

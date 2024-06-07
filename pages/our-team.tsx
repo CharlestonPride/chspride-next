@@ -8,7 +8,7 @@ import ObliqueHeader from "../components/modules/header/obliqueHeader";
 import { TeamMember, getTeamMembersPage } from "../lib/prepr";
 
 const headerStyle = {
-  backgroundImage: `url(https://res.cloudinary.com/charlestonpride-org/image/upload/v1625021244/rainbow_qi42lu.jpg)`,
+  backgroundImage: `url(https://charleston-pride.stream.prepr.io//2opkhhj72erl-rainbow-qi42lu.jpg)`,
 };
 
 const Headshot = (memberData: TeamMember) => {

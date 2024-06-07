@@ -8,7 +8,7 @@ export default function Layout({
   children,
   title = "Charleston Pride",
   description = "Our mission is to promote the visibility of the LGBTQ community in Charleston and the greater Southeast region. We strive to highlight the uniqueness and diversity of our community through distinct programming and events throughout the year promoting our history and culture. Charleston Pride seeks to educate society, honor our heritage, promote our culture, and celebrate our people.",
-  imageUrl = "https://res.cloudinary.com/charlestonpride-org/image/upload/v1625276576/CHSPride_Logo_4C_wSymbol_pkar3i.jpg",
+  imageUrl = "https://charleston-pride.stream.prepr.io//1204yerlb7ud-chspride-logo-4c-wsymbol-pkar3i.jpg",
 }) {
   return (
     <>

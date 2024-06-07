@@ -26,17 +26,10 @@ const ContentSectionStackedImage = (props: Props) => {
                   props.color
                 }
               ></div>
-              {props.imageSrc.startsWith("https://") ? (
-                <img
-                  src={props.imageSrc}
-                  className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
-                />
-              ) : (
-                <CloudImage
-                  className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
-                  imageId={props.imageSrc}
-                ></CloudImage>
-              )}
+              <CloudImage
+                className="w-100 border-radius-xl mt-6 ms-5 position-absolute"
+                imageId={props.imageSrc}
+              ></CloudImage>
             </div>
           </Col>
           <Col
@@ -69,17 +62,10 @@ const ContentSectionStackedImage = (props: Props) => {
                   props.color
                 }
               ></div>
-              {props.imageSrc.startsWith("https://") ? (
-                <img
-                  src={props.imageSrc}
-                  className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
-                />
-              ) : (
-                <CloudImage
-                  className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
-                  imageId={props.imageSrc}
-                ></CloudImage>
-              )}
+              <CloudImage
+                className="w-100 border-radius-xl mt-6 ms-n5 position-absolute"
+                imageId={props.imageSrc}
+              ></CloudImage>
             </div>
           </Col>
         </Row>

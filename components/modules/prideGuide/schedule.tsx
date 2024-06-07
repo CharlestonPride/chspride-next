@@ -37,7 +37,7 @@ const EventCard = (event: Event) => {
         <div className="position-relative">
           <a className="d-block blur-shadow-image">
             <CloudImage
-              imageId={event.imageId ? event.imageId : "2022/lvplxl"}
+              imageId={event.imageId}
               className="img-fluid shadow border-radius-lg"
             ></CloudImage>
           </a>

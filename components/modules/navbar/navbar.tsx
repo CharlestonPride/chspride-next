@@ -35,7 +35,7 @@ const Brand = () => {
     <Link href="/">
       <img
         height="70"
-        src="https://res.cloudinary.com/charlestonpride-org/image/upload/h_70/v1625256541/CHSPride_Logo_4C.jpg"
+        src="https://charleston-pride.stream.prepr.io//7hv49f57o9bd-chspride-logo-4c.jpg"
         alt="Charleston Pride"
       ></img>
     </Link>

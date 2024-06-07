@@ -45,7 +45,7 @@ const VendorRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow"
-              imageId="2024/ytgy2gjfliuvpf1avmpu"
+              imageId="5g4b8macyeli-charleston-pride-festival-2024-annoucement.jpg"
             ></CloudImage>
           </Col>
         </Row>
