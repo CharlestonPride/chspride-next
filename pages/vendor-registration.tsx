@@ -13,7 +13,7 @@ const VendorRegistration = () => {
       <ExternalFrame
         title="Charleston Pride Festival 2024 Vendor Registration"
         color="primary"
-        iframeSrc="https://registration.planningpod.com?ssid=ODM1MTgw"
+        iframeSrc="https://registration.planningpod.com?ssid=MTEyNjkzMQ=="
         iframeHeight="2000px"
       >
         <Row>
@@ -45,11 +45,20 @@ const VendorRegistration = () => {
           >
             <CloudImage
               className="w-100 border-radius-lg shadow"
-              imageId="5g4b8macyeli-charleston-pride-festival-2024-annoucement.jpg"
+              imageId="/5g4b8macyeli-charleston-pride-festival-2024-annoucement.jpg"
             ></CloudImage>
           </Col>
         </Row>
 
+        <div className="card my-3">
+          <div className="card-body">
+            <h4 className="card-title">Coupons:</h4>
+            <ul className="list-group">
+                <li className="list-group-item"><strong>parade24</strong> - take $100 off registration (Valid until July 15th)</li>
+                <li className="list-group-item"><strong>freepride24</strong> - take $50 off registration (Valid July 16th - Aug 1st)</li>
+              </ul>
+          </div>
+        </div>
         <div className="card my-3">
           <div className="card-body">
             <h4 className="card-title">Vendor Fees:</h4>
@@ -88,7 +97,7 @@ const VendorRegistration = () => {
             <h4 className="card-title">Food Trucks:</h4>
             <p className="card-description">
               Due to limited capacity and to ensure a variety of cuisine, food
-              trucks must be approved first. Apply below. After your acceptance
+              trucks must be approved first. Please send an email to <a href="mailto:festival@charlestonpride.org">festival@charlestonpride.org</a> to apply. After your acceptance
               you will receive instructions on how to pay for your spot.
             </p>
           </div>
