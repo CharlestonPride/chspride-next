@@ -12,8 +12,8 @@ import {
 import { InferGetStaticPropsType } from "next";
 import { titleCase } from "../utils/utils";
 
-const headerStyle = {
-  backgroundImage: `url(https://charleston-pride.stream.prepr.io//1k92v88y3wov-parade2-zpui4d.jpg)`,
+const HeaderStyle = (url: string) => {
+  return {backgroundImage: `url(${url})`}
 };
 
 const Perk = ({ children }) => {
@@ -63,12 +63,11 @@ const getBoothValue = (sponsorship, page) => {
 };
 
 const Sponsorships = ({
-  page,
-  sponsorships,
+  page
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title={page.title} description={page.description}>
-      <ObliqueHeader style={headerStyle}>
+      <ObliqueHeader style={HeaderStyle(page.background_image.url)}>
         <h1 className="text-gradient text-warning">{page.title}</h1>
         <h1>{page.description}</h1>
       </ObliqueHeader>
@@ -82,118 +81,7 @@ const Sponsorships = ({
         <Row>
           <Col>
             <Card className="mt-4">
-              <div className="table-responsive text-center">
-                <table className="table align-items-center mb-0 table-hover">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      {sponsorships.items.map((sponsorship, index) => {
-                        return (
-                          <th
-                            key={index}
-                            className={
-                              "sponsor-" +
-                              sponsorship.level.toLowerCase() +
-                              " text-black"
-                            }
-                          >
-                            {titleCase(sponsorship.level)}
-                          </th>
-                        );
-                      })}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <Perk>Sponsorship Level</Perk>
-                      {sponsorships.items.map((sponsorship, index) => {
-                        return <Price key={index}>{sponsorship.price}</Price>;
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.naming_rights}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return <Check value={sponsorship.naming_rights} />;
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.media_posts}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return <Check value={sponsorship.media_posts} />;
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.tshirt_recognition}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return <Check value={sponsorship.tshirt_recognition} />;
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.vendor_plot}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return (
-                          <Value value={getBoothValue(sponsorship, page)}>
-                            {sponsorship.vendor_plot_size !== "NA"
-                              ? sponsorship.vendor_plot_size
-                              : ""}
-                          </Value>
-                        );
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.festival_ticket}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return (
-                          <Value
-                            value={
-                              sponsorship.festival_tickets *
-                              page.festival_ticket_value
-                            }
-                          >
-                            {sponsorship.festival_tickets}
-                          </Value>
-                        );
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>2023 Pride Swag Bags</Perk>
-                      <Value value={750}>10</Value>
-                      <Value value={600}>8</Value>
-                      <Value value={450}>6</Value>
-                      <Value value={300}>4</Value>
-                      <Value value={150}>2</Value>
-                      <Value value={75}>1</Value>
-                    </tr>
-                    <tr>
-                      <Perk>{page.prism_ticket}</Perk>
-                      {sponsorships.items.map((sponsorship) => {
-                        return (
-                          <Value
-                            value={
-                              sponsorship.prism_tickets *
-                              page.prism_ticket_value
-                            }
-                          >
-                            {sponsorship.prism_tickets}
-                          </Value>
-                        );
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.logo_attribution}</Perk>
-                      {sponsorships.items.map(() => {
-                        return <Check value={true} />;
-                      })}
-                    </tr>
-                    <tr>
-                      <Perk>{page.sponsorship_badge}</Perk>
-                      {sponsorships.items.map(() => {
-                        return <Check value={true} />;
-                      })}
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <img src={page.package_image.url} className='img-fluid' />
               <div className="m-5 text-center">
                 For a custom Sponsorship or more information, contact the
                 Director of Sponsorships at{" "}
@@ -223,10 +111,9 @@ const Sponsorships = ({
 
 export async function getStaticProps() {
   const page = await getSponsorshipsPage();
-  const sponsorships = await getSponsorships();
 
   return {
-    props: { page, sponsorships },
+    props: { page },
   };
 }
 

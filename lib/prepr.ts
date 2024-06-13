@@ -68,20 +68,12 @@ export async function getSponsorshipsPage() {
 			width
 		}
 		closed_message
-		naming_rights
-		media_posts
-		tshirt_recognition
-		vendor_plot
-		festival_ticket
-		swag_bags
-    sponsorship_badge
-		prism_ticket
-		logo_attribution
-		festival_ticket_value
-		swag_bag_value
-		prism_ticket_value
-		large_plot_value
-		small_plot_value
+    package_image { 
+			url
+		}
+		background_image { 
+			url
+		}
 	}}`
       )
       .fetch()) || {};
@@ -323,20 +315,8 @@ export type SponsorshipPage = {
   registration: boolean;
   registration_form: EmbeddedForm;
   closed_message: string;
-  naming_rights: string;
-  media_posts: string;
-  tshirt_recognition: string;
-  vendor_plot: string;
-  festival_ticket: string;
-  swag_bags: string;
-  prism_ticket: string;
-  logo_attribution: string;
-  sponsorship_badge: string;
-  festival_ticket_value: number;
-  swag_bag_value: number;
-  prism_ticket_value: number;
-  large_plot_value: number;
-  small_plot_value: number;
+  background_image: Image;
+  package_image: Image;
 };
 
 export type Page = {
