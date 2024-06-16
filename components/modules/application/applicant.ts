@@ -89,13 +89,13 @@ export const applicantSchema = yup.object({
     .test(
       "fileSize",
       `File too large. Please select a file under 10MB`,
-      (value) => value === null || (value && value.size <= FILE_SIZE)
+      (value) => value === null || (value && (value as File).size <= FILE_SIZE)
     )
     .test(
       "fileFormat",
       "Unsupported file type. Supported file formats are .doc, .docx, and .pdf",
       (value) =>
-        value === null || (value && SUPPORTED_FORMATS.includes(value.type))
+        value === null || (value && SUPPORTED_FORMATS.includes((value as File).type))
     ),
   recaptcha: yup.string().nullable().required(),
 });
