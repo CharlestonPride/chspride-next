@@ -2,12 +2,13 @@
   "name": "chspride-next",
   "version": "2.0.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "swa": "swa start http://localhost:3000 --api-location ./api",
-    "api": "cd api && func start"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@azure/storage-blob": "^12.23.0",

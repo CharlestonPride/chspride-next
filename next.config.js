@@ -1,4 +1,5 @@
 module.exports = {
+  output: 'export',
   trailingSlash: true,
   exportPathMap: async function () {
     const paths = {
