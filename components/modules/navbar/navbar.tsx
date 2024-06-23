@@ -43,7 +43,6 @@ const GetInvolved = () => {
   return (
     <NavDropdown title="Get Involved" id="get-involved">
       <Nav.Link href="/donate">Make a Donation</Nav.Link>
-      <Nav.Link href="/donate">Make a donation</Nav.Link>
       <Nav.Link href="/store">Shop with Pride</Nav.Link>
       <Nav.Link href="/volunteer">Volunteer with Pride</Nav.Link>
     </NavDropdown>
