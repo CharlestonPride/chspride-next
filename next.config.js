@@ -1,5 +1,5 @@
 module.exports = {
-  output: 'standalone',
+  output: 'export',
   trailingSlash: true,
   exportPathMap: async function () {
     const paths = {
