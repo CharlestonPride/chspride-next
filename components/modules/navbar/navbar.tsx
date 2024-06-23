@@ -14,21 +14,6 @@ const Hamburger = () => {
   );
 };
 
-const NavLink = ({ href, children }) => {
-  return (
-    <Link href={href} passHref>
-      <Nav.Link>{children}</Nav.Link>
-    </Link>
-  );
-};
-
-const NavDropdownItem = ({ href, children }) => {
-  return (
-    <Link href={href} passHref>
-      <NavDropdown.Item>{children}</NavDropdown.Item>
-    </Link>
-  );
-};
 
 const Brand = () => {
   return (
@@ -45,12 +30,11 @@ const Brand = () => {
 const AboutUs = () => {
   return (
     <NavDropdown title="About Us" id="about-us">
-      <NavDropdownItem href="/our-team">Our Team</NavDropdownItem>
-      <NavDropdownItem href="/bylaws">Our Bylaws</NavDropdownItem>
-      <NavDropdown.Divider />
-      <NavDropdownItem href="/serve-on-the-board">
+      <Nav.Link href="/our-team">Our Team</Nav.Link>
+      <Nav.Link href="/bylaws">Our Bylaws</Nav.Link>
+      <Nav.Link href="/serve-on-the-board">
         Serve on the Board
-      </NavDropdownItem>
+      </Nav.Link>
     </NavDropdown>
   );
 };
@@ -58,13 +42,10 @@ const AboutUs = () => {
 const GetInvolved = () => {
   return (
     <NavDropdown title="Get Involved" id="get-involved">
-      {/* <NavDropdownItem href="/friends-of-pride">
-        Become a Friend of Pride
-      </NavDropdownItem> */}
-
-      <NavDropdownItem href="/donate">Make a donation</NavDropdownItem>
-      <NavDropdownItem href="/store">Shop with Pride</NavDropdownItem>
-      <NavDropdownItem href="/volunteer">Volunteer with Pride</NavDropdownItem>
+      <Nav.Link href="/donate">Make a Donation</Nav.Link>
+      <Nav.Link href="/donate">Make a donation</Nav.Link>
+      <Nav.Link href="/store">Shop with Pride</Nav.Link>
+      <Nav.Link href="/volunteer">Volunteer with Pride</Nav.Link>
     </NavDropdown>
   );
 };
@@ -72,12 +53,12 @@ const GetInvolved = () => {
 const Events = () => {
   return (
     <NavDropdown title="Events" id="events">
-      <NavDropdownItem href="/tacos-and-tattas">
+      <Nav.Link href="/tacos-and-tattas">
         Taco's and Tattas!
-      </NavDropdownItem>
-      <NavDropdownItem href="/pageant">
+      </Nav.Link>
+      <Nav.Link href="/pageant">
         Pageant: Renaissance Ball
-      </NavDropdownItem>
+      </Nav.Link>
     </NavDropdown>
   );
 };
@@ -101,10 +82,10 @@ const StayInTouch = () => {
 const PrideWeek = () => {
   return (
     <NavDropdown title="Pride Week" id="pride-week">
-      <NavDropdownItem href="/pride-guide">Pride Guide</NavDropdownItem>
-      <NavDropdownItem href="/vendor-registration">
+      <Nav.Link href="/pride-guide">Pride Guide</Nav.Link>
+      <Nav.Link href="/vendor-registration">
         Vendor Registration
-      </NavDropdownItem>
+      </Nav.Link>
     </NavDropdown>
   );
 };
