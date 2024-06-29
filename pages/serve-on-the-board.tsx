@@ -1,11 +1,22 @@
 import React from "react";
 import Layout from "../components/elements/layout/layout";
-import ExternalFrame from "../components/modules/externalFrame/externalFrame";
 import Link from "next/link";
-import Application from "../components/modules/application/application";
-import { title } from "process";
 import { Row, Col } from "react-bootstrap";
 import WaveComponent from "../components/visual/waveComponent";
+
+
+const Application = ({ enabled, disabledMessage }) => {
+  if (enabled) {
+    return (
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScbBqRFiax63FW3t_1toWWZaedKDDOCusB7aOwcgPvz-Ao-SQ/viewform?embedded=true"
+        height="1100"
+        width="100%"
+      />
+    );
+  }
+  return <div className="text-center">{disabledMessage}</div>;
+};
 
 const ServeOnTheBoard = ({
   title = "Serve on the Board of Directors",
@@ -61,10 +72,7 @@ const ServeOnTheBoard = ({
                   </p>
                   <div className="card card-frame mt-2 d-none d-lg-block">
                     <div className="card-body">
-                      {enabled && <Application />}
-                      {!enabled && disabledMessage && (
-                        <h4 className="text-center">{disabledMessage}</h4>
-                      )}
+                      <Application enabled={enabled} disabledMessage={disabledMessage} />
                     </div>
                   </div>
                 </div>
