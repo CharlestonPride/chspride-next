@@ -82,10 +82,7 @@ const ServeOnTheBoard = ({
         </div>
         <div className="d-lg-none">
           <div className="card mt-2 shadow-lg">
-            {enabled && <Application />}
-            {!enabled && disabledMessage && (
-              <h4 className="text-center">{disabledMessage}</h4>
-            )}
+            <Application enabled={enabled} disabledMessage={disabledMessage} />
           </div>
         </div>
       </section>
