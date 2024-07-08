@@ -12,6 +12,7 @@ module.exports = {
       "/volunteer": { page: "/volunteer" },
       "/vendor-registration": { page: "/vendor-registration" },
       "/gold-membership": { page: "/gold-membership" },
+      "/auction": { page: "/auction" }
     };
 
     return paths;
