@@ -21,9 +21,7 @@ const VendorRegistration = () => {
             <p className="lead">
               The Charleston Pride Festival will be held at{" "}
               <strong>The Refinery</strong> (1640 Meeting Street) in Charleston
-              on <strong>Saturday, September 21, 2024</strong>. We are excited
-              to bring the festival back after last year’s cancellation, and
-              invite you to join Charleston’s largest Pride event of the year.
+              on <strong>Saturday, September 21, 2024</strong>.
             </p>
             <p className="lead">
               Being a vendor is a great way to promote your organization and/or
@@ -54,9 +52,8 @@ const VendorRegistration = () => {
           <div className="card-body">
             <h4 className="card-title">Coupons:</h4>
             <ul className="list-group">
-                <li className="list-group-item"><strong>parade24</strong> - take $100 off registration (Valid until July 15th)</li>
-                <li className="list-group-item"><strong>freepride24</strong> - take $50 off registration (Valid July 16th - Aug 1st)</li>
-              </ul>
+              <li className="list-group-item"><strong>freepride24</strong> - take $50 off registration (Valid July 16th - Aug 1st)</li>
+            </ul>
           </div>
         </div>
         <div className="card my-3">
@@ -64,29 +61,29 @@ const VendorRegistration = () => {
             <h4 className="card-title">Vendor Fees:</h4>
             <ul className="list-group">
               <li className="list-group-item">
-                <strong>10x10 Vendor Plot:</strong> Fees for a 10x10 vendor plot
-                is $300. Non-profits can apply at the reduced rate of $150.
+                <strong>10x10 Vendor Plot:</strong> Fees for a 10x10 vendor plot range between $100 and $500
+                depending upon vendor's choice of placement within the Refinery property and proximity to the main stage. Nonprofits can apply at the reduced rate of 50%.
               </li>
               <li className="list-group-item">
-                <strong>10x10 Premium Vendor Plot:</strong> Fees for a Main
-                Stage Area Premium 10x10 vendor plot is $500.
+                <strong>10x10 Premium 1:</strong> $500 Main Stage Lawn
               </li>
               <li className="list-group-item">
-                <strong>20x20 Vendor Plot:</strong> A limited number of 20x20
-                plots will also be available for larger tents for $750.
-                Non-profits can apply at the reduced rate of $375.
+                <strong>10x10 Premium 2:</strong> $400 Cleats Concours
               </li>
               <li className="list-group-item">
-                If electricity is needed, a $75 fee will be added to the
-                registration [$150 for 20x20 tents]. Electricity availability is
-                limited, and we reserve the right to cap the number of power
-                slots.
+                <strong>10x10 Premium 3:</strong> $300 Entry Drive
               </li>
               <li className="list-group-item">
-                <strong>Note:</strong> Charleston Pride only provides the plot
-                for a vendor space and does not supply tents, tables or chairs.
-                Payments are non-refundable in case of weather cancellation.
-                Your registration will roll over to the 2023 or future Festival.
+                <strong>10x10 Parking Lot:</strong> $100 Refinery Gravel Lot
+              </li>
+              <li className="list-group-item">
+                <strong>20x20 Vendor Plot:</strong> A limited number of 20x20 vendor plots will also be available at $750. Placement will be at the discretion of Charleston Pride. Nonprofits can apply at the reduced rate of $375.
+              </li>
+              <li className="list-group-item">
+                If electrical hookup is needed via generator rental, a $75 fee [10x10] or $150 [20x20] will be added to the vendor's registration. Generators will be provided on-site the day of the Festival. Electrical availability is limited, and Charleston Pride reserves the right to cap the number of power slots.
+              </li>
+              <li className="list-group-item">
+                <strong>Note:</strong> Charleston Pride only provides the plot for a vendor space and does not supply tents, tables or chairs. Payments are non-refundable in case of weather cancellation. Your registration will roll over to the 2025 or future Festival.
               </li>
             </ul>
           </div>
@@ -96,9 +93,7 @@ const VendorRegistration = () => {
           <div className="card-body">
             <h4 className="card-title">Food Trucks:</h4>
             <p className="card-description">
-              Due to limited capacity and to ensure a variety of cuisine, food
-              trucks must be approved first. Please send an email to <a href="mailto:festival@charlestonpride.org">festival@charlestonpride.org</a> to apply. After your acceptance
-              you will receive instructions on how to pay for your spot.
+              Due to limited capacity and to ensure a variety of cuisine, food trucks must be approved first. Please send an email to <a href="mailto:festival@charlestonpride.org">festival@charlestonpride.org</a> to apply along with your expected food menu. After your acceptance you will receive instructions on how to pay for your spot.
             </p>
           </div>
         </div>
@@ -114,9 +109,7 @@ const VendorRegistration = () => {
             </p>
             <ul className="list-group">
               <li className="list-group-item">
-                Load-in will be on the day of the festival, and will begin at
-                8am. Tentative festival times are from 11AM to 5PM. Load-out
-                will begin after 5:15pm.{" "}
+                Load-in will be on the day of the festival, and will begin at 8am. Tentative festival times are from 12pM to 6PM. Load-out will begin after 6:15pm.
               </li>
               <li className="list-group-item">
                 Tents are to be 10x10 ft [or 20x20 ] with straight legs, not
