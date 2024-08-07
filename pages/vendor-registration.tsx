@@ -48,14 +48,12 @@ const VendorRegistration = () => {
           </Col>
         </Row>
 
-        <div className="card my-3">
-          <div className="card-body">
-            <h4 className="card-title">Coupons:</h4>
-            <ul className="list-group">
-              <li className="list-group-item"><strong>freepride24</strong> - take $50 off registration (Valid July 16th - Aug 1st)</li>
-            </ul>
-          </div>
-        </div>
+        <Row>
+          <Col>
+            <CloudImage className="w-100 border-radius-lg shadow"
+              imageId="/4gj6dunsvvs3-vendorbooths.jpg"></CloudImage>
+          </Col>
+        </Row>
         <div className="card my-3">
           <div className="card-body">
             <h4 className="card-title">Vendor Fees:</h4>
@@ -109,7 +107,7 @@ const VendorRegistration = () => {
             </p>
             <ul className="list-group">
               <li className="list-group-item">
-                Load-in will be on the day of the festival, and will begin at 8am. Tentative festival times are from 12pM to 6PM. Load-out will begin after 6:15pm.
+                Load-in will be on the day of the festival, and will begin at 8am. Tentative festival times are from 12PM to 6PM. Load-out will begin after 6:15pm.
               </li>
               <li className="list-group-item">
                 Tents are to be 10x10 ft [or 20x20 ] with straight legs, not
